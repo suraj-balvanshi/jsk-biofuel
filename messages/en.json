@@ -1,0 +1,15 @@
+{
+  "homepage": {
+    "title": "JSK Biofuel"
+  },
+  "header": {
+    "title": "JSK Biofuel",
+    "menu-1": "Products",
+    "submenu-1-1": "Biodeisel",
+    "submenu-1-2": "Glycerin",
+    "menu-2": "Media",
+    "menu-3": "Career",
+    "menu-4": "About Us",
+    "menu-5": "Contact Us"
+  }
+}
