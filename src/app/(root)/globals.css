@@ -55,7 +55,7 @@
 }
 
 @utility max-content-width {
-  @apply max-w-[1920px] mx-auto;
+  @apply max-w-7xl mx-auto;
 }
 
 @utility link-click-animation {

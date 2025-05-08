@@ -1,15 +1,168 @@
 {
-  "homepage": {
-    "title": "JSK Biofuel"
-  },
   "header": {
-    "title": "JSK Biofuel",
+    "title": "JSK Bio-fuel",
     "menu-1": "Products",
-    "submenu-1-1": "Biodeisel",
+    "submenu-1-1": "Biodiesel",
     "submenu-1-2": "Glycerin",
-    "menu-2": "Media",
-    "menu-3": "Career",
-    "menu-4": "About Us",
-    "menu-5": "Contact Us"
+    "menu-2": "About Us",
+    "menu-3": "Sustainability",
+    "menu-4": "Contact",
+    "menu-5": "Careers"
+  },
+  "hero": {
+    "slide-1": {
+      "heading": "Fueling the Future, Sustainably",
+      "description": "Explore how biofuel is transforming the world of renewable energy and reducing carbon emissions."
+    },
+    "slide-2": {
+      "heading": "Proudly Made in India. Powering Progress with Biodiesel",
+      "description": "Discover innovative technologies driving sustainable energy using agricultural waste."
+    },
+    "slide-3": {
+      "heading": "Turning Waste Into Power, Responsibly",
+      "description": "See how everyday resources can be converted into powerful fuel alternatives."
+    },
+    "slide-4": {
+      "heading": "Fuel the Change. Go JSK Biofuel",
+      "description": "Be part of the global shift toward clean and efficient biofuel."
+    }
+  },
+  "footer": {
+    "text": "Footer"
+  },
+  "strength": {
+    "title": "Why Choose Us",
+    "feature-1": {
+      "emoji": "🌱",
+      "title": "Eco-Friendly Manufacturing",
+      "description": "We turn waste materials like tallow and used cooking oil into clean, renewable fuel."
+    },
+    "feature-2": {
+      "emoji": "🏭",
+      "title": "In-House Production Unit",
+      "description": "Based in Uttar Pradesh, our facility ensures consistent quality and a reliable supply chain."
+    },
+    "feature-3": {
+      "emoji": "🛢️",
+      "title": "Bulk Supply Capacity",
+      "description": "Well-equipped to meet large-scale fuel demands for transport, industrial, and commercial sectors."
+    },
+    "feature-4": {
+      "emoji": "📦",
+      "title": "Custom Solutions",
+      "description": "Fuel blending and delivery tailored to client requirements."
+    },
+    "feature-5": {
+      "emoji": "⚙️",
+      "title": "High Fuel Efficiency",
+      "description": "Our biodiesel delivers powerful performance while reducing carbon footprint."
+    },
+    "feature-6": {
+      "emoji": "🧪",
+      "title": "Strict Quality Control",
+      "description": "Every batch is tested to meet national fuel standards and ensure purity."
+    },
+    "feature-7": {
+      "emoji": "🌍",
+      "title": "Committed to Sustainability",
+      "description": "Supporting India’s green energy goals and reducing dependency on fossil fuels."
+    },
+    "feature-8": {
+      "emoji": "🇮🇳",
+      "title": "Made in India",
+      "description": "Locally produced biodiesel supporting national energy independence."
+    },
+    "feature-9": {
+      "emoji": "🚀",
+      "title": "Innovation Driven",
+      "description": "Constantly improving technology and exploring new feedstocks."
+    }
+  },
+  "products": {
+    "title": "Our Products",
+    "biodiesel": {
+      "title": "Biodiesel",
+      "feature-1": {
+        "title": "High-Quality Biofuel",
+        "description": "Made from tallow, used cooking oil (UCO), and organic waste."
+      },
+      "feature-2": {
+        "title": "B100 and Custom Blends",
+        "description": "Available in blends like B5, B10, B20 to suit regulations or customer needs."
+      },
+      "feature-3": {
+        "title": "Engine Compatible",
+        "description": "Works with standard diesel engines without major modifications."
+      },
+      "feature-4": {
+        "title": "Low Emissions, High Performance",
+        "description": "Reduces carbon footprint while maintaining power and efficiency."
+      },
+      "feature-5": {
+        "title": "Bulk Orders Fulfilled",
+        "description": "Ideal for industries, transportation fleets, and agriculture."
+      },
+      "feature-6": {
+        "title": "Lab-Tested",
+        "description": "Meets Indian and international fuel quality standards."
+      }
+    },
+    "glycerin": {
+      "title": "Glycerin",
+      "feature-1": {
+        "title": "Multi-Industry Use",
+        "description": "Used in pharmaceuticals, cosmetics, soaps, and chemical industries."
+      },
+      "feature-2": {
+        "title": "Eco-Derived",
+        "description": "Byproduct of biodiesel, biodegradable and plant/fat-based."
+      },
+      "feature-3": {
+        "title": "Different Grades Available",
+        "description": "Crude and refined glycerin offered based on application."
+      },
+      "feature-4": {
+        "title": "Consistent Quality & Supply",
+        "description": "Reliable sourcing directly from our biodiesel production process."
+      }
+    }
+  },
+  "companyStrength": {
+    "title": "Why Trust Us",
+    "feature-1": {
+      "emoji": "🏭",
+      "title": "Reliable Manufacturer",
+      "description": "In-house production of biodiesel and glycerin with quality you can trust."
+    },
+    "feature-2": {
+      "emoji": "🌱",
+      "title": "Sustainable & Eco-Friendly",
+      "description": "Products made from renewable resources like tallow and used cooking oil."
+    },
+    "feature-3": {
+      "emoji": "🧪",
+      "title": "Tested & Certified Quality",
+      "description": "Every batch is lab-tested to meet national and industry standards."
+    },
+    "feature-4": {
+      "emoji": "🛢️",
+      "title": "Bulk Supply Capability",
+      "description": "Equipped to handle large-scale orders with consistent on-time delivery."
+    },
+    "feature-5": {
+      "emoji": "⚙️",
+      "title": "Dual Product Portfolio",
+      "description": "Offering Biodiesel & Glycerin for industrial use."
+    },
+    "feature-6": {
+      "emoji": "🚚",
+      "title": "Efficient Distribution Network",
+      "description": "Smooth logistics across India ensure reliable client service."
+    },
+    "feature-7": {
+      "emoji": "🤝",
+      "title": "Customer-Centric Approach",
+      "description": "Custom blends, flexible packaging, and responsive support."
+    }
   }
 }

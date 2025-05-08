@@ -117,7 +117,7 @@ export default function RootLayout({
         </header>
         <main className="max-content-width w-full">{children}</main>
         <footer className="max-content-width mt-auto w-full">
-          <div>Footer</div>
+          <div>{t("footer.text")}</div>
         </footer>
       </body>
     </html>

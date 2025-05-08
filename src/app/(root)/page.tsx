@@ -11,14 +11,14 @@ export default function Home() {
       <div className="mx-4 mb-4">
         <PerfectStrengthCard />
       </div>
+      <div className="mb-4">
+        <PerfectProductAccordion />
+      </div>
       <div className="mx-4 mb-4">
         <PerfectCompanyStrength />
       </div>
-      <div className="m-auto sm:px-4 mb-4 flex place-items-center max-h-[450px] max-w-[800px]">
+      <div className="m-auto px-4 mb-4 flex place-items-center max-h-[450px] max-w-[800px]">
         <PerfectYoutubeEmbed />
-      </div>
-      <div className="mb-4">
-        <PerfectProductAccordion />
       </div>
     </div>
   );
