@@ -2,8 +2,6 @@
 @import "tw-animate-css";
 @plugin "tailwindcss-motion";
 
-@custom-variant dark (&: is(.dark *));
-
 @layer base {
   * {
     box-sizing: border-box;
@@ -97,6 +95,17 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* JSK Biofuel theme */
+  --color-sky-blue: #5ab7e4;
+  --color-azure-blue: #1b6ca8;
+  --color-mint-green: #88d4a3;
+  --color-nature-green: #2e7d32;
+  --color-deep-forest: #1b3a2b;
+
+  --color-soft-white: #f5f5f5;
+  --color-light-gray: #e0e0e0;
+  --color-charcoal-black: #111111;
 }
 
 .dark {
