@@ -42,23 +42,53 @@ const features = [
     description:
       "Supporting India’s green energy goals and reducing dependency on fossil fuels.",
   },
+  {
+    emoji: "🇮🇳",
+    title: "Made in India",
+    description:
+      "Locally produced biodiesel supporting national energy independence.",
+  },
+  {
+    emoji: "🚀",
+    title: "Innovation Driven",
+    description:
+      "Constantly improving technology and exploring new feedstocks.",
+  },
 ];
 
 export default function PerfectStrengthCard() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {features.map((feature, idx) => (
-        <Card key={idx} className="h-full">
-          <CardHeader>
-            <CardTitle className="text-xl flex items-center gap-2">
-              <span>{feature.emoji}</span> {feature.title}
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-muted-foreground">{feature.description}</p>
-          </CardContent>
-        </Card>
-      ))}
-    </div>
+    <>
+      <div>
+        <h2 className="mb-4 text-2xl font-[700]">Why Choose Us</h2>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {features.map((feature, idx) => (
+          <Card
+            key={idx}
+            className="group motion-preset-pop p-4 overflow-hidden transition-colors duration-300 bg-background hover:bg-[var(--color-nature-green)]"
+          >
+            <CardHeader className="p-0">
+              <CardTitle className="text-xl flex items-center gap-4 transition-colors duration-300 group-hover:text-white">
+                {/* Animated circle background behind emoji */}
+                <div className="relative w-10 h-10 flex items-center justify-center">
+                  {/* Background scaling circle */}
+                  <span className="absolute inset-0 rounded-full bg-white transition-transform duration-300 ease-in-out group-hover:scale-150 group-hover:bg-[var(--color-deep-forest)]" />
+                  {/* Emoji foreground */}
+                  <span className="relative z-10 text-xl">{feature.emoji}</span>
+                </div>
+
+                <h3>{feature.title}</h3>
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="p-0 mt-0">
+              <p className="transition-colors duration-300 text-muted-foreground group-hover:text-white">
+                {feature.description}
+              </p>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </>
   );
 }
