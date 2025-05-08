@@ -60,7 +60,7 @@ export default function PeekStackCarousel() {
   return (
     <>
       <div>
-        <h2 className="mb-4 text-2xl font-[700]">Why Trust Us</h2>
+        <h2 className="mb-4 text-3xl font-semibold">Why Trust Us</h2>
       </div>
       <div className="relative h-[350px] w-full overflow-hidden flex justify-end items-center px-4">
         <Image

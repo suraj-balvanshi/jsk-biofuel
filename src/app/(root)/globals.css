@@ -150,3 +150,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+.bg-gradient-custom {
+  background: linear-gradient(
+    to right,
+    var(--color-nature-green),
+    var(--color-mint-green)
+  );
+}

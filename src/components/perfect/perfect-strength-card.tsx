@@ -60,7 +60,7 @@ export default function PerfectStrengthCard() {
   return (
     <>
       <div>
-        <h2 className="mb-4 text-2xl font-[700]">Why Choose Us</h2>
+        <h2 className="mb-4 text-3xl font-semibold">Why Choose Us</h2>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((feature, idx) => (
