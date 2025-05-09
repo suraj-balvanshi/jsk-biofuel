@@ -1,4 +1,4 @@
-import { PerfectContactForm } from "@/components/perfect/perfect-contact-form";
+import PerfectContactForm from "@/components/perfect/perfect-contact-form";
 import PerfectContactInfoGrid from "@/components/perfect/prefect-contact-info-grid";
 
 import Image from "next/image";

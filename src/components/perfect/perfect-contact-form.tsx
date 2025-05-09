@@ -47,8 +47,8 @@ const formSchema = z.object({
   }),
 });
 
-export function PerfectContactForm() {
-  const t = useTranslations("PerfectContactForm"); // Namespace for translations
+export default function PerfectContactForm() {
+  const t = useTranslations("PerfectContactForm");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({

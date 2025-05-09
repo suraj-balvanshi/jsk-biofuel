@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { useTranslations } from "next-intl";
+import { NextIntlClientProvider, useLocale, useTranslations } from "next-intl";
 import PerfectNavMenu from "@/components/perfect/perfect-nav-menu";
 import PerfectBurgerMenu from "@/components/perfect/perfect-burger-menu";
 
@@ -98,30 +98,34 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const t = useTranslations();
+  const locale = "en"; // useLocale();
+  const messages = require(`/messages/${locale}.json`).default;
 
   return (
     <html
-      lang="en"
+      lang={locale}
       className={`${inter_18pt.variable} ${playfair_9pt.variable} ${spaceGrotesk.variable} aliased`}
     >
       <body className="min-h-screen flex flex-col">
-        <header className="border-b shadow-sm">
-          <nav className="flex items-center max-content-width px-4 py-2">
-            <h1 className="mr-auto">
-              <Link href="/">{t("header.title")}</Link>
-            </h1>
-            <div className="max-sm:hidden">
-              <PerfectNavMenu />
-            </div>
-            <div className="sm:hidden h-6 ">
-              <PerfectBurgerMenu />
-            </div>
-          </nav>
-        </header>
-        <main className="max-content-width w-full">{children}</main>
-        <footer className="max-content-width mt-auto w-full">
-          <div>{t("footer.text")}</div>
-        </footer>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <header className="border-b shadow-sm">
+            <nav className="flex items-center max-content-width px-4 py-2">
+              <h1 className="mr-auto">
+                <Link href="/">{t("header.title")}</Link>
+              </h1>
+              <div className="max-sm:hidden">
+                <PerfectNavMenu />
+              </div>
+              <div className="sm:hidden h-6 ">
+                <PerfectBurgerMenu />
+              </div>
+            </nav>
+          </header>
+          <main className="max-content-width w-full">{children}</main>
+          <footer className="max-content-width mt-auto w-full">
+            <div>{t("footer.text")}</div>
+          </footer>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

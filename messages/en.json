@@ -208,5 +208,34 @@
       "label": "LinkedIn",
       "value": "linkedin.com/company/jskbiofuel"
     }
+  },
+  "PerfectContactForm": {
+    "nameLabel": "Name",
+    "namePlaceholder": "Enter your name",
+    "phoneLabel": "Phone",
+    "phonePlaceholder": "Enter your phone number",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Enter your email",
+    "productLabel": "Product",
+    "productPlaceholder": "Select a product",
+    "product1": "Biodiesel",
+    "product2": "Glycerin",
+    "productOther": "Other",
+    "cityLabel": "City",
+    "cityPlaceholder": "Enter your city",
+    "stateLabel": "State",
+    "statePlaceholder": "Enter your state",
+    "queryLabel": "Query",
+    "queryPlaceholder": "Please describe your query or message",
+    "submitting": "Submitting...",
+    "submit": "Submit",
+    "formSubmitted": "Form submitted",
+    "formSubmittedDescription": "We've received your message and will get back to you soon.",
+    "form": {
+      "nameError": "Name must be at least 2 characters.",
+      "phoneError": "Please enter a valid phone number.",
+      "emailError": "Please enter a valid email address.",
+      "queryError": "Query must be at least 10 characters."
+    }
   }
 }

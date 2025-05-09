@@ -1,4 +1,11 @@
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin } from "lucide-react";
+import {
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+  FaFacebook,
+  FaTwitter,
+  FaLinkedin,
+} from "react-icons/fa";
 import { useTranslations } from "next-intl";
 
 export default function PerfectContactInfoGrid() {
@@ -17,7 +24,7 @@ export default function PerfectContactInfoGrid() {
           {/* Email */}
           <div className="w-full border-b md:w-1/2 md:border-r lg:w-1/3 p-8">
             <div className="flex items-center mb-6">
-              <Mail className="h-6 w-6" />
+              <FaEnvelope className="h-6 w-6" />
               <div className="ml-4 text-xl">{t("email.label")}</div>
             </div>
             <p className="leading-loose text-gray-500">{t("email.value")}</p>
@@ -26,7 +33,7 @@ export default function PerfectContactInfoGrid() {
           {/* Phone */}
           <div className="w-full border-b md:w-1/2 lg:w-1/3 lg:border-r p-8">
             <div className="flex items-center mb-6">
-              <Phone className="h-6 w-6" />
+              <FaPhone className="h-6 w-6" />
               <div className="ml-4 text-xl">{t("phone.label")}</div>
             </div>
             <p className="leading-loose text-gray-500">{t("phone.value")}</p>
@@ -35,7 +42,7 @@ export default function PerfectContactInfoGrid() {
           {/* Address */}
           <div className="w-full border-b md:w-1/2 md:border-r lg:w-1/3 lg:border-r-0 p-8">
             <div className="flex items-center mb-6">
-              <MapPin className="h-6 w-6" />
+              <FaMapMarkerAlt className="h-6 w-6" />
               <div className="ml-4 text-xl">{t("address.label")}</div>
             </div>
             <p className="leading-loose text-gray-500">{t("address.value")}</p>
@@ -44,7 +51,7 @@ export default function PerfectContactInfoGrid() {
           {/* Facebook */}
           <div className="w-full border-b md:w-1/2 lg:w-1/3 lg:border-r lg:border-b-0 p-8">
             <div className="flex items-center mb-6">
-              <Facebook className="h-6 w-6" />
+              <FaFacebook className="h-6 w-6" />
               <div className="ml-4 text-xl">{t("facebook.label")}</div>
             </div>
             <p className="leading-loose text-gray-500">{t("facebook.value")}</p>
@@ -53,8 +60,8 @@ export default function PerfectContactInfoGrid() {
           {/* Twitter */}
           <div className="w-full border-b md:w-1/2 md:border-r md:border-b-0 lg:w-1/3 lg:border-b-0 p-8">
             <div className="flex items-center mb-6">
-              <Twitter className="h-6 w-6" />
-              <div class="ml-4 text-xl">{t("twitter.label")}</div>
+              <FaTwitter className="h-6 w-6" />
+              <div className="ml-4 text-xl">{t("twitter.label")}</div>
             </div>
             <p className="leading-loose text-gray-500">{t("twitter.value")}</p>
           </div>
@@ -62,7 +69,7 @@ export default function PerfectContactInfoGrid() {
           {/* LinkedIn */}
           <div className="w-full md:w-1/2 lg:w-1/3 p-8">
             <div className="flex items-center mb-6">
-              <Linkedin className="h-6 w-6" />
+              <FaLinkedin className="h-6 w-6" />
               <div className="ml-4 text-xl">{t("linkedin.label")}</div>
             </div>
             <p className="leading-loose text-gray-500">{t("linkedin.value")}</p>

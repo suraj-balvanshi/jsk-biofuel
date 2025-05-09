@@ -4,21 +4,8 @@ import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { NextIntlClientProvider } from "next-intl";
 
-export default function PerfectCompanyStrength() {
-  // static messages import
-  const messages = require("../../../messages/en.json");
-  const locale = "en";
-
-  return (
-    <NextIntlClientProvider messages={messages} locale={locale}>
-      <InnerComponent />
-    </NextIntlClientProvider>
-  );
-}
-
-function InnerComponent() {
+function PerfectCompanyStrength() {
   const t = useTranslations("companyStrength");
 
   const [current, setCurrent] = useState(0);
