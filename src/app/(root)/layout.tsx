@@ -6,6 +6,7 @@ import PerfectBurgerMenu from "@/components/perfect/perfect-burger-menu";
 
 // fonts.ts
 import localFont from "next/font/local";
+import Link from "next/link";
 
 // Inter 18pt – Optimized for large text
 export const inter_18pt = localFont({
@@ -106,7 +107,9 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col">
         <header className="border-b shadow-sm">
           <nav className="flex items-center max-content-width px-4 py-2">
-            <h1 className="mr-auto">{t("header.title")}</h1>
+            <h1 className="mr-auto">
+              <Link href="/">{t("header.title")}</Link>
+            </h1>
             <div className="max-sm:hidden">
               <PerfectNavMenu />
             </div>

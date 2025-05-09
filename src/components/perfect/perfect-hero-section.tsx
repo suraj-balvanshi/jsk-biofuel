@@ -47,7 +47,7 @@ export default function PerfectHeroSection() {
                   alt={slide.heading}
                   fill
                   className="absolute inset-0 w-full h-full object-cover sm:rounded-xl overflow-hidden"
-                  priority={true}
+                  priority={false}
                 />
 
                 {/* Overlay with content */}

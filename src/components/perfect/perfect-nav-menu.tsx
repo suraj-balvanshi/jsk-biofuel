@@ -29,7 +29,9 @@ export default function PerfectNavMenu() {
             <NavigationMenuLink>{t("menu-3")}</NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink>{t("menu-4")}</NavigationMenuLink>
+            <NavigationMenuLink href="/contact-us">
+              {t("menu-4")}
+            </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink>{t("menu-5")}</NavigationMenuLink>

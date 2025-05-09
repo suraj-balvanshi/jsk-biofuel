@@ -17,7 +17,7 @@ export default function ProductAccordionGrid() {
         <h3 className="text-2xl mb-4">{t("biodiesel.title")}</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:p-4 sm:rounded-xl bg-gradient-custom">
           <img
-            src="/images/company-strength/company-strength-1.JPG"
+            src="/images/products/biodiesel.JPG"
             alt="Biodiesel"
             className="w-full h-64 object-cover self-center sm:border-2 border-white"
           />
@@ -46,7 +46,7 @@ export default function ProductAccordionGrid() {
         <h3 className="text-2xl mb-4">{t("glycerin.title")}</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:p-4 sm:rounded-xl bg-gradient-custom">
           <img
-            src="/images/company-strength/company-strength-1.JPG"
+            src="/images/products/glycerin.JPG"
             alt="Glycerin"
             className="w-full h-64 object-cover self-center sm:border-2 border-white"
           />
