@@ -2,12 +2,15 @@
   "header": {
     "title": "JSK Bio-fuel",
     "menu-1": "Products",
-    "submenu-1-1": "Biodiesel",
-    "submenu-1-2": "Glycerin",
     "menu-2": "About Us",
-    "menu-3": "Sustainability",
-    "menu-4": "Contact",
-    "menu-5": "Careers"
+    "menu-3": "Services",
+    "menu-4": "Contact Us",
+    "menu-5": "Careers",
+    "submenu-1-1": "Biodiesel",
+    "submenu-1-2": "Glycerin"
+  },
+  "footer": {
+    "text": "© 2023 JSK Bio-fuel. All rights reserved."
   },
   "hero": {
     "slide-1": {
@@ -26,9 +29,6 @@
       "heading": "Fuel the Change. Go JSK Biofuel",
       "description": "Be part of the global shift toward clean and efficient biofuel."
     }
-  },
-  "footer": {
-    "text": "Footer"
   },
   "strength": {
     "title": "Why Choose Us",
@@ -163,6 +163,50 @@
       "emoji": "🤝",
       "title": "Customer-Centric Approach",
       "description": "Custom blends, flexible packaging, and responsive support."
+    }
+  },
+  "contact": {
+    "cta": {
+      "heading": "Got any queries for us?",
+      "description": "We’re here to help. Reach out with questions, project ideas, or just to say hello.",
+      "button": "Contact us"
+    }
+  },
+  "PerfectInfinitePartners": {
+    "company1": "Company 1",
+    "company2": "Company 2",
+    "company3": "Company 3",
+    "company4": "Company 4",
+    "company5": "Company 5",
+    "company6": "Company 6",
+    "company7": "Company 7",
+    "company8": "Company 8"
+  },
+  "PerfectContactInfoGrid": {
+    "title": "Get in touch with us",
+    "email": {
+      "label": "Email",
+      "value": "info@jskbiofuel.com"
+    },
+    "phone": {
+      "label": "Phone",
+      "value": "+91 999-999-9999"
+    },
+    "address": {
+      "label": "Address",
+      "value": "E-3196/7, E Block Market Road, Rajajipuram, Lucknow - 226017. U.P. India"
+    },
+    "facebook": {
+      "label": "Facebook",
+      "value": "@jskbiofuel"
+    },
+    "twitter": {
+      "label": "Twitter",
+      "value": "@jskbiofuel"
+    },
+    "linkedin": {
+      "label": "LinkedIn",
+      "value": "linkedin.com/company/jskbiofuel"
     }
   }
 }

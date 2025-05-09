@@ -23,18 +23,19 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
+import { useTranslations } from "next-intl";
 
 const formSchema = z.object({
   name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
+    message: "form.nameError", // Translation key
   }),
   phone: z.string().min(10, {
-    message: "Please enter a valid phone number.",
+    message: "form.phoneError", // Translation key
   }),
   email: z
     .string()
     .email({
-      message: "Please enter a valid email address.",
+      message: "form.emailError", // Translation key
     })
     .optional()
     .or(z.literal("")),
@@ -42,11 +43,12 @@ const formSchema = z.object({
   state: z.string().optional(),
   product: z.string().optional(),
   query: z.string().min(10, {
-    message: "Query must be at least 10 characters.",
+    message: "form.queryError", // Translation key
   }),
 });
 
 export function PerfectContactForm() {
+  const t = useTranslations("PerfectContactForm"); // Namespace for translations
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -69,9 +71,8 @@ export function PerfectContactForm() {
     setTimeout(() => {
       console.log(values);
 
-      toast("Form submitted", {
-        description:
-          "We've received your message and will get back to you soon.",
+      toast(t("formSubmitted"), {
+        description: t("formSubmittedDescription"),
       });
       form.reset();
       setIsSubmitting(false);
@@ -88,10 +89,10 @@ export function PerfectContactForm() {
             render={({ field }) => (
               <FormItem>
                 <FormLabel>
-                  Name <span className="text-red-500">*</span>
+                  {t("nameLabel")} <span className="text-red-500">*</span>
                 </FormLabel>
                 <FormControl>
-                  <Input placeholder="Enter your name" {...field} />
+                  <Input placeholder={t("namePlaceholder")} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -103,10 +104,10 @@ export function PerfectContactForm() {
             render={({ field }) => (
               <FormItem>
                 <FormLabel>
-                  Phone <span className="text-red-500">*</span>
+                  {t("phoneLabel")} <span className="text-red-500">*</span>
                 </FormLabel>
                 <FormControl>
-                  <Input placeholder="Enter your phone number" {...field} />
+                  <Input placeholder={t("phonePlaceholder")} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -120,11 +121,11 @@ export function PerfectContactForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email</FormLabel>
+                <FormLabel>{t("emailLabel")}</FormLabel>
                 <FormControl>
                   <Input
                     type="email"
-                    placeholder="Enter your email"
+                    placeholder={t("emailPlaceholder")}
                     {...field}
                   />
                 </FormControl>
@@ -137,20 +138,20 @@ export function PerfectContactForm() {
             name="product"
             render={({ field }) => (
               <FormItem className="w-full">
-                <FormLabel>Product</FormLabel>
+                <FormLabel>{t("productLabel")}</FormLabel>
                 <Select
                   onValueChange={field.onChange}
                   defaultValue={field.value}
                 >
                   <FormControl className="w-full">
                     <SelectTrigger>
-                      <SelectValue placeholder="Select a product" />
+                      <SelectValue placeholder={t("productPlaceholder")} />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    <SelectItem value="product1">Biodiesel</SelectItem>
-                    <SelectItem value="product2">Glycerin</SelectItem>
-                    <SelectItem value="other">Other</SelectItem>
+                    <SelectItem value="product1">{t("product1")}</SelectItem>
+                    <SelectItem value="product2">{t("product2")}</SelectItem>
+                    <SelectItem value="other">{t("productOther")}</SelectItem>
                   </SelectContent>
                 </Select>
                 <FormMessage />
@@ -165,9 +166,9 @@ export function PerfectContactForm() {
             name="city"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>City</FormLabel>
+                <FormLabel>{t("cityLabel")}</FormLabel>
                 <FormControl>
-                  <Input placeholder="Enter your city" {...field} />
+                  <Input placeholder={t("cityPlaceholder")} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -178,9 +179,9 @@ export function PerfectContactForm() {
             name="state"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>State</FormLabel>
+                <FormLabel>{t("stateLabel")}</FormLabel>
                 <FormControl>
-                  <Input placeholder="Enter your state" {...field} />
+                  <Input placeholder={t("statePlaceholder")} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -194,11 +195,11 @@ export function PerfectContactForm() {
           render={({ field }) => (
             <FormItem>
               <FormLabel>
-                Query <span className="text-red-500">*</span>
+                {t("queryLabel")} <span className="text-red-500">*</span>
               </FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="Please describe your query or message"
+                  placeholder={t("queryPlaceholder")}
                   className="min-h-[120px]"
                   {...field}
                 />
@@ -209,7 +210,7 @@ export function PerfectContactForm() {
         />
 
         <Button type="submit" className="w-full" disabled={isSubmitting}>
-          {isSubmitting ? "Submitting..." : "Submit"}
+          {isSubmitting ? t("submitting") : t("submit")}
         </Button>
       </form>
     </Form>

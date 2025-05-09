@@ -41,7 +41,7 @@ function InnerComponent() {
           fill
           className="absolute inset-0 w-full h-full object-cover sm:rounded-xl overflow-hidden"
         />
-        <div className="relative max-w-sm w-full min-h-[200] h-auto ">
+        <div className="relative max-w-sm w-full min-h-[200px] h-auto ">
           {Array.from({ length: 7 }).map((_, idx) => {
             const featureKey = `feature-${idx + 1}`;
             const isCurrent = idx === current;

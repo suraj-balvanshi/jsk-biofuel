@@ -1,41 +1,44 @@
 import Image from "next/image";
-
-const companies = [
-  {
-    name: "Company 1",
-    logo: "/placeholder.svg?height=60&width=120",
-  },
-  {
-    name: "Company 2",
-    logo: "/placeholder.svg?height=60&width=120",
-  },
-  {
-    name: "Company 3",
-    logo: "/placeholder.svg?height=60&width=120",
-  },
-  {
-    name: "Company 4",
-    logo: "/placeholder.svg?height=60&width=120",
-  },
-  {
-    name: "Company 5",
-    logo: "/placeholder.svg?height=60&width=120",
-  },
-  {
-    name: "Company 6",
-    logo: "/placeholder.svg?height=60&width=120",
-  },
-  {
-    name: "Company 7",
-    logo: "/placeholder.svg?height=60&width=120",
-  },
-  {
-    name: "Company 8",
-    logo: "/placeholder.svg?height=60&width=120",
-  },
-];
+import { useTranslations } from "next-intl";
 
 export function PerfectInfinitePartners() {
+  const t = useTranslations("PerfectInfinitePartners");
+
+  const companies = [
+    {
+      name: t("company1"),
+      logo: "/placeholder.svg?height=60&width=120",
+    },
+    {
+      name: t("company2"),
+      logo: "/placeholder.svg?height=60&width=120",
+    },
+    {
+      name: t("company3"),
+      logo: "/placeholder.svg?height=60&width=120",
+    },
+    {
+      name: t("company4"),
+      logo: "/placeholder.svg?height=60&width=120",
+    },
+    {
+      name: t("company5"),
+      logo: "/placeholder.svg?height=60&width=120",
+    },
+    {
+      name: t("company6"),
+      logo: "/placeholder.svg?height=60&width=120",
+    },
+    {
+      name: t("company7"),
+      logo: "/placeholder.svg?height=60&width=120",
+    },
+    {
+      name: t("company8"),
+      logo: "/placeholder.svg?height=60&width=120",
+    },
+  ];
+
   const animationDuration = `${companies.length * 4}s`; // Adjust speed here
 
   return (
