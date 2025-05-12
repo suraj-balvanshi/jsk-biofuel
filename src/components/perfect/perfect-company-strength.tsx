@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-function PerfectCompanyStrength() {
+export default function PerfectCompanyStrength() {
   const t = useTranslations("companyStrength");
 
   const [current, setCurrent] = useState(0);

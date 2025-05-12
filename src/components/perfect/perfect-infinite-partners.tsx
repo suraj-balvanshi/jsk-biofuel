@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-export function PerfectInfinitePartners() {
+export default function PerfectInfinitePartners() {
   const t = useTranslations("PerfectInfinitePartners");
 
   const companies = [

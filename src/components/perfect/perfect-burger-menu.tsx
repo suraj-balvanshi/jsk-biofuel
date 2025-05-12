@@ -31,13 +31,13 @@ export default function PerfectBurgerMenu() {
                   <li>
                     <Link
                       className="active:link-click-animation py-2 block"
-                      href="/"
+                      href="/products/biodiesel"
                     >
                       {t("submenu-1-1")}
                     </Link>
                   </li>
                   <li>
-                    <Link className="py-2 block" href="/">
+                    <Link className="py-2 block" href="/products/glycerin">
                       {t("submenu-1-2")}
                     </Link>
                   </li>

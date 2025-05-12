@@ -189,16 +189,16 @@
       "value": "info@jskbiofuel.com"
     },
     "phone": {
-      "label": "Phone",
-      "value": "+91 999-999-9999"
+      "label": "Phone/Fax",
+      "value": "9839571751 , 9415564333"
     },
     "address": {
       "label": "Address",
-      "value": "E-3196/7, E Block Market Road, Rajajipuram, Lucknow - 226017. U.P. India"
+      "value": "Newaj Kheda, Parg Mohan, The Hasanganj, Unnao, Uttar Pradesh, 209841"
     },
-    "facebook": {
-      "label": "Facebook",
-      "value": "@jskbiofuel"
+    "business": {
+      "label": "Business hours",
+      "value": "8:00 a.m. to 10:00 p.m."
     },
     "twitter": {
       "label": "Twitter",

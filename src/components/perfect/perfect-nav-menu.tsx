@@ -18,8 +18,12 @@ export default function PerfectNavMenu() {
           <NavigationMenuItem>
             <NavigationMenuTrigger>{t("menu-1")}</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <NavigationMenuLink>{t("submenu-1-1")}</NavigationMenuLink>
-              <NavigationMenuLink>{t("submenu-1-2")}</NavigationMenuLink>
+              <NavigationMenuLink href="/products/biodiesel">
+                {t("submenu-1-1")}
+              </NavigationMenuLink>
+              <NavigationMenuLink href="/products/glycerin">
+                {t("submenu-1-2")}
+              </NavigationMenuLink>
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>

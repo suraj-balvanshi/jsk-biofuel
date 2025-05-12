@@ -1,11 +1,11 @@
 import {
   FaEnvelope,
   FaPhone,
-  FaMapMarkerAlt,
-  FaFacebook,
-  FaTwitter,
+  FaMapLocationDot,
+  FaBusinessTime,
+  FaXTwitter,
   FaLinkedin,
-} from "react-icons/fa";
+} from "react-icons/fa6";
 import { useTranslations } from "next-intl";
 
 export default function PerfectContactInfoGrid() {
@@ -42,25 +42,25 @@ export default function PerfectContactInfoGrid() {
           {/* Address */}
           <div className="w-full border-b md:w-1/2 md:border-r lg:w-1/3 lg:border-r-0 p-8">
             <div className="flex items-center mb-6">
-              <FaMapMarkerAlt className="h-6 w-6" />
+              <FaMapLocationDot className="h-6 w-6" />
               <div className="ml-4 text-xl">{t("address.label")}</div>
             </div>
             <p className="leading-loose text-gray-500">{t("address.value")}</p>
           </div>
 
-          {/* Facebook */}
+          {/* Business Hour */}
           <div className="w-full border-b md:w-1/2 lg:w-1/3 lg:border-r lg:border-b-0 p-8">
             <div className="flex items-center mb-6">
-              <FaFacebook className="h-6 w-6" />
-              <div className="ml-4 text-xl">{t("facebook.label")}</div>
+              <FaBusinessTime className="h-6 w-6" />
+              <div className="ml-4 text-xl">{t("business.label")}</div>
             </div>
-            <p className="leading-loose text-gray-500">{t("facebook.value")}</p>
+            <p className="leading-loose text-gray-500">{t("business.value")}</p>
           </div>
 
           {/* Twitter */}
           <div className="w-full border-b md:w-1/2 md:border-r md:border-b-0 lg:w-1/3 lg:border-b-0 p-8">
             <div className="flex items-center mb-6">
-              <FaTwitter className="h-6 w-6" />
+              <FaXTwitter className="h-6 w-6" />
               <div className="ml-4 text-xl">{t("twitter.label")}</div>
             </div>
             <p className="leading-loose text-gray-500">{t("twitter.value")}</p>

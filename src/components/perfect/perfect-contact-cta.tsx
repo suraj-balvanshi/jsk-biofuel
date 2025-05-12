@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-export default function ContactLeadSection() {
+export default function PerfectContactCta() {
   const t = useTranslations("contact.cta");
 
   return (
