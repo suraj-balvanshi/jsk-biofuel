@@ -220,13 +220,13 @@ export function PerfectBiodieselPage() {
       {/* Summary Section */}
       <div className="flex flex-col md:flex-row items-center gap-6">
         <div className="flex-1 text-lg">{biodieselSummary}</div>
-        <div className="flex-1">
+        <div className="flex-1 max-w-xl h-[400px] relative">
           <Image
             src="/images/products/biodiesel.JPG"
             alt="Biodiesel"
-            width={500}
-            height={300}
-            className="rounded-xl"
+            fill
+            objectFit="cover"
+            className="rounded-xl max-w-xl relative"
           />
         </div>
       </div>
@@ -271,13 +271,13 @@ export function PerfectBiodieselPage() {
 
       {/* Key Features Section */}
       <div className="flex flex-col md:flex-row gap-6 items-center">
-        <div className="flex-1">
+        <div className="flex-1 max-w-xl h-[400px] relative">
           <Image
             src="/images/products/biodiesel.JPG"
             alt="Key Features"
-            width={500}
-            height={300}
-            className="rounded-xl"
+            fill
+            objectFit="cover"
+            className="rounded-xl max-w-xl relative"
           />
         </div>
         <div>
@@ -513,6 +513,30 @@ export function PerfectGlycerinPage() {
     },
   ];
 
+  const glycerinAdvantagesTitle = "Glycerin's Advantages:";
+  const glycerinAdvantages = [
+    {
+      description:
+        "Traditional Wellness: Plays a vital role in Ayurvedic and herbalwellness formulations.",
+    },
+    {
+      description:
+        "Growing Industries: High demand from India’s expanding personalcare and pharmaceutical sectors.",
+    },
+    {
+      description:
+        "Supporting Local Businesses: Benefits MSME soap and cosmeticsmanufacturers in smaller cities and towns.",
+    },
+    {
+      description:
+        "Eco-Friendly Choice: Being biodegradable, it aligns with India’sSwachh Bharat and Green Chemistry initiatives.",
+    },
+    {
+      description:
+        "Versatile Applications: Widely used in tobacco processing, foodpreservation, and as an industrial lubricant.",
+    },
+  ];
+
   const glycerinFaqsTitle = "Frequently Asked Questions about Glycerin:";
   const glycerinFaqs = [
     {
@@ -544,13 +568,13 @@ export function PerfectGlycerinPage() {
       {/* Summary Section */}
       <div className="flex flex-col md:flex-row items-center gap-6">
         <div className="flex-1 text-lg">{glycerinSummary}</div>
-        <div className="flex-1">
+        <div className="flex-1 max-w-xl h-[400px] relative">
           <Image
             src="/images/products/glycerin.JPG"
             alt="Glycerin"
-            width={500}
-            height={300}
-            className="rounded-xl"
+            fill
+            objectFit="cover"
+            className="rounded-xl max-w-xl relative"
           />
         </div>
       </div>
@@ -595,13 +619,13 @@ export function PerfectGlycerinPage() {
 
       {/* Key Features Section */}
       <div className="flex flex-col md:flex-row gap-6 items-center">
-        <div className="flex-1">
+        <div className="flex-1 max-w-xl h-[400px] relative">
           <Image
             src="/images/products/glycerin.JPG"
             alt="Key Features"
-            width={500}
-            height={300}
-            className="rounded-xl"
+            fill
+            objectFit="cover"
+            className="rounded-xl max-w-xl relative"
           />
         </div>
         <div>
@@ -646,6 +670,18 @@ export function PerfectGlycerinPage() {
                 </div>
                 <p className="text-gray-800 text-sm">{item.text}</p>
               </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Product Advantages Section */}
+      <div className="text-center">
+        <h3 className="text-2xl font-bold mb-4">{glycerinAdvantagesTitle}</h3>
+        <ul className="list-disc list-inside space-y-2 text-gray-800">
+          {glycerinAdvantages.map((advantage, index) => (
+            <li key={index}>
+              <p>{advantage.description}</p>
             </li>
           ))}
         </ul>
