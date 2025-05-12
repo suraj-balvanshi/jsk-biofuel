@@ -32,6 +32,8 @@ import {
 } from "lucide-react";
 
 export function PerfectBiodieselPage() {
+  const biodieselSummary =
+    "Biodiesel is a clean, renewable alternative to traditional petroleum-based fuels. Made from sustainable plant oils and animal fats, biodiesel helps reduce harmful emissions, improve engine performance, and contribute to a more sustainable energy future. Ideal for industrial applications, transportation, and power generation, biodiesel offers a reliable and eco-friendly energy solution that supports environmental protection.";
   const biodieselApplications = [
     {
       icon: <Bus size={24} />,
@@ -74,6 +76,142 @@ export function PerfectBiodieselPage() {
       text: "Institutional Backup: Providing reliable power for schools, hospitals, and government offices.",
     },
   ];
+  const biodieselHighlightTitle = "Highlights of Biodiesel:";
+  const biodieselHighlights = [
+    {
+      title: "Renewable & Local",
+      description: "Produced domestically, ensuring a sustainable supply.",
+    },
+    {
+      title: "Cleaner Emissions",
+      description:
+        "Significantly reduces harmful emissions compared to petroleum diesel.",
+    },
+    {
+      title: "Engine Friendly",
+      description: "Works seamlessly with most existing diesel engines.",
+    },
+    {
+      title: "Versatile Blends",
+      description:
+        "Available in various blends to suit different needs (B5, B20, B100).",
+    },
+  ];
+
+  const biodieselBenefitsTitle = "Benefits of Biodiesel:";
+  const biodieselBenefits = [
+    {
+      title: "Strong Performance:",
+      description: "High lubricity, non-toxic, and naturally breaks down.",
+    },
+    {
+      title: "Reliable Power:",
+      description:
+        "Proven track record in demanding heavy-duty vehicles and fleets.",
+    },
+    {
+      title: "Future-Ready:",
+      description:
+        "Expanding applications in railways, logistics networks, and local power generation.",
+    },
+    {
+      title: "Government Support:",
+      description:
+        "Benefits from tax incentives in the U.S. and EU, and support under India's National Policy on Biofuels.",
+    },
+    {
+      title: "Cost-Effective Long-Term:",
+      description:
+        "Reduces wear on engines, offers potential tax advantages, and carbon credit opportunities.",
+    },
+  ];
+
+  const biodieselKeyFeaturesTitle = "Key Features of Biodiesel:";
+  const biodieselKeyFeatures = [
+    {
+      title: "Significant Emission Reduction:",
+      description: "Cuts CO₂ emissions by up to 75%.",
+    },
+    {
+      title: "Easy Transition:",
+      description: "No major changes needed for most diesel engines.",
+    },
+    {
+      title: "Resourceful Production:",
+      description: "Made from waste and renewable agricultural products.",
+    },
+    {
+      title: "Flexible Options:",
+      description: "Available in multiple blend levels (B5, B20, B100).",
+    },
+  ];
+
+  const biodieselEnvironmentalAdvantagesTitle =
+    "Biodiesel Environmental Advantages:";
+  const biodieselEnvironmentalAdvantages = [
+    {
+      description:
+        "Lowers greenhouse gas emissions, contributing to a healthier planet.",
+    },
+    {
+      description:
+        "Reduces harmful air pollutants like carbon monoxide and particulate matter.",
+    },
+    {
+      description:
+        "Encourages the recycling of used cooking oil and agricultural byproducts.",
+    },
+    {
+      description: "Safer for the environment in case of accidental spills.",
+    },
+  ];
+
+  const biodieselAdvantagesTitle = "Biodiesel's Advantages:";
+  const biodieselAdvantages = [
+    {
+      description:
+        "Boosting Local Economy: Supports the Make in India initiative through domestic production.",
+    },
+    {
+      description:
+        "Securing Energy Future: Enhances energy independence and reduces reliance on imported crude oil.",
+    },
+    {
+      description:
+        "Empowering Rural India: Creates jobs in rural areas and supports agricultural incomes through feedstock sourcing.",
+    },
+    {
+      description:
+        "Powering National Infrastructure: Fuels critical public services such as railways, public buses, and telecom towers.",
+    },
+    {
+      description:
+        "Ideal for Indian Conditions: Performs effectively in India's hot climate and is suitable for rural off-grid power needs.",
+    },
+  ];
+
+  const BiodieselFAQTitle = "Frequently Asked Questions about Biodiesel:";
+  const biodieselFaqs = [
+    {
+      question: "Q1: Can my diesel engine run on biodiesel?",
+      answer:
+        "A: Absolutely, most modern diesel engines can use biodiesel blends without any modifications.",
+    },
+    {
+      question: "Q2: Will biodiesel affect my engine's power?",
+      answer:
+        "A: No, biodiesel provides similar performance and fuel efficiency as regular petroleum diesel.",
+    },
+    {
+      question: "Q3: Is biodiesel more expensive than regular diesel?",
+      answer:
+        "A: While prices can vary, subsidies and lower maintenance costs often make it a cost-effective choice.",
+    },
+    {
+      question: "Q4: Is biodiesel environmentally friendly?",
+      answer: "A: Yes, it's non-toxic and readily biodegradable.",
+    },
+  ];
 
   return (
     <div className="p-6 space-y-12">
@@ -81,15 +219,7 @@ export function PerfectBiodieselPage() {
 
       {/* Summary Section */}
       <div className="flex flex-col md:flex-row items-center gap-6">
-        <div className="flex-1 text-lg">
-          Biodiesel is a clean, renewable alternative to traditional
-          petroleum-based fuels. Made from sustainable plant oils and animal
-          fats, biodiesel helps reduce harmful emissions, improve engine
-          performance, and contribute to a more sustainable energy future. Ideal
-          for industrial applications, transportation, and power generation,
-          biodiesel offers a reliable and eco-friendly energy solution that
-          supports environmental protection.
-        </div>
+        <div className="flex-1 text-lg">{biodieselSummary}</div>
         <div className="flex-1">
           <Image
             src="/images/products/biodiesel.JPG"
@@ -104,93 +234,38 @@ export function PerfectBiodieselPage() {
       {/* Key Highlights Section */}
       <div className="text-center">
         <h2 className="text-2xl font-bold">
-          <span className="text-blue-600">Highlights of Biodiesel:</span>
+          <span className="text-blue-600">{biodieselHighlightTitle}</span>
         </h2>
         <div className="grid md:grid-cols-2 gap-8 mt-6">
-          <div>
-            <h3 className="text-lg font-bold text-blue-950">
-              Renewable & Local
-            </h3>
-            <p className="text-sm text-gray-700 mt-2">
-              Produced domestically, ensuring a sustainable supply.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-lg font-bold text-blue-950">
-              Cleaner Emissions
-            </h3>
-            <p className="text-sm text-gray-700 mt-2">
-              Significantly reduces harmful emissions compared to petroleum
-              diesel.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-lg font-bold text-blue-950">Engine Friendly</h3>
-            <p className="text-sm text-gray-700 mt-2">
-              Works seamlessly with most existing diesel engines.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-lg font-bold text-blue-950">
-              Versatile Blends
-            </h3>
-            <p className="text-sm text-gray-700 mt-2">
-              Available in various blends to suit different needs (B5, B20,
-              B100).
-            </p>
-          </div>
+          {biodieselHighlights.map((highlight, index) => (
+            <div key={index}>
+              <h3 className="text-lg font-bold text-blue-950">
+                {highlight.title}
+              </h3>
+              <p className="text-sm text-gray-700 mt-2">
+                {highlight.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
 
       {/* Benefits Section */}
       <div className="bg-gray-100 p-6 rounded-xl">
         <h3 className="text-center text-2xl font-bold">
-          Benefits of Biodiesel:
+          {biodieselBenefitsTitle}
         </h3>
         <div className="grid md:grid-cols-3 gap-6 mt-6">
-          <div className="bg-white p-4 rounded shadow">
-            <h4 className="text-purple-600 text-2xl font-bold">
-              Strong Performance:
-            </h4>
-            <p className="text-sm text-gray-700 mt-1">
-              High lubricity, non-toxic, and naturally breaks down.
-            </p>
-          </div>
-          <div className="bg-white p-4 rounded shadow">
-            <h4 className="text-purple-600 text-2xl font-bold">
-              Reliable Power:
-            </h4>
-            <p className="text-sm text-gray-700 mt-1">
-              Proven track record in demanding heavy-duty vehicles and fleets.
-            </p>
-          </div>
-          <div className="bg-white p-4 rounded shadow">
-            <h4 className="text-purple-600 text-2xl font-bold">
-              Future-Ready:
-            </h4>
-            <p className="text-sm text-gray-700 mt-1">
-              Expanding applications in railways, logistics networks, and local
-              power generation.
-            </p>
-          </div>
-          <div className="bg-white p-4 rounded shadow">
-            <h4 className="text-purple-600 text-2xl font-bold">
-              Government Support:
-            </h4>
-            <p className="text-sm text-gray-700 mt-1">
-              Benefits from tax incentives in the U.S. and EU, and support under
-              India's National Policy on Biofuels.
-            </p>
-          </div>
-          <div className="bg-white p-4 rounded shadow">
-            <h4 className="text-purple-600 text-2xl font-bold">
-              Cost-Effective Long-Term:
-            </h4>
-            <p className="text-sm text-gray-700 mt-1">
-              Reduces wear on engines, offers potential tax advantages, and
-              carbon credit opportunities.
-            </p>
-          </div>
+          {biodieselBenefits.map((benefit, index) => (
+            <div key={index} className="bg-white p-4 rounded shadow">
+              <h4 className="text-purple-600 text-2xl font-bold">
+                {benefit.title}
+              </h4>
+              <p className="text-sm text-gray-700 mt-1">
+                {benefit.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -207,61 +282,31 @@ export function PerfectBiodieselPage() {
         </div>
         <div>
           <h3 className="text-purple-600 text-2xl font-bold">
-            Key Features of biodiesel:
+            {biodieselKeyFeaturesTitle}
           </h3>
           <ul className="flex-1 space-y-2 text-lg list-disc list-inside">
-            <li>
-              <p>
-                Significant Emission Reduction: Cuts CO₂ emissions by up to 75%.
-              </p>
-            </li>
-            <li>
-              <p>
-                Easy Transition: No major changes needed for most diesel
-                engines.
-              </p>
-            </li>
-            <li>
-              <p>
-                Resourceful Production: Made from waste and renewable
-                agricultural
-              </p>
-              products.
-            </li>
-            <li>
-              <p>
-                Flexible Options: Available in multiple blend levels (B5, B20,
-              </p>
-              B100).
-            </li>
+            {biodieselKeyFeatures.map((feature, index) => (
+              <li key={index}>
+                <p>
+                  <strong>{feature.title}</strong> {feature.description}
+                </p>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
 
       {/* Environmental Advantages Section */}
       <div className="text-center">
-        <h3 className="text-2xl font-bold mb-4">Environmental Advantages:</h3>
+        <h3 className="text-2xl font-bold mb-4">
+          {biodieselEnvironmentalAdvantagesTitle}
+        </h3>
         <ul className="list-disc list-inside space-y-2 text-gray-800">
-          <li>
-            <p>
-              Lowers greenhouse gas emissions, contributing to a healthier
-              planet.
-            </p>
-          </li>
-          <li>
-            <p>
-              Reduces harmful air pollutants like carbon monoxide and
-              particulate
-            </p>
-            matter.
-          </li>
-          <li>
-            <p>Encourages the recycling of used cooking oil and agricultural</p>
-            byproducts.
-          </li>
-          <li>
-            <p>Safer for the environment in case of accidental spills.</p>
-          </li>
+          {biodieselEnvironmentalAdvantages.map((advantage, index) => (
+            <li key={index}>
+              <p>{advantage.description}</p>
+            </li>
+          ))}
         </ul>
       </div>
 
@@ -271,7 +316,7 @@ export function PerfectBiodieselPage() {
         <ul className="space-y-4 grid md:grid-cols-3 gap-6">
           {biodieselApplications.map((item, index) => (
             <li key={index} className="mb-0 flex flex-col">
-              <div className="flex items-center bg-blue-50 p-4 rounded-lg shadow-sm max-w-2xl mx-auto h-full">
+              <div className="flex items-center bg-blue-50 p-4 rounded-lg shadow-sm max-w-2xl mx-auto h-full w-full">
                 <div className="bg-blue-600 text-white rounded-full p-2 mr-4">
                   {item.icon}
                 </div>
@@ -284,132 +329,48 @@ export function PerfectBiodieselPage() {
 
       {/* Product Advantages Section */}
       <div className="text-center">
-        <h3 className="text-2xl font-bold mb-4">Biodiesel's Advantages:</h3>
+        <h3 className="text-2xl font-bold mb-4">{biodieselAdvantagesTitle}</h3>
         <ul className="list-disc list-inside space-y-2 text-gray-800">
-          <li>
-            <p>
-              Boosting Local Economy: Supports the Make in India initiative
-              through domestic production.
-            </p>
-          </li>
-          <li>
-            <p>
-              Securing Energy Future: Enhances energy independence and reduces
-              reliance on imported crude oil.
-            </p>
-          </li>
-          <li>
-            <p>
-              Empowering Rural India: Creates jobs in rural areas and supports
-              agricultural incomes through feedstock sourcing.
-            </p>
-          </li>
-          <li>
-            <p>
-              Powering National Infrastructure: Fuels critical public services
-              such as railways, public buses, and telecom towers.
-            </p>
-          </li>
-          <li>
-            <p>
-              Ideal for Indian Conditions: Performs effectively in India's hot
-              climate and is suitable for rural off-grid power needs.
-            </p>
-          </li>
+          {biodieselAdvantages.map((advantage, index) => (
+            <li key={index}>
+              <p>{advantage.description}</p>
+            </li>
+          ))}
         </ul>
       </div>
 
       {/* FAQ Section */}
       <div>
         <h3 className="text-2xl font-bold mb-4 text-center">
-          Frequently Asked Questions
+          {BiodieselFAQTitle}
         </h3>
         <Accordion
           type="single"
           collapsible
           className="w-full max-w-2xl mx-auto"
         >
-          <AccordionItem value="item-1" className="mt-2 border-0">
-            <AccordionTrigger className="flex items-center gap-3 px-4 py-3 bg-gray-100 rounded-md">
-              <span className="bg-violet-600 text-white p-2 rounded-full">
-                <CircleHelp size={20} />
-              </span>
-              <span className="font-semibold text-sm">
-                <p>Q1: Can my diesel engine run on biodiesel?</p>
-              </span>
-            </AccordionTrigger>
-            <AccordionContent className="bg-indigo-100 text-sm text-gray-800 rounded-md px-4 py-3 mt-2 flex justify-between items-start gap-4">
-              <p className="flex-1">
-                <p>
-                  A: Absolutely, most modern diesel engines can use biodiesel
-                  blends without any modifications.
-                </p>
-              </p>
-              <div className="bg-violet-600 text-white p-2 rounded-full">
-                <BotMessageSquare size={20} />
-              </div>
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-2" className="mt-2 border-0">
-            <AccordionTrigger className="flex items-center gap-3 px-4 py-3 bg-gray-100 rounded-md">
-              <span className="bg-violet-600 text-white p-2 rounded-full">
-                <CircleHelp size={20} />
-              </span>
-              <span className="font-semibold text-sm">
-                <p>Q2: Will biodiesel affect my engine's power?</p>
-              </span>
-            </AccordionTrigger>
-            <AccordionContent className="bg-indigo-100 text-sm text-gray-800 rounded-md px-4 py-3 mt-2 flex justify-between items-start gap-4">
-              <p className="flex-1">
-                <p>
-                  A: No, biodiesel provides similar performance and fuel
-                  efficiency as regular petroleum diesel.
-                </p>
-              </p>
-              <div className="bg-violet-600 text-white p-2 rounded-full">
-                <BotMessageSquare size={20} />
-              </div>
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-3" className="mt-2 border-0">
-            <AccordionTrigger className="flex items-center gap-3 px-4 py-3 bg-gray-100 rounded-md">
-              <span className="bg-violet-600 text-white p-2 rounded-full">
-                <CircleHelp size={20} />
-              </span>
-              <span className="font-semibold text-sm">
-                <p>Q3: Is biodiesel more expensive than regular diesel?</p>
-              </span>
-            </AccordionTrigger>
-            <AccordionContent className="bg-indigo-100 text-sm text-gray-800 rounded-md px-4 py-3 mt-2 flex justify-between items-start gap-4">
-              <div className="flex-1">
-                <p>
-                  A: While prices can vary, subsidies and lower maintenance
-                  costs often make it a cost-effective choice.
-                </p>
-              </div>
-              <div className="bg-violet-600 text-white p-2 rounded-full">
-                <BotMessageSquare size={20} />
-              </div>
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-4" className="mt-2 border-0">
-            <AccordionTrigger className="flex items-center gap-3 px-4 py-3 bg-gray-100 rounded-md">
-              <span className="bg-violet-600 text-white p-2 rounded-full">
-                <CircleHelp size={20} />
-              </span>
-              <span className="font-semibold text-sm">
-                <p>Q4: Is biodiesel environmentally friendly?</p>
-              </span>
-            </AccordionTrigger>
-            <AccordionContent className="bg-indigo-100 text-sm text-gray-800 rounded-md px-4 py-3 mt-2 flex justify-between items-start gap-4">
-              <div className="flex-1">
-                <p>A: Yes, it's non-toxic and readily biodegradable.</p>
-              </div>
-              <div className="bg-violet-600 text-white p-2 rounded-full">
-                <BotMessageSquare size={20} />
-              </div>
-            </AccordionContent>
-          </AccordionItem>
+          {biodieselFaqs.map((faq, index) => (
+            <AccordionItem
+              key={index}
+              value={`item-${index + 1}`}
+              className="mt-2 border-0"
+            >
+              <AccordionTrigger className="flex items-center gap-3 px-4 py-3 bg-gray-100 rounded-md">
+                <span className="bg-violet-600 text-white p-2 rounded-full">
+                  <CircleHelp size={20} />
+                </span>
+                <span className="font-semibold text-sm">
+                  <p>{faq.question}</p>
+                </span>
+              </AccordionTrigger>
+              <AccordionContent className="bg-indigo-100 text-sm text-gray-800 rounded-md px-4 py-3 mt-2 flex justify-between items-start gap-4">
+                <p className="flex-1">{faq.answer}</p>
+                <div className="bg-violet-600 text-white p-2 rounded-full">
+                  <BotMessageSquare size={20} />
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
         </Accordion>
       </div>
     </div>
@@ -417,6 +378,9 @@ export function PerfectBiodieselPage() {
 }
 
 export function PerfectGlycerinPage() {
+  const glycerinSummary =
+    "Glycerin is a high-quality byproduct of biodiesel production, valued for its versatility and wide range of industrial applications. Known for its moisturizing and non-toxic properties, glycerin is widely used in personal care products, pharmaceuticals, and food manufacturing. With its excellent purity and sustainability, glycerin provides an eco-friendly resource for various industries looking for safe and effective ingredients.";
+
   const glycerinApplications = [
     {
       icon: <Leaf size={24} />,
@@ -459,21 +423,127 @@ export function PerfectGlycerinPage() {
       text: "Textile Industry: In dyeing and fabric sizing.",
     },
   ];
+
+  const glycerinHighlightsTitle = "Highlights of Glycerin:";
+  const glycerinHighlights = [
+    {
+      title: "High Quality",
+      description: "Available in pharmaceutical and cosmetic grades.",
+    },
+    {
+      title: "Sustainable Source",
+      description: "Derived from renewable resources.",
+    },
+    {
+      title: "Gentle & Effective",
+      description: "Moisturizing and non-toxic.",
+    },
+    {
+      title: "Broad Utility",
+      description: "Used across numerous industries.",
+    },
+  ];
+
+  const glycerinBenefitsTitle = "Benefits of Glycerin:";
+  const glycerinBenefits = [
+    {
+      title: "Purity & Stability:",
+      description: "High purity, non-irritating, and has a long shelf life.",
+    },
+    {
+      title: "Essential Ingredient:",
+      description:
+        "A crucial component in pharmaceuticals and fast-moving consumer goods (FMCG).",
+    },
+    {
+      title: "Future Potential:",
+      description:
+        "Expanding applications in green chemicals, bio-packaging, and even solar technology.",
+    },
+    {
+      title: "Indirect Support:",
+      description:
+        "Benefits from the overall support of the biodiesel industry.",
+    },
+    {
+      title: "Economical Value:",
+      description:
+        "A low-cost byproduct with significant potential for high-value applications.",
+    },
+  ];
+
+  const glycerinKeyFeaturesTitle = "Key Features of Glycerin:";
+  const glycerinKeyFeatures = [
+    {
+      title: "Biodiesel-Derived:",
+      description: "Produced from renewable biodiesel manufacturing.",
+    },
+    {
+      title: "Multiple Grades:",
+      description:
+        "Available in technical, USP (pharmaceutical), and food grades.",
+    },
+    {
+      title: "Highly Soluble:",
+      description: "Water-soluble and attracts moisture (hygroscopic).",
+    },
+    {
+      title: "Safe to Use:",
+      description: "Non-toxic and safe for human applications.",
+    },
+  ];
+
+  const glycerinEnvironmentalAdvantagesTitle = "Environmental Advantages:";
+  const glycerinEnvironmentalAdvantages = [
+    {
+      description:
+        "Renewable Origin: Produced from biodegradable and renewable sources.",
+    },
+    {
+      description:
+        "Waste Reduction: Supports a zero-waste approach by utilizing biodiesel byproducts.",
+    },
+    {
+      description:
+        "Safer Alternative: A less toxic option compared to some petroleum-based chemicals.",
+    },
+    {
+      description:
+        "Cleaner Water: Helps reduce chemical pollution in wastewater.",
+    },
+  ];
+
+  const glycerinFaqsTitle = "Frequently Asked Questions about Glycerin:";
+  const glycerinFaqs = [
+    {
+      question: "Q1: Is glycerin safe for my skin?",
+      answer:
+        "A: Yes, it's a common ingredient in Indian skincare products known for its excellent moisturizing properties.",
+    },
+    {
+      question: "Q2: What are the different types of glycerin available?",
+      answer:
+        "A: The main grades are technical, USP (pharmaceutical), and food-grade.",
+    },
+    {
+      question: "Q3: Is glycerin environmentally friendly?",
+      answer:
+        "A: Yes, especially when it's a byproduct of biodiesel production, making it biodegradable and renewable.",
+    },
+    {
+      question: "Q4: Can I use glycerin in Indian cooking and sweets?",
+      answer:
+        "A: Absolutely. Food-grade glycerin is used in various Indian sweets, bakery items, and dairy products.",
+    },
+  ];
+
   return (
     <div className="p-6 space-y-12">
       <h2 className="text-center text-4xl font-bold">Glycerin</h2>
 
       {/* Summary Section */}
       <div className="flex flex-col md:flex-row items-center gap-6">
-        <div className="flex-1 text-lg">
-          Glycerin is a high-quality byproduct of biodiesel production, valued
-          for its versatility and wide range of industrial applications. Known
-          for its moisturizing and non-toxic properties, glycerin is widely used
-          in personal care products, pharmaceuticals, and food manufacturing.
-          With its excellent purity and sustainability, glycerin provides an
-          eco-friendly resource for various industries looking for safe and
-          effective ingredients.
-        </div>
+        <div className="flex-1 text-lg">{glycerinSummary}</div>
         <div className="flex-1">
           <Image
             src="/images/products/glycerin.JPG"
@@ -488,126 +558,43 @@ export function PerfectGlycerinPage() {
       {/* Key Highlights Section */}
       <div className="text-center">
         <h2 className="text-2xl font-bold">
-          <span className="text-blue-600">Highlights of Glycerin:</span>
+          <span className="text-blue-600">{glycerinHighlightsTitle}</span>
         </h2>
         <div className="grid md:grid-cols-2 gap-8 mt-6">
-          <div>
-            <h3 className="text-lg font-bold text-blue-950">High Quality</h3>
-            <p className="text-sm text-gray-700 mt-2">
-              Available in pharmaceutical and cosmetic grades.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-lg font-bold text-blue-950">
-              Sustainable Source
-            </h3>
-            <p className="text-sm text-gray-700 mt-2">
-              Derived from renewable resources.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-lg font-bold text-blue-950">
-              Gentle & Effective
-            </h3>
-            <p className="text-sm text-gray-700 mt-2">
-              Moisturizing and non-toxic.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-lg font-bold text-blue-950">Broad Utility</h3>
-            <p className="text-sm text-gray-700 mt-2">
-              Used across numerous industries.
-            </p>
-          </div>
+          {glycerinHighlights.map((highlight, index) => (
+            <div key={index}>
+              <h3 className="text-lg font-bold text-blue-950">
+                {highlight.title}
+              </h3>
+              <p className="text-sm text-gray-700 mt-2">
+                {highlight.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
 
       {/* Benefits Section */}
       <div className="bg-gray-100 p-6 rounded-xl">
-        <h2 className="text-center text-2xl font-bold">
-          Benefits of Glycerin:
-        </h2>
+        <h3 className="text-center text-2xl font-bold">
+          {glycerinBenefitsTitle}
+        </h3>
         <div className="grid md:grid-cols-3 gap-6 mt-6">
-          <div className="bg-white p-4 rounded shadow">
-            <h3 className="text-purple-600 text-2xl font-bold">
-              Purity & Stability:
-            </h3>
-            <p className="text-sm text-gray-700 mt-1">
-              High purity, non-irritating, and has a long shelf life.
-            </p>
-          </div>
-
-          <div className="bg-white p-4 rounded shadow">
-            <h3 className="text-purple-600 text-2xl font-bold">
-              Essential Ingredient:
-            </h3>
-            <p className="text-sm text-gray-700 mt-1">
-              A crucial component in pharmaceuticals and fast-moving consumer
-              goods (FMCG).
-            </p>
-          </div>
-
-          <div className="bg-white p-4 rounded shadow">
-            <h3 className="text-purple-600 text-2xl font-bold">
-              Future Potential:
-            </h3>
-            <p className="text-sm text-gray-700 mt-1">
-              Expanding applications in green chemicals, bio-packaging, and even
-              solar technology.
-            </p>
-          </div>
-
-          <div className="bg-white p-4 rounded shadow">
-            <h3 className="text-purple-600 text-2xl font-bold">
-              Indirect Support:
-            </h3>
-            <p className="text-sm text-gray-700 mt-1">
-              Benefits from the overall support of the biodiesel industry.
-            </p>
-          </div>
-
-          <div className="bg-white p-4 rounded shadow">
-            <h3 className="text-purple-600 text-2xl font-bold">
-              Economical Value:
-            </h3>
-            <p className="text-sm text-gray-700 mt-1">
-              A low-cost byproduct with significant potential for high-value
-              applications.
-            </p>
-          </div>
+          {glycerinBenefits.map((benefit, index) => (
+            <div key={index} className="bg-white p-4 rounded shadow">
+              <h4 className="text-purple-600 text-2xl font-bold">
+                {benefit.title}
+              </h4>
+              <p className="text-sm text-gray-700 mt-1">
+                {benefit.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
 
       {/* Key Features Section */}
       <div className="flex flex-col md:flex-row gap-6 items-center">
-        <div>
-          <h3 className="text-purple-600 text-2xl font-bold">
-            Key Features of Glycerin
-          </h3>
-          <ul className="flex-1 space-y-2 text-lg list-disc list-inside">
-            <li>
-              <p>
-                Biodiesel-Derived: Produced from renewable biodiesel
-                manufacturing.
-              </p>
-            </li>
-            <li>
-              <p>
-                Multiple Grades: Available in technical, USP (pharmaceutical),
-                and food grades.
-              </p>
-            </li>
-            <li>
-              <p>
-                Highly Soluble: Water-soluble and attracts moisture
-                (hygroscopic).
-              </p>
-            </li>
-            <li>
-              <p>Safe to Use: Non-toxic and safe for human applications.</p>
-            </li>
-          </ul>
-        </div>
         <div className="flex-1">
           <Image
             src="/images/products/glycerin.JPG"
@@ -617,186 +604,85 @@ export function PerfectGlycerinPage() {
             className="rounded-xl"
           />
         </div>
-      </div>
-
-      {/* Environmental Advantages Section */}
-      <div className="text-center">
-        <h3 className="text-2xl font-bold mb-4">Environmental Advantages:</h3>
-        <ul className="list-disc list-inside space-y-2 text-gray-800">
-          <li>
-            <p>
-              Renewable Origin: Produced from biodegradable and renewable
-              sources.
-            </p>
-          </li>
-          <li>
-            <p>
-              Waste Reduction: Supports a zero-waste approach by utilizing
-              biodiesel byproducts.
-            </p>
-          </li>
-          <li>
-            <p>
-              Safer Alternative: A less toxic option compared to some
-              petroleum-based chemicals.
-            </p>
-          </li>
-          <li>
-            <p>Cleaner Water: Helps reduce chemical pollution in wastewater.</p>
-          </li>
-        </ul>
-      </div>
-
-      {/* Product Applications Section */}
-      <div>
         <div>
-          <h2 className="text-2xl font-bold mb-4">Glycerin Applications:</h2>
-          <ul className="space-y-4 grid md:grid-cols-3 gap-6">
-            {glycerinApplications.map((item, index) => (
+          <h3 className="text-purple-600 text-2xl font-bold">
+            {glycerinKeyFeaturesTitle}
+          </h3>
+          <ul className="flex-1 space-y-2 text-lg list-disc list-inside">
+            {glycerinKeyFeatures.map((feature, index) => (
               <li key={index}>
-                <div className="flex items-center bg-blue-50 p-4 rounded-lg shadow-sm">
-                  <div className="bg-blue-600 text-white rounded-full p-2 mr-4 flex items-center justify-center w-10 h-10">
-                    {item.icon}
-                  </div>
-                  <p className="text-gray-800 text-sm">{item.text}</p>
-                </div>
+                <p>
+                  <strong>{feature.title}</strong> {feature.description}
+                </p>
               </li>
             ))}
           </ul>
         </div>
       </div>
 
-      {/* Product Advantages Section */}
+      {/* Environmental Advantages Section */}
       <div className="text-center">
-        <h3 className="text-2xl font-bold mb-4">Glycerin's Advantages:</h3>
+        <h3 className="text-2xl font-bold mb-4">
+          {glycerinEnvironmentalAdvantagesTitle}
+        </h3>
         <ul className="list-disc list-inside space-y-2 text-gray-800">
-          <li>
-            <p>
-              Traditional Wellness: Plays a vital role in Ayurvedic and herbal
-              wellness formulations.
-            </p>
-          </li>
-          <li>
-            <p>
-              Growing Industries: High demand from India’s expanding personal
-              care and pharmaceutical sectors.
-            </p>
-          </li>
-          <li>
-            <p>
-              Supporting Local Businesses: Benefits MSME soap and cosmetics
-              manufacturers in smaller cities and towns.
-            </p>
-          </li>
-          <li>
-            <p>
-              Eco-Friendly Choice: Being biodegradable, it aligns with India’s
-              Swachh Bharat and Green Chemistry initiatives.
-            </p>
-          </li>
-          <li>
-            <p>
-              Versatile Applications: Widely used in tobacco processing, food
-              preservation, and as an industrial lubricant.
-            </p>
-          </li>
+          {glycerinEnvironmentalAdvantages.map((advantage, index) => (
+            <li key={index}>
+              <p>{advantage.description}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Product Applications Section */}
+      <div>
+        <h3 className="text-2xl font-bold mb-4">Glycerin Applications</h3>
+        <ul className="space-y-4 grid md:grid-cols-3 gap-6">
+          {glycerinApplications.map((item, index) => (
+            <li key={index} className="mb-0 flex flex-col">
+              <div className="flex items-center bg-blue-50 p-4 rounded-lg shadow-sm max-w-2xl mx-auto h-full w-full">
+                <div className="bg-blue-600 text-white rounded-full p-2 mr-4 flex items-center justify-center w-10 h-10">
+                  {item.icon}
+                </div>
+                <p className="text-gray-800 text-sm">{item.text}</p>
+              </div>
+            </li>
+          ))}
         </ul>
       </div>
 
       {/* FAQ Section */}
       <div>
         <h3 className="text-2xl font-bold mb-4 text-center">
-          Frequently Asked Questions
+          {glycerinFaqsTitle}
         </h3>
         <Accordion
           type="single"
           collapsible
           className="w-full max-w-2xl mx-auto"
         >
-          <AccordionItem value="item-1" className="mt-2 border-0">
-            <AccordionTrigger className="flex items-center gap-3 px-4 py-3 bg-gray-100 rounded-md">
-              <span className="bg-violet-600 text-white p-2 rounded-full">
-                <CircleHelp size={20} />
-              </span>
-              <span className="font-semibold text-sm">
-                <p>Q1: Is glycerin safe for my skin?</p>
-              </span>
-            </AccordionTrigger>
-            <AccordionContent className="bg-indigo-100 text-sm text-gray-800 rounded-md px-4 py-3 mt-2 flex justify-between items-start gap-4">
-              <p className="flex-1">
-                <p>
-                  A: Yes, it's a common ingredient in Indian skincare products
-                  known for its excellent moisturizing properties.
-                </p>
-              </p>
-              <div className="bg-violet-600 text-white p-2 rounded-full">
-                <BotMessageSquare size={20} />
-              </div>
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-2" className="mt-2 border-0">
-            <AccordionTrigger className="flex items-center gap-3 px-4 py-3 bg-gray-100 rounded-md">
-              <span className="bg-violet-600 text-white p-2 rounded-full">
-                <CircleHelp size={20} />
-              </span>
-              <span className="font-semibold text-sm">
-                <p>Q2: What are the different types of glycerin available?</p>
-              </span>
-            </AccordionTrigger>
-            <AccordionContent className="bg-indigo-100 text-sm text-gray-800 rounded-md px-4 py-3 mt-2 flex justify-between items-start gap-4">
-              <p className="flex-1">
-                <p>
-                  A: The main grades are technical, USP (pharmaceutical), and
-                  food-grade.
-                </p>
-              </p>
-              <div className="bg-violet-600 text-white p-2 rounded-full">
-                <BotMessageSquare size={20} />
-              </div>
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-3" className="mt-2 border-0">
-            <AccordionTrigger className="flex items-center gap-3 px-4 py-3 bg-gray-100 rounded-md">
-              <span className="bg-violet-600 text-white p-2 rounded-full">
-                <CircleHelp size={20} />
-              </span>
-              <span className="font-semibold text-sm">
-                <p>Q3: Is glycerin environmentally friendly?</p>
-              </span>
-            </AccordionTrigger>
-            <AccordionContent className="bg-indigo-100 text-sm text-gray-800 rounded-md px-4 py-3 mt-2 flex justify-between items-start gap-4">
-              <div className="flex-1">
-                <p>
-                  A: Yes, especially when it's a byproduct of biodiesel
-                  production, making it biodegradable and renewable.
-                </p>
-              </div>
-              <div className="bg-violet-600 text-white p-2 rounded-full">
-                <BotMessageSquare size={20} />
-              </div>
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-4" className="mt-2 border-0">
-            <AccordionTrigger className="flex items-center gap-3 px-4 py-3 bg-gray-100 rounded-md">
-              <span className="bg-violet-600 text-white p-2 rounded-full">
-                <CircleHelp size={20} />
-              </span>
-              <span className="font-semibold text-sm">
-                <p>Q4: Can I use glycerin in Indian cooking and sweets?</p>
-              </span>
-            </AccordionTrigger>
-            <AccordionContent className="bg-indigo-100 text-sm text-gray-800 rounded-md px-4 py-3 mt-2 flex justify-between items-start gap-4">
-              <div className="flex-1">
-                <p>
-                  A: Absolutely. Food-grade glycerin is used in various Indian
-                  sweets, bakery items, and dairy products.
-                </p>
-              </div>
-              <div className="bg-violet-600 text-white p-2 rounded-full">
-                <BotMessageSquare size={20} />
-              </div>
-            </AccordionContent>
-          </AccordionItem>
+          {glycerinFaqs.map((faq, index) => (
+            <AccordionItem
+              key={index}
+              value={`item-${index + 1}`}
+              className="mt-2 border-0"
+            >
+              <AccordionTrigger className="flex items-center gap-3 px-4 py-3 bg-gray-100 rounded-md">
+                <span className="bg-violet-600 text-white p-2 rounded-full">
+                  <CircleHelp size={20} />
+                </span>
+                <span className="font-semibold text-sm">
+                  <p>{faq.question}</p>
+                </span>
+              </AccordionTrigger>
+              <AccordionContent className="bg-indigo-100 text-sm text-gray-800 rounded-md px-4 py-3 mt-2 flex justify-between items-start gap-4">
+                <p className="flex-1">{faq.answer}</p>
+                <div className="bg-violet-600 text-white p-2 rounded-full">
+                  <BotMessageSquare size={20} />
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
         </Accordion>
       </div>
     </div>
