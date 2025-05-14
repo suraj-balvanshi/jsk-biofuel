@@ -27,7 +27,7 @@
     "followUs": {
       "title": "Follow Us",
       "linkedin": "@jskbiofuel",
-      "twitter": "@jskbiofuel"
+      "whatsapp": "9839571751"
     },
     "copyright": "© 2025 JSK Biofuel All rights reserved."
   },
@@ -360,23 +360,26 @@
     "title": "Get in touch with us",
     "email": {
       "label": "Email",
-      "value": "info@jskbiofuel.com"
+      "value": "info@jskbiofuel.com",
+      "link": "mailto:info@jskbiofuel.com"
     },
     "phone": {
       "label": "Phone/Fax",
-      "value": "9839571751 , 9415564333"
+      "value": "9839571751 , 9415564333",
+      "link": "tel:9839571751"
     },
     "address": {
       "label": "Address",
-      "value": "Newaj Kheda, Parg Mohan, The Hasanganj, Unnao, Uttar Pradesh, 209841"
+      "value": "Newaj Kheda, Parg Mohan, The Hasanganj, Unnao, Uttar Pradesh, 209841",
+      "link": "https://www.google.com/maps/search/?api=1&query=Newaj+Kheda,+Parg+Mohan,+The+Hasanganj,+Unnao,+Uttar+Pradesh,+209841"
     },
     "business": {
       "label": "Business hours",
       "value": "8:00 a.m. to 10:00 p.m."
     },
-    "twitter": {
-      "label": "Twitter",
-      "value": "@jskbiofuel"
+    "whatsapp": {
+      "label": "WhatsApp",
+      "value": "9839571751"
     },
     "linkedin": {
       "label": "LinkedIn",

@@ -3,7 +3,7 @@ import {
   FaPhone,
   FaMapLocationDot,
   FaBusinessTime,
-  FaXTwitter,
+  FaWhatsapp,
   FaLinkedin,
 } from "react-icons/fa6";
 import { useTranslations } from "next-intl";
@@ -29,7 +29,12 @@ export default function PerfectContactInfoGrid() {
                 {t("email.label")}
               </div>
             </div>
-            <p className="leading-loose text-gray-500">{t("email.value")}</p>
+            <a
+              href={t("email.link")}
+              className="leading-loose text-gray-500 underline"
+            >
+              {t("email.value")}
+            </a>
           </div>
 
           {/* Phone */}
@@ -40,7 +45,12 @@ export default function PerfectContactInfoGrid() {
                 {t("phone.label")}
               </div>
             </div>
-            <p className="leading-loose text-gray-500">{t("phone.value")}</p>
+            <a
+              href={t("phone.link")}
+              className="leading-loose text-gray-500 underline"
+            >
+              {t("phone.value")}
+            </a>
           </div>
 
           {/* Address */}
@@ -51,7 +61,14 @@ export default function PerfectContactInfoGrid() {
                 {t("address.label")}
               </div>
             </div>
-            <p className="leading-loose text-gray-500">{t("address.value")}</p>
+            <a
+              href={t("address.link")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="leading-loose text-gray-500 underline"
+            >
+              {t("address.value")}
+            </a>
           </div>
 
           {/* Business Hour */}
@@ -65,15 +82,22 @@ export default function PerfectContactInfoGrid() {
             <p className="leading-loose text-gray-500">{t("business.value")}</p>
           </div>
 
-          {/* Twitter */}
+          {/* WhatsApp */}
           <div className="w-full border-b md:w-1/2 md:border-r md:border-b-0 lg:w-1/3 lg:border-b-0 p-8">
             <div className="flex items-center mb-6">
-              <FaXTwitter className="h-6 w-6" />
+              <FaWhatsapp className="h-6 w-6" />
               <div className="ml-4 text-xl font-semibold">
-                {t("twitter.label")}
+                {t("whatsapp.label")}
               </div>
             </div>
-            <p className="leading-loose text-gray-500">{t("twitter.value")}</p>
+            <a
+              href={`https://wa.me/${t("whatsapp.value")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="leading-loose text-gray-500 underline"
+            >
+              {t("whatsapp.value")}
+            </a>
           </div>
 
           {/* LinkedIn */}

@@ -1,4 +1,4 @@
-import { FaLinkedin, FaTwitter } from "react-icons/fa6";
+import { FaLinkedin, FaWhatsapp } from "react-icons/fa6";
 import { useTranslations } from "next-intl";
 
 export default function PerfectFooter() {
@@ -66,11 +66,19 @@ export default function PerfectFooter() {
           <div className="flex space-x-4">
             <div className="hover:text-blue-400">
               <FaLinkedin className="h-6 w-6" />
+              <br />
               <p>{t("followUs.linkedin")}</p>
             </div>
             <div className="hover:text-pink-500">
-              <FaTwitter className="h-6 w-6" />
-              <p>{t("followUs.twitter")}</p>
+              <a
+                href={`https://wa.me/${t("followUs.whatsapp")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaWhatsapp className="h-6 w-6" />
+                <br />
+                <p>{t("followUs.whatsapp")}</p>
+              </a>
             </div>
           </div>
         </div>
