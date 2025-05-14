@@ -10,7 +10,26 @@
     "submenu-1-2": "Glycerin"
   },
   "footer": {
-    "text": "© 2025 JSK Bio-fuel. All rights reserved."
+    "title": "JSK Biofuel",
+    "description": "Fueling the Future, Sustainably. Explore how biofuel is transforming the world of renewable energy and reducing carbon emissions.",
+    "quickLinks": {
+      "title": "Quick Links",
+      "biodiesel": "Biodiesel",
+      "glycerin": "Glycerin",
+      "career": "Career"
+    },
+    "contactUs": {
+      "title": "Contact Us",
+      "email": "info@jskbiofuel.com",
+      "phone1": "+91 9839571751",
+      "phone2": "+91 9415564333"
+    },
+    "followUs": {
+      "title": "Follow Us",
+      "linkedin": "@jskbiofuel",
+      "twitter": "@jskbiofuel"
+    },
+    "copyright": "© 2025 JSK Biofuel All rights reserved."
   },
   "hero": {
     "slide-1": {
@@ -387,6 +406,55 @@
       "emailError": "Please enter a valid email address.",
       "queryError": "Query must be at least 10 characters."
     }
+  },
+  "career": {
+    "title": "Career",
+    "positionInfo": "Position Information",
+    "positionLabel": "Position Applying For",
+    "positionPlaceholder": "Select a position",
+    "position1": "Sales Manager",
+    "position2": "Chemical Engineer",
+    "position3": "Mechanical Engineer",
+    "position4": "CRE",
+    "personalInfo": "Personal Information",
+    "professionalInfo": "Professional Information",
+    "references": "References",
+    "referencesNote": "Please provide a professional reference (optional)",
+    "resumeUpload": "Resume Upload",
+    "dragDrop": "Drag and drop your resume here or click to browse",
+    "selectFile": "Select File",
+    "supportedFormats": "Supported formats: PDF, DOC, DOCX (Max 5MB)",
+    "submitting": "Submitting...",
+    "submit": "Submit Application",
+    "formSubmitted": "Application submitted successfully!",
+    "formError": "There was an error submitting your application. Please try again.",
+    "serverError": "There was an error sending email. Please try again.",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "Enter your full name",
+    "phoneLabel": "Phone Number",
+    "phonePlaceholder": "Enter your phone number",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "Enter your email address",
+    "addressLabel": "Address",
+    "addressPlaceholder": "Enter your full address",
+    "previousPositionLabel": "Previous Position",
+    "previousPositionPlaceholder": "Enter your previous position",
+    "previousCompanyLabel": "Previous Company",
+    "previousCompanyPlaceholder": "Enter your previous company",
+    "expectedCTCLabel": "Expected CTC",
+    "expectedCTCPlaceholder": "Enter your expected CTC",
+    "yearsOfExperienceLabel": "Years of Experience",
+    "yearsOfExperiencePlaceholder": "Enter your years of experience",
+    "referenceNameLabel": "Reference Name",
+    "referenceNamePlaceholder": "Enter the reference name",
+    "referenceCompanyLabel": "Reference Company",
+    "referenceCompanyPlaceholder": "Enter the reference company",
+    "referencePositionLabel": "Reference Position",
+    "referencePositionPlaceholder": "Enter the reference position",
+    "referenceEmailLabel": "Reference Email",
+    "referenceEmailPlaceholder": "Enter the reference email",
+    "referencePhoneLabel": "Reference Phone",
+    "referencePhonePlaceholder": "Enter the reference phone number"
   },
   "about": {
     "imageTitle": "Company Overview",

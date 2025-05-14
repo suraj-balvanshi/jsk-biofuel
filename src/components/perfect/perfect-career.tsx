@@ -1,12 +1,12 @@
 "use client";
 
 import type React from "react";
-
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Upload, X } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -27,8 +27,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Card } from "@/components/ui/card";
-
-import { useRef } from "react";
 
 const formSchema = z.object({
   position: z.string({
@@ -74,6 +72,7 @@ const formSchema = z.object({
 type FormValues = z.infer<typeof formSchema>;
 
 export default function PerfectCareer() {
+  const t = useTranslations("career");
   const [resumeFile, setResumeFile] = useState<File | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
@@ -113,78 +112,68 @@ export default function PerfectCareer() {
     setIsSubmitting(true);
 
     try {
-      try {
-        const formData = new FormData();
+      const formData = new FormData();
 
-        // Append all form values
-        Object.entries(data).forEach(([key, value]) => {
-          if (value !== undefined) {
-            formData.append(key, value);
-          }
-        });
-
-        // Append the resume file
-        if (resumeFile) {
-          formData.append("resume", resumeFile);
+      // Append all form values
+      Object.entries(data).forEach(([key, value]) => {
+        if (value !== undefined) {
+          formData.append(key, value);
         }
+      });
 
-        const response = await fetch("/api/career-email", {
-          method: "POST",
-          body: formData,
-        });
-
-        if (!response.ok) {
-          throw new Error("Failed to send email");
-        }
-
-        const result = await response.json();
-        alert("Application submitted successfully!");
-
-        form.reset();
-        setResumeFile(null);
-      } catch (error) {
-        console.error("Error:", error);
-        alert(
-          "There was an error submitting your application. Please try again."
-        );
+      // Append the resume file
+      if (resumeFile) {
+        formData.append("resume", resumeFile);
       }
+
+      const response = await fetch("/api/career-email", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (!response.ok) {
+        alert(t("serverError"));
+        throw new Error("Failed to send email");
+      }
+
+      alert(t("formSubmitted"));
+      form.reset();
+      setResumeFile(null);
     } catch (error) {
-      console.error("Error submitting form:", error);
-      alert(
-        "There was an error submitting your application. Please try again."
-      );
+      console.error("Error:", error);
+      alert(t("formError"));
     } finally {
       setIsSubmitting(false);
     }
   };
 
   const positions = [
-    "Sales Manager",
-    "Chemical Engineer",
-    "Mechanical Engineer",
-    "CRE",
+    t("position1"),
+    t("position2"),
+    t("position3"),
+    t("position4"),
   ];
 
   return (
     <Card className="p-6 my-4 max-w-4xl mx-auto">
-      <h3 className="text-6xl text-center font-bold">Career</h3>
+      <h3 className="text-6xl text-center font-bold">{t("title")}</h3>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <div className="space-y-4">
-            <h2 className="text-xl font-semibold">Position Information</h2>
+            <h2 className="text-xl font-semibold">{t("positionInfo")}</h2>
             <FormField
               control={form.control}
               name="position"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Position Applying For</FormLabel>
+                  <FormLabel>{t("positionLabel")}</FormLabel>
                   <Select
                     onValueChange={field.onChange}
                     defaultValue={field.value}
                   >
                     <FormControl>
                       <SelectTrigger>
-                        <SelectValue placeholder="Select a position" />
+                        <SelectValue placeholder={t("positionPlaceholder")} />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
@@ -202,16 +191,16 @@ export default function PerfectCareer() {
           </div>
 
           <div className="space-y-4">
-            <h2 className="text-xl font-semibold">Personal Information</h2>
+            <h2 className="text-xl font-semibold">{t("personalInfo")}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <FormField
                 control={form.control}
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Full Name</FormLabel>
+                    <FormLabel>{t("nameLabel")}</FormLabel>
                     <FormControl>
-                      <Input placeholder="Rajesh Kumar" {...field} />
+                      <Input placeholder={t("namePlaceholder")} {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -223,9 +212,9 @@ export default function PerfectCareer() {
                 name="phone"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Phone Number</FormLabel>
+                    <FormLabel>{t("phoneLabel")}</FormLabel>
                     <FormControl>
-                      <Input placeholder="+91 9876543210" {...field} />
+                      <Input placeholder={t("phonePlaceholder")} {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -237,10 +226,10 @@ export default function PerfectCareer() {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Email Address</FormLabel>
+                    <FormLabel>{t("emailLabel")}</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="rajesh.kumar@example.com"
+                        placeholder={t("emailPlaceholder")}
                         type="email"
                         {...field}
                       />
@@ -255,10 +244,10 @@ export default function PerfectCareer() {
                 name="address"
                 render={({ field }) => (
                   <FormItem className="md:col-span-2">
-                    <FormLabel>Address</FormLabel>
+                    <FormLabel>{t("addressLabel")}</FormLabel>
                     <FormControl>
                       <Textarea
-                        placeholder="123 MG Road, Bengaluru, Karnataka, 560001"
+                        placeholder={t("addressPlaceholder")}
                         {...field}
                       />
                     </FormControl>
@@ -270,16 +259,19 @@ export default function PerfectCareer() {
           </div>
 
           <div className="space-y-4">
-            <h2 className="text-xl font-semibold">Professional Information</h2>
+            <h2 className="text-xl font-semibold">{t("professionalInfo")}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <FormField
                 control={form.control}
                 name="previousPosition"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Previous Position</FormLabel>
+                    <FormLabel>{t("previousPositionLabel")}</FormLabel>
                     <FormControl>
-                      <Input placeholder="Chemical Engineer" {...field} />
+                      <Input
+                        placeholder={t("previousPositionPlaceholder")}
+                        {...field}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -291,9 +283,12 @@ export default function PerfectCareer() {
                 name="previousCompany"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Previous Company</FormLabel>
+                    <FormLabel>{t("previousCompanyLabel")}</FormLabel>
                     <FormControl>
-                      <Input placeholder="Reliance Industries" {...field} />
+                      <Input
+                        placeholder={t("previousCompanyPlaceholder")}
+                        {...field}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -305,9 +300,12 @@ export default function PerfectCareer() {
                 name="expectedCTC"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Expected CTC</FormLabel>
+                    <FormLabel>{t("expectedCTCLabel")}</FormLabel>
                     <FormControl>
-                      <Input placeholder="₹12,00,000" {...field} />
+                      <Input
+                        placeholder={t("expectedCTCPlaceholder")}
+                        {...field}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -319,9 +317,12 @@ export default function PerfectCareer() {
                 name="yearsOfExperience"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Years of Experience</FormLabel>
+                    <FormLabel>{t("yearsOfExperienceLabel")}</FormLabel>
                     <FormControl>
-                      <Input placeholder="5" {...field} />
+                      <Input
+                        placeholder={t("yearsOfExperiencePlaceholder")}
+                        {...field}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -331,19 +332,20 @@ export default function PerfectCareer() {
           </div>
 
           <div className="space-y-4">
-            <h2 className="text-xl font-semibold">References</h2>
-            <p className="text-sm text-gray-500 mb-4">
-              Please provide a professional reference (optional)
-            </p>
+            <h2 className="text-xl font-semibold">{t("references")}</h2>
+            <p className="text-sm text-gray-500 mb-4">{t("referencesNote")}</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <FormField
                 control={form.control}
                 name="referenceName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Reference Name</FormLabel>
+                    <FormLabel>{t("referenceNameLabel")}</FormLabel>
                     <FormControl>
-                      <Input placeholder="Anil Sharma" {...field} />
+                      <Input
+                        placeholder={t("referenceNamePlaceholder")}
+                        {...field}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -355,9 +357,12 @@ export default function PerfectCareer() {
                 name="referenceCompany"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Reference Company</FormLabel>
+                    <FormLabel>{t("referenceCompanyLabel")}</FormLabel>
                     <FormControl>
-                      <Input placeholder="Tata Chemicals" {...field} />
+                      <Input
+                        placeholder={t("referenceCompanyPlaceholder")}
+                        {...field}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -369,9 +374,12 @@ export default function PerfectCareer() {
                 name="referencePosition"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Reference Position</FormLabel>
+                    <FormLabel>{t("referencePositionLabel")}</FormLabel>
                     <FormControl>
-                      <Input placeholder="Senior Manager" {...field} />
+                      <Input
+                        placeholder={t("referencePositionPlaceholder")}
+                        {...field}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -383,10 +391,10 @@ export default function PerfectCareer() {
                 name="referenceEmail"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Reference Email</FormLabel>
+                    <FormLabel>{t("referenceEmailLabel")}</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="anil.sharma@example.com"
+                        placeholder={t("referenceEmailPlaceholder")}
                         type="email"
                         {...field}
                       />
@@ -401,9 +409,12 @@ export default function PerfectCareer() {
                 name="referencePhone"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Reference Phone</FormLabel>
+                    <FormLabel>{t("referencePhoneLabel")}</FormLabel>
                     <FormControl>
-                      <Input placeholder="+91 9876543211" {...field} />
+                      <Input
+                        placeholder={t("referencePhonePlaceholder")}
+                        {...field}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -413,7 +424,7 @@ export default function PerfectCareer() {
           </div>
 
           <div className="space-y-4">
-            <h2 className="text-xl font-semibold">Resume Upload</h2>
+            <h2 className="text-xl font-semibold">{t("resumeUpload")}</h2>
             <div
               onDragOver={(e) => {
                 e.preventDefault();
@@ -445,7 +456,7 @@ export default function PerfectCareer() {
                 <div className="flex flex-col items-center justify-center space-y-2 cursor-pointer">
                   <Upload className="h-8 w-8 text-gray-400" />
                   <p className="text-sm text-gray-500 text-center">
-                    Drag and drop your resume here <br /> or click to browse
+                    {t("dragDrop")}
                   </p>
                   <label htmlFor="resume-upload">
                     <div className="mt-2">
@@ -455,7 +466,7 @@ export default function PerfectCareer() {
                         size="sm"
                         onClick={() => fileInputRef.current?.click()}
                       >
-                        Select File
+                        {t("selectFile")}
                       </Button>
                     </div>
                     <input
@@ -468,7 +479,7 @@ export default function PerfectCareer() {
                     />
                   </label>
                   <p className="text-xs text-gray-400 mt-2">
-                    Supported formats: PDF, DOC, DOCX (Max 5MB)
+                    {t("supportedFormats")}
                   </p>
                 </div>
               ) : (
@@ -506,7 +517,7 @@ export default function PerfectCareer() {
 
           <div className="pt-4">
             <Button type="submit" className="w-full" disabled={isSubmitting}>
-              {isSubmitting ? "Submitting..." : "Submit Application"}
+              {isSubmitting ? t("submitting") : t("submit")}
             </Button>
           </div>
         </form>
