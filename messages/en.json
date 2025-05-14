@@ -339,7 +339,12 @@
       "heading": "Got any queries for us?",
       "description": "We’re here to help. Reach out with questions, project ideas, or just to say hello.",
       "button": "Contact us"
-    }
+    },
+    "heroImageAlt": "Contact us",
+    "heroTitle": "Let’s power a greener future, together.",
+    "heroDescription": "Whether you’re a fuel distributor, industrial buyer, or partner in renewable energy — we’re here to collaborate. Reach out to explore biodiesel and glycerin solutions tailored for India’s growing energy needs.",
+    "contactUsTitle": "Contact Us",
+    "contactUsDescription": "Fill out the form below and we'll get back to you as soon as possible."
   },
   "PerfectInfinitePartners": {
     "company1": "Company 1",
