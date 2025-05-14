@@ -30,192 +30,124 @@ import {
   Shirt,
   Ruler,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export function PerfectBiodieselPage() {
-  const biodieselSummary =
-    "Biodiesel is a clean, renewable alternative to traditional petroleum-based fuels. Made from sustainable plant oils and animal fats, biodiesel helps reduce harmful emissions, improve engine performance, and contribute to a more sustainable energy future. Ideal for industrial applications, transportation, and power generation, biodiesel offers a reliable and eco-friendly energy solution that supports environmental protection.";
-  const biodieselApplications = [
-    {
-      icon: <Bus size={24} />,
-      text: "Public Transportation: Powering state-run RTC buses.",
-    },
-    {
-      icon: <TrainFront size={24} />,
-      text: "Railways: Fueling diesel locomotives and maintenance vehicles of Indian Railways.",
-    },
-    {
-      icon: <Truck size={24} />,
-      text: "Commercial Transport: Used in trucking and logistics fleets nationwide.",
-    },
-    {
-      icon: <Tractor size={24} />,
-      text: "Agriculture: Powering tractors and irrigation pump-sets.",
-    },
-    {
-      icon: <Hammer size={24} />,
-      text: "Construction: Running earth movers and generators on construction sites.",
-    },
-    {
-      icon: <Power size={24} />,
-      text: "Rural Power: Providing backup power for rural electrification and health centers managed by the state.",
-    },
-    {
-      icon: <Fuel size={24} />,
-      text: "Fuel Retail: Available as blended fuel options at IOCL, HPCL, and BPCL fuel stations.",
-    },
-    {
-      icon: <Building2 size={24} />,
-      text: "Urban Services: Powering municipal garbage trucks and other service vehicles in cities.",
-    },
-    {
-      icon: <Signal size={24} />,
-      text: "Telecom: Fueling DG sets in mobile communication towers.",
-    },
-    {
-      icon: <ShieldCheck size={24} />,
-      text: "Institutional Backup: Providing reliable power for schools, hospitals, and government offices.",
-    },
-  ];
-  const biodieselHighlightTitle = "Highlights of Biodiesel:";
+  const t = useTranslations("products.biodiesel");
+  console.log(t);
+
+  const biodieselSummary = t("summary");
+  const biodieselHighlightTitle = t("highlightTitle");
   const biodieselHighlights = [
     {
-      title: "Renewable & Local",
-      description: "Produced domestically, ensuring a sustainable supply.",
+      title: t("highlights.renewable"),
+      description: t("highlights.renewableDescription"),
     },
     {
-      title: "Cleaner Emissions",
-      description:
-        "Significantly reduces harmful emissions compared to petroleum diesel.",
+      title: t("highlights.cleanerEmissions"),
+      description: t("highlights.cleanerEmissionsDescription"),
     },
     {
-      title: "Engine Friendly",
-      description: "Works seamlessly with most existing diesel engines.",
+      title: t("highlights.engineFriendly"),
+      description: t("highlights.engineFriendlyDescription"),
     },
     {
-      title: "Versatile Blends",
-      description:
-        "Available in various blends to suit different needs (B5, B20, B100).",
+      title: t("highlights.versatileBlends"),
+      description: t("highlights.versatileBlendsDescription"),
     },
   ];
 
-  const biodieselBenefitsTitle = "Benefits of Biodiesel:";
+  const biodieselBenefitsTitle = t("benefitsTitle");
   const biodieselBenefits = [
     {
-      title: "Strong Performance:",
-      description: "High lubricity, non-toxic, and naturally breaks down.",
+      title: t("benefits.performance"),
+      description: t("benefits.performanceDescription"),
     },
     {
-      title: "Reliable Power:",
-      description:
-        "Proven track record in demanding heavy-duty vehicles and fleets.",
+      title: t("benefits.reliablePower"),
+      description: t("benefits.reliablePowerDescription"),
     },
     {
-      title: "Future-Ready:",
-      description:
-        "Expanding applications in railways, logistics networks, and local power generation.",
+      title: t("benefits.futureReady"),
+      description: t("benefits.futureReadyDescription"),
     },
     {
-      title: "Government Support:",
-      description:
-        "Benefits from tax incentives in the U.S. and EU, and support under India's National Policy on Biofuels.",
+      title: t("benefits.governmentSupport"),
+      description: t("benefits.governmentSupportDescription"),
     },
     {
-      title: "Cost-Effective Long-Term:",
-      description:
-        "Reduces wear on engines, offers potential tax advantages, and carbon credit opportunities.",
+      title: t("benefits.costEffective"),
+      description: t("benefits.costEffectiveDescription"),
     },
   ];
 
-  const biodieselKeyFeaturesTitle = "Key Features of Biodiesel:";
+  const biodieselKeyFeaturesTitle = t("keyFeaturesTitle");
   const biodieselKeyFeatures = [
     {
-      title: "Significant Emission Reduction:",
-      description: "Cuts CO₂ emissions by up to 75%.",
+      title: t("keyFeatures.emissionReduction"),
+      description: t("keyFeatures.emissionReductionDescription"),
     },
     {
-      title: "Easy Transition:",
-      description: "No major changes needed for most diesel engines.",
+      title: t("keyFeatures.easyTransition"),
+      description: t("keyFeatures.easyTransitionDescription"),
     },
     {
-      title: "Resourceful Production:",
-      description: "Made from waste and renewable agricultural products.",
+      title: t("keyFeatures.resourcefulProduction"),
+      description: t("keyFeatures.resourcefulProductionDescription"),
     },
     {
-      title: "Flexible Options:",
-      description: "Available in multiple blend levels (B5, B20, B100).",
+      title: t("keyFeatures.flexibleOptions"),
+      description: t("keyFeatures.flexibleOptionsDescription"),
     },
   ];
 
-  const biodieselEnvironmentalAdvantagesTitle =
-    "Biodiesel Environmental Advantages:";
+  const biodieselEnvironmentalAdvantagesTitle = t(
+    "environmentalAdvantagesTitle"
+  );
   const biodieselEnvironmentalAdvantages = [
-    {
-      description:
-        "Lowers greenhouse gas emissions, contributing to a healthier planet.",
-    },
-    {
-      description:
-        "Reduces harmful air pollutants like carbon monoxide and particulate matter.",
-    },
-    {
-      description:
-        "Encourages the recycling of used cooking oil and agricultural byproducts.",
-    },
-    {
-      description: "Safer for the environment in case of accidental spills.",
-    },
+    { description: t("environmentalAdvantages.greenhouseGas") },
+    { description: t("environmentalAdvantages.airPollutants") },
+    { description: t("environmentalAdvantages.recycling") },
+    { description: t("environmentalAdvantages.saferSpills") },
   ];
 
-  const biodieselAdvantagesTitle = "Biodiesel's Advantages:";
+  const biodieselAdvantagesTitle = t("advantagesTitle");
   const biodieselAdvantages = [
-    {
-      description:
-        "Boosting Local Economy: Supports the Make in India initiative through domestic production.",
-    },
-    {
-      description:
-        "Securing Energy Future: Enhances energy independence and reduces reliance on imported crude oil.",
-    },
-    {
-      description:
-        "Empowering Rural India: Creates jobs in rural areas and supports agricultural incomes through feedstock sourcing.",
-    },
-    {
-      description:
-        "Powering National Infrastructure: Fuels critical public services such as railways, public buses, and telecom towers.",
-    },
-    {
-      description:
-        "Ideal for Indian Conditions: Performs effectively in India's hot climate and is suitable for rural off-grid power needs.",
-    },
+    { description: t("advantages.localEconomy") },
+    { description: t("advantages.energyFuture") },
+    { description: t("advantages.ruralIndia") },
+    { description: t("advantages.infrastructure") },
+    { description: t("advantages.indianConditions") },
   ];
 
-  const BiodieselFAQTitle = "Frequently Asked Questions about Biodiesel:";
+  const BiodieselFAQTitle = t("faqTitle");
   const biodieselFaqs = [
+    { question: t("faqs.q1"), answer: t("faqs.a1") },
+    { question: t("faqs.q2"), answer: t("faqs.a2") },
+    { question: t("faqs.q3"), answer: t("faqs.a3") },
+    { question: t("faqs.q4"), answer: t("faqs.a4") },
+  ];
+
+  const biodieselApplicationsTitle = t("applicationsTitle");
+  const biodieselApplications = [
+    { icon: <Bus size={24} />, text: t("applications.publicTransportation") },
+    { icon: <TrainFront size={24} />, text: t("applications.railways") },
+    { icon: <Truck size={24} />, text: t("applications.commercialTransport") },
+    { icon: <Tractor size={24} />, text: t("applications.agriculture") },
+    { icon: <Hammer size={24} />, text: t("applications.construction") },
+    { icon: <Power size={24} />, text: t("applications.ruralPower") },
+    { icon: <Fuel size={24} />, text: t("applications.fuelRetail") },
+    { icon: <Building2 size={24} />, text: t("applications.urbanServices") },
+    { icon: <Signal size={24} />, text: t("applications.telecom") },
     {
-      question: "Q1: Can my diesel engine run on biodiesel?",
-      answer:
-        "A: Absolutely, most modern diesel engines can use biodiesel blends without any modifications.",
-    },
-    {
-      question: "Q2: Will biodiesel affect my engine's power?",
-      answer:
-        "A: No, biodiesel provides similar performance and fuel efficiency as regular petroleum diesel.",
-    },
-    {
-      question: "Q3: Is biodiesel more expensive than regular diesel?",
-      answer:
-        "A: While prices can vary, subsidies and lower maintenance costs often make it a cost-effective choice.",
-    },
-    {
-      question: "Q4: Is biodiesel environmentally friendly?",
-      answer: "A: Yes, it's non-toxic and readily biodegradable.",
+      icon: <ShieldCheck size={24} />,
+      text: t("applications.institutionalBackup"),
     },
   ];
 
   return (
     <div className="p-6 space-y-12">
-      <h2 className="text-center text-4xl font-bold">Biodiesel</h2>
+      <h2 className="text-center text-4xl font-bold">{t("title")}</h2>
 
       {/* Summary Section */}
       <div className="flex flex-col md:flex-row items-center gap-6">
@@ -312,7 +244,9 @@ export function PerfectBiodieselPage() {
 
       {/* Product Applications Section */}
       <div>
-        <h3 className="text-2xl font-bold mb-4">Biodiesel Applications</h3>
+        <h3 className="text-2xl font-bold mb-4">
+          {biodieselApplicationsTitle}
+        </h3>
         <ul className="space-y-4 grid md:grid-cols-3 gap-6">
           {biodieselApplications.map((item, index) => (
             <li key={index} className="mb-0 flex flex-col">
@@ -378,192 +312,120 @@ export function PerfectBiodieselPage() {
 }
 
 export function PerfectGlycerinPage() {
-  const glycerinSummary =
-    "Glycerin is a high-quality byproduct of biodiesel production, valued for its versatility and wide range of industrial applications. Known for its moisturizing and non-toxic properties, glycerin is widely used in personal care products, pharmaceuticals, and food manufacturing. With its excellent purity and sustainability, glycerin provides an eco-friendly resource for various industries looking for safe and effective ingredients.";
+  const t = useTranslations("products.glycerin");
 
-  const glycerinApplications = [
-    {
-      icon: <Leaf size={24} />,
-      text: "Ayurveda & Herbal Products: In soaps, tonics, and balms.",
-    },
-    {
-      icon: <Soap size={24} />,
-      text: "Soap & Detergent Manufacturing: Especially for brands in rural markets.",
-    },
-    {
-      icon: <Droplets size={24} />,
-      text: "Toiletries & Cosmetics: In skin creams, shampoos, and face washes.",
-    },
-    {
-      icon: <Pill size={24} />,
-      text: "Pharmaceuticals: In cough syrups and liquid medications (elixirs).",
-    },
-    {
-      icon: <Cigarette size={24} />,
-      text: "Tobacco Industry: In the production of beedis and flavored chewing tobacco.",
-    },
-    {
-      icon: <CakeSlice size={24} />,
-      text: "Food Industry: In traditional Indian sweets (mithai), dairy desserts, and processed foods.",
-    },
-    {
-      icon: <Package size={24} />,
-      text: "Plastic & Rubber Processing: In the manufacturing of locally produced molded goods.",
-    },
-    {
-      icon: <SprayCan size={24} />,
-      text: "Agrochemicals: As a carrier agent for fertilizers and pesticides in agriculture.",
-    },
-    {
-      icon: <Ruler size={24} />,
-      text: "Leather Industry: In the tanning and finishing processes.",
-    },
-    {
-      icon: <Shirt size={24} />,
-      text: "Textile Industry: In dyeing and fabric sizing.",
-    },
-  ];
-
-  const glycerinHighlightsTitle = "Highlights of Glycerin:";
+  const glycerinSummary = t("summary");
+  const glycerinHighlightsTitle = t("highlightsTitle");
   const glycerinHighlights = [
     {
-      title: "High Quality",
-      description: "Available in pharmaceutical and cosmetic grades.",
+      title: t("highlights.highQuality"),
+      description: t("highlights.highQualityDescription"),
     },
     {
-      title: "Sustainable Source",
-      description: "Derived from renewable resources.",
+      title: t("highlights.sustainableSource"),
+      description: t("highlights.sustainableSourceDescription"),
     },
     {
-      title: "Gentle & Effective",
-      description: "Moisturizing and non-toxic.",
+      title: t("highlights.gentleEffective"),
+      description: t("highlights.gentleEffectiveDescription"),
     },
     {
-      title: "Broad Utility",
-      description: "Used across numerous industries.",
+      title: t("highlights.broadUtility"),
+      description: t("highlights.broadUtilityDescription"),
     },
   ];
 
-  const glycerinBenefitsTitle = "Benefits of Glycerin:";
+  const glycerinBenefitsTitle = t("benefitsTitle");
   const glycerinBenefits = [
     {
-      title: "Purity & Stability:",
-      description: "High purity, non-irritating, and has a long shelf life.",
+      title: t("benefits.purityStability"),
+      description: t("benefits.purityStabilityDescription"),
     },
     {
-      title: "Essential Ingredient:",
-      description:
-        "A crucial component in pharmaceuticals and fast-moving consumer goods (FMCG).",
+      title: t("benefits.essentialIngredient"),
+      description: t("benefits.essentialIngredientDescription"),
     },
     {
-      title: "Future Potential:",
-      description:
-        "Expanding applications in green chemicals, bio-packaging, and even solar technology.",
+      title: t("benefits.futurePotential"),
+      description: t("benefits.futurePotentialDescription"),
     },
     {
-      title: "Indirect Support:",
-      description:
-        "Benefits from the overall support of the biodiesel industry.",
+      title: t("benefits.indirectSupport"),
+      description: t("benefits.indirectSupportDescription"),
     },
     {
-      title: "Economical Value:",
-      description:
-        "A low-cost byproduct with significant potential for high-value applications.",
+      title: t("benefits.economicalValue"),
+      description: t("benefits.economicalValueDescription"),
     },
   ];
 
-  const glycerinKeyFeaturesTitle = "Key Features of Glycerin:";
+  const glycerinKeyFeaturesTitle = t("keyFeaturesTitle");
   const glycerinKeyFeatures = [
     {
-      title: "Biodiesel-Derived:",
-      description: "Produced from renewable biodiesel manufacturing.",
+      title: t("keyFeatures.biodieselDerived"),
+      description: t("keyFeatures.biodieselDerivedDescription"),
     },
     {
-      title: "Multiple Grades:",
-      description:
-        "Available in technical, USP (pharmaceutical), and food grades.",
+      title: t("keyFeatures.multipleGrades"),
+      description: t("keyFeatures.multipleGradesDescription"),
     },
     {
-      title: "Highly Soluble:",
-      description: "Water-soluble and attracts moisture (hygroscopic).",
+      title: t("keyFeatures.highlySoluble"),
+      description: t("keyFeatures.highlySolubleDescription"),
     },
     {
-      title: "Safe to Use:",
-      description: "Non-toxic and safe for human applications.",
+      title: t("keyFeatures.safeToUse"),
+      description: t("keyFeatures.safeToUseDescription"),
     },
   ];
 
-  const glycerinEnvironmentalAdvantagesTitle = "Environmental Advantages:";
+  const glycerinEnvironmentalAdvantagesTitle = t(
+    "environmentalAdvantagesTitle"
+  );
   const glycerinEnvironmentalAdvantages = [
-    {
-      description:
-        "Renewable Origin: Produced from biodegradable and renewable sources.",
-    },
-    {
-      description:
-        "Waste Reduction: Supports a zero-waste approach by utilizing biodiesel byproducts.",
-    },
-    {
-      description:
-        "Safer Alternative: A less toxic option compared to some petroleum-based chemicals.",
-    },
-    {
-      description:
-        "Cleaner Water: Helps reduce chemical pollution in wastewater.",
-    },
+    { description: t("environmentalAdvantages.renewableOrigin") },
+    { description: t("environmentalAdvantages.wasteReduction") },
+    { description: t("environmentalAdvantages.saferAlternative") },
+    { description: t("environmentalAdvantages.cleanerWater") },
   ];
 
-  const glycerinAdvantagesTitle = "Glycerin's Advantages:";
+  const glycerinAdvantagesTitle = t("advantagesTitle");
   const glycerinAdvantages = [
-    {
-      description:
-        "Traditional Wellness: Plays a vital role in Ayurvedic and herbalwellness formulations.",
-    },
-    {
-      description:
-        "Growing Industries: High demand from India’s expanding personalcare and pharmaceutical sectors.",
-    },
-    {
-      description:
-        "Supporting Local Businesses: Benefits MSME soap and cosmeticsmanufacturers in smaller cities and towns.",
-    },
-    {
-      description:
-        "Eco-Friendly Choice: Being biodegradable, it aligns with India’sSwachh Bharat and Green Chemistry initiatives.",
-    },
-    {
-      description:
-        "Versatile Applications: Widely used in tobacco processing, foodpreservation, and as an industrial lubricant.",
-    },
+    { description: t("advantages.traditionalWellness") },
+    { description: t("advantages.growingIndustries") },
+    { description: t("advantages.supportingLocalBusinesses") },
+    { description: t("advantages.ecoFriendlyChoice") },
+    { description: t("advantages.versatileApplications") },
   ];
 
-  const glycerinFaqsTitle = "Frequently Asked Questions about Glycerin:";
+  const glycerinFaqsTitle = t("faqTitle");
   const glycerinFaqs = [
+    { question: t("faqs.q1"), answer: t("faqs.a1") },
+    { question: t("faqs.q2"), answer: t("faqs.a2") },
+    { question: t("faqs.q3"), answer: t("faqs.a3") },
+    { question: t("faqs.q4"), answer: t("faqs.a4") },
+  ];
+
+  const glycerinApplicationsTitle = t("applicationsTitle");
+  const glycerinApplications = [
+    { icon: <Leaf size={24} />, text: t("applications.ayurveda") },
+    { icon: <Soap size={24} />, text: t("applications.soapManufacturing") },
     {
-      question: "Q1: Is glycerin safe for my skin?",
-      answer:
-        "A: Yes, it's a common ingredient in Indian skincare products known for its excellent moisturizing properties.",
+      icon: <Droplets size={24} />,
+      text: t("applications.toiletriesCosmetics"),
     },
-    {
-      question: "Q2: What are the different types of glycerin available?",
-      answer:
-        "A: The main grades are technical, USP (pharmaceutical), and food-grade.",
-    },
-    {
-      question: "Q3: Is glycerin environmentally friendly?",
-      answer:
-        "A: Yes, especially when it's a byproduct of biodiesel production, making it biodegradable and renewable.",
-    },
-    {
-      question: "Q4: Can I use glycerin in Indian cooking and sweets?",
-      answer:
-        "A: Absolutely. Food-grade glycerin is used in various Indian sweets, bakery items, and dairy products.",
-    },
+    { icon: <Pill size={24} />, text: t("applications.pharmaceuticals") },
+    { icon: <Cigarette size={24} />, text: t("applications.tobaccoIndustry") },
+    { icon: <CakeSlice size={24} />, text: t("applications.foodIndustry") },
+    { icon: <Package size={24} />, text: t("applications.plasticRubber") },
+    { icon: <SprayCan size={24} />, text: t("applications.agrochemicals") },
+    { icon: <Ruler size={24} />, text: t("applications.leatherIndustry") },
+    { icon: <Shirt size={24} />, text: t("applications.textileIndustry") },
   ];
 
   return (
     <div className="p-6 space-y-12">
-      <h2 className="text-center text-4xl font-bold">Glycerin</h2>
+      <h2 className="text-center text-4xl font-bold">{t("title")}</h2>
 
       {/* Summary Section */}
       <div className="flex flex-col md:flex-row items-center gap-6">

@@ -55,12 +55,12 @@ export default function PerfectBurgerMenu() {
               </Link>
             </li>
             <li>
-              <Link className="active:animate-jump py-2 block" href="/">
+              <Link className="active:animate-jump py-2 block" href="/about">
                 {t("menu-4")}
               </Link>
             </li>
             <li>
-              <Link className="active:animate-jump py-2 block" href="/">
+              <Link className="active:animate-jump py-2 block" href="/contact">
                 {t("menu-5")}
               </Link>
             </li>

@@ -33,12 +33,12 @@ export default function PerfectNavMenu() {
             <NavigationMenuLink>{t("menu-3")}</NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink href="/contact-us">
-              {t("menu-4")}
-            </NavigationMenuLink>
+            <NavigationMenuLink href="/about">{t("menu-4")}</NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink>{t("menu-5")}</NavigationMenuLink>
+            <NavigationMenuLink href="/contact">
+              {t("menu-5")}
+            </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
