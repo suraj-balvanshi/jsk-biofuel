@@ -1,92 +1,12 @@
+// src/app/(root)/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
 import { NextIntlClientProvider, useTranslations } from "next-intl";
 import PerfectNavMenu from "@/components/perfect/perfect-nav-menu";
 import PerfectBurgerMenu from "@/components/perfect/perfect-burger-menu";
-
-// fonts.ts
-import localFont from "next/font/local";
 import Link from "next/link";
 import PerfectFooter from "@/components/perfect/perfect-footer";
-
-// Inter 18pt – Optimized for large text
-export const inter_18pt = localFont({
-  src: [
-    {
-      path: "../../../public/fonts/Inter/Inter_18pt-Regular.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../../public/fonts/Inter/Inter_18pt-Italic.ttf",
-      weight: "400",
-      style: "italic",
-    },
-    {
-      path: "../../../public/fonts/Inter/Inter_18pt-Bold.ttf",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../../../public/fonts/Inter/Inter_18pt-BoldItalic.ttf",
-      weight: "700",
-      style: "italic",
-    },
-  ],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-//Playfair 9pt – Optimized for small text
-export const playfair_9pt = localFont({
-  src: [
-    {
-      path: "../../../public/fonts/Playfair/Playfair_9pt-Regular.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../../public/fonts/Playfair/Playfair_9pt-Italic.ttf",
-      weight: "400",
-      style: "italic",
-    },
-    {
-      path: "../../../public/fonts/Playfair/Playfair_9pt-Bold.ttf",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../../../public/fonts/Playfair/Playfair_9pt-BoldItalic.ttf",
-      weight: "700",
-      style: "italic",
-    },
-  ],
-  variable: "--font-playfair",
-  display: "swap",
-});
-
-// Space Grotesk – UI and Titles
-export const spaceGrotesk = localFont({
-  src: [
-    {
-      path: "../../../public/fonts/SpaceGrotesk/SpaceGrotesk-Regular.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../../public/fonts/SpaceGrotesk/SpaceGrotesk-Medium.ttf",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../../../public/fonts/SpaceGrotesk/SpaceGrotesk-Bold.ttf",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  variable: "--font-space-grotesk",
-  display: "swap",
-});
+import { inter_18pt, playfair_9pt, spaceGrotesk } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: "JSK Bio-fuel",
@@ -99,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const t = useTranslations();
-  const locale = "en"; // useLocale();
+  const locale = "en";
   const messages = require(`/messages/${locale}.json`).default;
 
   return (
