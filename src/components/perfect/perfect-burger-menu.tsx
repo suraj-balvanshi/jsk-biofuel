@@ -50,7 +50,7 @@ export default function PerfectBurgerMenu() {
               </Link>
             </li>
             <li>
-              <Link className="active:animate-jump py-2 block" href="/">
+              <Link className="active:animate-jump py-2 block" href="/career">
                 {t("menu-3")}
               </Link>
             </li>

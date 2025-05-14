@@ -7,6 +7,7 @@ import PerfectBurgerMenu from "@/components/perfect/perfect-burger-menu";
 // fonts.ts
 import localFont from "next/font/local";
 import Link from "next/link";
+import PerfectFooter from "@/components/perfect/perfect-footer";
 
 // Inter 18pt – Optimized for large text
 export const inter_18pt = localFont({
@@ -122,8 +123,8 @@ export default function RootLayout({
             </nav>
           </header>
           <main className="max-content-width w-full">{children}</main>
-          <footer className="max-content-width mt-auto w-full">
-            <div>{t("footer.text")}</div>
+          <footer className="bg-gray-800 text-white py-8">
+            <PerfectFooter />
           </footer>
         </NextIntlClientProvider>
       </body>

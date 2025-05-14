@@ -19,7 +19,7 @@ export default function Home() {
       <div className="mx-4 mb-4">
         <PerfectCompanyStrength />
       </div>
-      <div className="mx-4 mb-4">
+      <div className="m-4">
         <PerfectInfinitePartners />
       </div>
       <div>
