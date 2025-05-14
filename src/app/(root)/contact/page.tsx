@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function ContactHero() {
   return (
-    <section className="w-full p-4 bg-white dark:bg-gray-950">
+    <section className="w-full p-4 bg-white font-inter">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         <div className="w-full h-64 md:h-96 relative rounded-xl overflow-hidden shadow-md">
           <Image
@@ -17,10 +17,10 @@ export default function ContactHero() {
           />
         </div>
         <div className="text-center md:text-left">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold font-spaceGrotesk text-gray-900 mb-4">
             Let’s power a greener future, together.
           </h2>
-          <p className="text-base md:text-lg text-gray-700 dark:text-gray-300">
+          <p className="text-base md:text-lg text-gray-700">
             Whether you’re a fuel distributor, industrial buyer, or partner in
             renewable energy — we’re here to collaborate. Reach out to explore
             biodiesel and glycerin solutions tailored for India’s growing energy
@@ -31,7 +31,7 @@ export default function ContactHero() {
       <div className="container py-10">
         <div className="mx-auto max-w-2xl space-y-6">
           <div className="space-y-2 text-center">
-            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl font-spaceGrotesk">
               Contact Us
             </h1>
             <p className="text-gray-500">

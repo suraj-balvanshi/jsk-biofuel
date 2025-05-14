@@ -11,13 +11,13 @@ export default function PerfectFooter() {
           <h4 className="text-lg font-bold mb-4 font-spaceGrotesk">
             {t("title")}
           </h4>
-          <p className="font-playfair">{t("description")}</p>
+          <p>{t("description")}</p>
         </div>
         <div>
           <h4 className="text-lg font-bold mb-4 font-spaceGrotesk">
             {t("quickLinks.title")}
           </h4>
-          <ul className="space-y-2 font-playfair">
+          <ul className="space-y-2">
             <li>
               <a href="/products/biodiesel" className="hover:text-gray-300">
                 {t("quickLinks.biodiesel")}
@@ -39,7 +39,7 @@ export default function PerfectFooter() {
           <h4 className="text-lg font-bold mb-4 font-spaceGrotesk">
             {t("contactUs.title")}
           </h4>
-          <ul className="space-y-2 font-playfair">
+          <ul className="space-y-2">
             <li>
               <a
                 href="mailto:info@jskbiofuel.com"
@@ -63,7 +63,7 @@ export default function PerfectFooter() {
           <h4 className="text-lg font-bold mb-4 font-spaceGrotesk">
             {t("followUs.title")}
           </h4>
-          <div className="flex space-x-4 font-playfair">
+          <div className="flex space-x-4">
             <div className="hover:text-blue-400">
               <FaLinkedin className="h-6 w-6" />
               <p>{t("followUs.linkedin")}</p>
@@ -75,7 +75,7 @@ export default function PerfectFooter() {
           </div>
         </div>
       </div>
-      <div className="text-center mt-8 font-playfair">
+      <div className="text-center mt-8">
         <p>{t("copyright")}</p>
       </div>
     </div>

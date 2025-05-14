@@ -35,7 +35,7 @@ export default function PerfectHeroSection() {
   ];
 
   return (
-    <section className="perfect-hero-section">
+    <section className="perfect-hero-section font-inter">
       <Carousel className="max-w-full mx-auto sm:m-4 mb-4">
         <CarouselContent>
           {carouselSlides.map((slide, index) => (
@@ -55,7 +55,6 @@ export default function PerfectHeroSection() {
                   <div className="text-white bg-black/35 p-4 max-w-md">
                     <h2 className="text-2xl font-semibold">{slide.heading}</h2>
                     <p className="mt-2 text-base">{slide.description}</p>
-                    <div className="h-[64px]"></div>
                   </div>
                 </div>
               </div>

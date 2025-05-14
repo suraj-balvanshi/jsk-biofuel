@@ -12,10 +12,10 @@ export default function PerfectContactInfoGrid() {
   const t = useTranslations("PerfectContactInfoGrid");
 
   return (
-    <div className="max-w-7xl mx-auto p-4">
+    <div className="max-w-7xl mx-auto p-4 font-inter">
       <div className="container mx-auto px-6 bg-white">
         <div className="mb-8 text-center">
-          <p className="mt-2 text-2xl font-bold tracking-tight text-gray-900">
+          <p className="mt-2 text-2xl font-bold font-spaceGrotesk text-gray-900">
             {t("title")}
           </p>
         </div>
@@ -25,7 +25,9 @@ export default function PerfectContactInfoGrid() {
           <div className="w-full border-b md:w-1/2 md:border-r lg:w-1/3 p-8">
             <div className="flex items-center mb-6">
               <FaEnvelope className="h-6 w-6" />
-              <div className="ml-4 text-xl">{t("email.label")}</div>
+              <div className="ml-4 text-xl font-semibold">
+                {t("email.label")}
+              </div>
             </div>
             <p className="leading-loose text-gray-500">{t("email.value")}</p>
           </div>
@@ -34,7 +36,9 @@ export default function PerfectContactInfoGrid() {
           <div className="w-full border-b md:w-1/2 lg:w-1/3 lg:border-r p-8">
             <div className="flex items-center mb-6">
               <FaPhone className="h-6 w-6" />
-              <div className="ml-4 text-xl">{t("phone.label")}</div>
+              <div className="ml-4 text-xl font-semibold">
+                {t("phone.label")}
+              </div>
             </div>
             <p className="leading-loose text-gray-500">{t("phone.value")}</p>
           </div>
@@ -43,7 +47,9 @@ export default function PerfectContactInfoGrid() {
           <div className="w-full border-b md:w-1/2 md:border-r lg:w-1/3 lg:border-r-0 p-8">
             <div className="flex items-center mb-6">
               <FaMapLocationDot className="h-6 w-6" />
-              <div className="ml-4 text-xl">{t("address.label")}</div>
+              <div className="ml-4 text-xl font-semibold">
+                {t("address.label")}
+              </div>
             </div>
             <p className="leading-loose text-gray-500">{t("address.value")}</p>
           </div>
@@ -52,7 +58,9 @@ export default function PerfectContactInfoGrid() {
           <div className="w-full border-b md:w-1/2 lg:w-1/3 lg:border-r lg:border-b-0 p-8">
             <div className="flex items-center mb-6">
               <FaBusinessTime className="h-6 w-6" />
-              <div className="ml-4 text-xl">{t("business.label")}</div>
+              <div className="ml-4 text-xl font-semibold">
+                {t("business.label")}
+              </div>
             </div>
             <p className="leading-loose text-gray-500">{t("business.value")}</p>
           </div>
@@ -61,7 +69,9 @@ export default function PerfectContactInfoGrid() {
           <div className="w-full border-b md:w-1/2 md:border-r md:border-b-0 lg:w-1/3 lg:border-b-0 p-8">
             <div className="flex items-center mb-6">
               <FaXTwitter className="h-6 w-6" />
-              <div className="ml-4 text-xl">{t("twitter.label")}</div>
+              <div className="ml-4 text-xl font-semibold">
+                {t("twitter.label")}
+              </div>
             </div>
             <p className="leading-loose text-gray-500">{t("twitter.value")}</p>
           </div>
@@ -70,7 +80,9 @@ export default function PerfectContactInfoGrid() {
           <div className="w-full md:w-1/2 lg:w-1/3 p-8">
             <div className="flex items-center mb-6">
               <FaLinkedin className="h-6 w-6" />
-              <div className="ml-4 text-xl">{t("linkedin.label")}</div>
+              <div className="ml-4 text-xl font-semibold">
+                {t("linkedin.label")}
+              </div>
             </div>
             <p className="leading-loose text-gray-500">{t("linkedin.value")}</p>
           </div>

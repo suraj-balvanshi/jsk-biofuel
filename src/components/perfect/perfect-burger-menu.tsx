@@ -14,7 +14,7 @@ export default function PerfectBurgerMenu() {
   const t = useTranslations("header");
   return (
     <Drawer direction="right">
-      <DrawerTrigger>
+      <DrawerTrigger className="font-inter">
         <Menu />
       </DrawerTrigger>
       <DrawerContent className="w-screen !max-w-3xs">
@@ -26,18 +26,21 @@ export default function PerfectBurgerMenu() {
           <ul>
             <li>
               <details>
-                <summary className="py-2">{t("menu-1")}</summary>
+                <summary className="py-2 font-semibold">{t("menu-1")}</summary>
                 <ul className="pl-4">
                   <li>
                     <Link
-                      className="active:link-click-animation py-2 block"
+                      className="active:link-click-animation py-2 block font-normal"
                       href="/products/biodiesel"
                     >
                       {t("submenu-1-1")}
                     </Link>
                   </li>
                   <li>
-                    <Link className="py-2 block" href="/products/glycerin">
+                    <Link
+                      className="py-2 block font-normal"
+                      href="/products/glycerin"
+                    >
                       {t("submenu-1-2")}
                     </Link>
                   </li>

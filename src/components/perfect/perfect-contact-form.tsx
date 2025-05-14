@@ -81,14 +81,17 @@ export default function PerfectContactForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="space-y-6 font-inter"
+      >
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <FormField
             control={form.control}
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>
+                <FormLabel className="font-semibold">
                   {t("nameLabel")} <span className="text-red-500">*</span>
                 </FormLabel>
                 <FormControl>
@@ -103,7 +106,7 @@ export default function PerfectContactForm() {
             name="phone"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>
+                <FormLabel className="font-semibold">
                   {t("phoneLabel")} <span className="text-red-500">*</span>
                 </FormLabel>
                 <FormControl>
@@ -121,7 +124,9 @@ export default function PerfectContactForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>{t("emailLabel")}</FormLabel>
+                <FormLabel className="font-semibold">
+                  {t("emailLabel")}
+                </FormLabel>
                 <FormControl>
                   <Input
                     type="email"
@@ -138,7 +143,9 @@ export default function PerfectContactForm() {
             name="product"
             render={({ field }) => (
               <FormItem className="w-full">
-                <FormLabel>{t("productLabel")}</FormLabel>
+                <FormLabel className="font-semibold">
+                  {t("productLabel")}
+                </FormLabel>
                 <Select
                   onValueChange={field.onChange}
                   defaultValue={field.value}
@@ -166,7 +173,9 @@ export default function PerfectContactForm() {
             name="city"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>{t("cityLabel")}</FormLabel>
+                <FormLabel className="font-semibold">
+                  {t("cityLabel")}
+                </FormLabel>
                 <FormControl>
                   <Input placeholder={t("cityPlaceholder")} {...field} />
                 </FormControl>
@@ -179,7 +188,9 @@ export default function PerfectContactForm() {
             name="state"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>{t("stateLabel")}</FormLabel>
+                <FormLabel className="font-semibold">
+                  {t("stateLabel")}
+                </FormLabel>
                 <FormControl>
                   <Input placeholder={t("statePlaceholder")} {...field} />
                 </FormControl>
@@ -194,7 +205,7 @@ export default function PerfectContactForm() {
           name="query"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>
+              <FormLabel className="font-semibold">
                 {t("queryLabel")} <span className="text-red-500">*</span>
               </FormLabel>
               <FormControl>
@@ -209,7 +220,11 @@ export default function PerfectContactForm() {
           )}
         />
 
-        <Button type="submit" className="w-full" disabled={isSubmitting}>
+        <Button
+          type="submit"
+          className="w-full font-spaceGrotesk"
+          disabled={isSubmitting}
+        >
           {isSubmitting ? t("submitting") : t("submit")}
         </Button>
       </form>

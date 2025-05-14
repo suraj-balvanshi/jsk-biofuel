@@ -26,7 +26,7 @@ export default function PerfectMediaPage() {
               />
               <div className="absolute inset-0 bg-black/35 bg-opacity-60 opacity-0 group-hover:opacity-100 touch:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-black">
-                  <h4 className="text-md font-bold text-white">
+                  <h4 className="text-md font-bold text-white font-playfair">
                     {t("inauguration1.caption")}
                   </h4>
                 </div>
@@ -43,7 +43,7 @@ export default function PerfectMediaPage() {
               />
               <div className="absolute inset-0 bg-black/35 bg-opacity-60 opacity-0 group-hover:opacity-100 touch:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-black">
-                  <h4 className="text-md font-bold text-white">
+                  <h4 className="text-md font-bold text-white font-playfair">
                     {t("inauguration2.caption")}
                   </h4>
                 </div>
@@ -58,7 +58,7 @@ export default function PerfectMediaPage() {
               />
               <div className="absolute inset-0 bg-black/35 bg-opacity-60 opacity-0 group-hover:opacity-100 touch:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-black">
-                  <h4 className="text-md font-bold text-white">
+                  <h4 className="text-md font-bold text-white font-playfair">
                     {t("inauguration3.caption")}
                   </h4>
                 </div>
@@ -75,7 +75,7 @@ export default function PerfectMediaPage() {
               />
               <div className="absolute inset-0 bg-black/35 bg-opacity-60 opacity-0 group-hover:opacity-100 touch:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-black">
-                  <h4 className="text-md font-bold text-white">
+                  <h4 className="text-md font-bold text-white font-playfair">
                     {t("inauguration4.caption")}
                   </h4>
                 </div>
@@ -90,7 +90,7 @@ export default function PerfectMediaPage() {
               />
               <div className="absolute inset-0 bg-black/35 bg-opacity-60 opacity-0 group-hover:opacity-100 touch:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-black">
-                  <h4 className="text-md font-bold text-white">
+                  <h4 className="text-md font-bold text-white font-playfair">
                     {t("inauguration5.caption")}
                   </h4>
                 </div>
@@ -107,7 +107,7 @@ export default function PerfectMediaPage() {
               />
               <div className="absolute inset-0 bg-black/35 bg-opacity-60 opacity-0 group-hover:opacity-100 touch:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-black">
-                  <h4 className="text-md font-bold text-white">
+                  <h4 className="text-md font-bold text-white font-playfair">
                     {t("inauguration6.caption")}
                   </h4>
                 </div>
@@ -122,7 +122,7 @@ export default function PerfectMediaPage() {
               />
               <div className="absolute inset-0 bg-black/35 bg-opacity-60 opacity-0 group-hover:opacity-100 touch:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-black">
-                  <h4 className="text-md font-bold text-white">
+                  <h4 className="text-md font-bold text-white font-playfair">
                     {t("inauguration7.caption")}
                   </h4>
                 </div>
@@ -145,7 +145,7 @@ export default function PerfectMediaPage() {
               />
               <div className="absolute inset-0 bg-black/35 bg-opacity-60 opacity-0 group-hover:opacity-100 touch:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-black">
-                  <h4 className="text-md font-bold text-white">
+                  <h4 className="text-md font-bold text-white font-playfair">
                     {t("site1.caption")}
                   </h4>
                 </div>
@@ -162,7 +162,7 @@ export default function PerfectMediaPage() {
               />
               <div className="absolute inset-0 bg-black/35 bg-opacity-60 opacity-0 group-hover:opacity-100 touch:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-black">
-                  <h4 className="text-md font-bold text-white">
+                  <h4 className="text-md font-bold text-white font-playfair">
                     {t("site2.caption")}
                   </h4>
                 </div>
@@ -177,7 +177,7 @@ export default function PerfectMediaPage() {
               />
               <div className="absolute inset-0 bg-black/35 bg-opacity-60 opacity-0 group-hover:opacity-100 touch:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-black">
-                  <h4 className="text-md font-bold text-white">
+                  <h4 className="text-md font-bold text-white font-playfair">
                     {t("site3.caption")}
                   </h4>
                 </div>
@@ -194,7 +194,7 @@ export default function PerfectMediaPage() {
               />
               <div className="absolute inset-0 bg-black/35 bg-opacity-60 opacity-0 group-hover:opacity-100 touch:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-black">
-                  <h4 className="text-md font-bold text-white">
+                  <h4 className="text-md font-bold text-white font-playfair">
                     {t("site4.caption")}
                   </h4>
                 </div>
@@ -209,7 +209,7 @@ export default function PerfectMediaPage() {
               />
               <div className="absolute inset-0 bg-black/35 bg-opacity-60 opacity-0 group-hover:opacity-100 touch:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-black">
-                  <h4 className="text-md font-bold text-white">
+                  <h4 className="text-md font-bold text-white font-playfair">
                     {t("site5.caption")}
                   </h4>
                 </div>
@@ -226,7 +226,7 @@ export default function PerfectMediaPage() {
               />
               <div className="absolute inset-0 bg-black/35 bg-opacity-60 opacity-0 group-hover:opacity-100 touch:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-black">
-                  <h4 className="text-md font-bold text-white">
+                  <h4 className="text-md font-bold text-white font-playfair">
                     {t("site6.caption")}
                   </h4>
                 </div>
@@ -241,7 +241,7 @@ export default function PerfectMediaPage() {
               />
               <div className="absolute inset-0 bg-black/35 bg-opacity-60 opacity-0 group-hover:opacity-100 touch:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-black">
-                  <h4 className="text-md font-bold text-white">
+                  <h4 className="text-md font-bold text-white font-playfair">
                     {t("site7.caption")}
                   </h4>
                 </div>
@@ -256,7 +256,7 @@ export default function PerfectMediaPage() {
               />
               <div className="absolute inset-0 bg-black/35 bg-opacity-60 opacity-0 group-hover:opacity-100 touch:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-black">
-                  <h4 className="text-md font-bold text-white">
+                  <h4 className="text-md font-bold text-white font-playfair">
                     {t("site8.caption")}
                   </h4>
                 </div>

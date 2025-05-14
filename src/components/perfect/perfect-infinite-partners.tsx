@@ -44,10 +44,10 @@ export default function PerfectInfinitePartners() {
   return (
     <div className="relative w-full overflow-hidden group">
       {/* Left gradient */}
-      <div className="absolute left-0 top-0 z-10 h-full w-24 bg-gradient-to-r from-white to-transparent dark:from-background" />
+      <div className="absolute left-0 top-0 z-10 h-full w-24 bg-gradient-to-r from-white to-transparent" />
 
       {/* Right gradient */}
-      <div className="absolute right-0 top-0 z-10 h-full w-24 bg-gradient-to-l from-white to-transparent dark:from-background" />
+      <div className="absolute right-0 top-0 z-10 h-full w-24 bg-gradient-to-l from-white to-transparent" />
 
       {/* Scrolling container */}
       <div className="flex w-full overflow-hidden">

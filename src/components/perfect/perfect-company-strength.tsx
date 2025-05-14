@@ -19,9 +19,11 @@ export default function PerfectCompanyStrength() {
   return (
     <>
       <div>
-        <h2 className="mb-4 text-3xl font-semibold">{t("title")}</h2>
+        <h2 className="mb-4 text-3xl font-bold font-spaceGrotesk">
+          {t("title")}
+        </h2>
       </div>
-      <div className="relative h-[350px] w-full overflow-hidden flex justify-end items-center px-4">
+      <div className="relative h-[350px] w-full overflow-hidden flex justify-end items-center px-4 font-inter">
         <Image
           src="/images/company-strength/company-strength-1.JPG"
           alt="Inaugration of JSK Biofuel"

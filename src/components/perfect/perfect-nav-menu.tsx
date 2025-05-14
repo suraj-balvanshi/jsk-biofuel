@@ -13,15 +13,23 @@ export default function PerfectNavMenu() {
 
   return (
     <>
-      <NavigationMenu>
+      <NavigationMenu className="font-inter">
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>{t("menu-1")}</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="font-semibold">
+              {t("menu-1")}
+            </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <NavigationMenuLink href="/products/biodiesel">
+              <NavigationMenuLink
+                href="/products/biodiesel"
+                className="font-normal"
+              >
                 {t("submenu-1-1")}
               </NavigationMenuLink>
-              <NavigationMenuLink href="/products/glycerin">
+              <NavigationMenuLink
+                href="/products/glycerin"
+                className="font-normal"
+              >
                 {t("submenu-1-2")}
               </NavigationMenuLink>
             </NavigationMenuContent>

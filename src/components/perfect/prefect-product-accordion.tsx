@@ -11,10 +11,12 @@ export default function ProductAccordionGrid() {
 
   return (
     <div>
-      <h2 className="text-3xl font-semibold mx-4">{t("title")}</h2>
+      <h2 className="text-3xl font-bold font-spaceGrotesk mx-4">
+        {t("title")}
+      </h2>
       {/* Biodiesel Section */}
-      <section className="bg-white text-black py-4 sm:mx-4">
-        <h3 className="text-2xl mb-4">{t("biodiesel.title")}</h3>
+      <section className="bg-white text-black py-4 sm:mx-4 font-inter">
+        <h3 className="text-2xl font-semibold">{t("biodiesel.title")}</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:p-4 sm:rounded-xl bg-gradient-custom">
           <img
             src="/images/products/biodiesel.JPG"
@@ -42,8 +44,8 @@ export default function ProductAccordionGrid() {
       </section>
 
       {/* Glycerin Section */}
-      <section className="bg-white text-black pb-4 sm:mx-4">
-        <h3 className="text-2xl mb-4">{t("glycerin.title")}</h3>
+      <section className="bg-white text-black pb-4 sm:mx-4 font-inter">
+        <h3 className="text-2xl font-semibold">{t("glycerin.title")}</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:p-4 sm:rounded-xl bg-gradient-custom">
           <img
             src="/images/products/glycerin.JPG"

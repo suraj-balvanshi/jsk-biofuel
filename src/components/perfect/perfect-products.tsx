@@ -146,8 +146,10 @@ export function PerfectBiodieselPage() {
   ];
 
   return (
-    <div className="p-6 space-y-12">
-      <h2 className="text-center text-4xl font-bold">{t("title")}</h2>
+    <div className="p-6 space-y-12 font-inter">
+      <h2 className="text-center text-4xl font-bold font-spaceGrotesk">
+        {t("title")}
+      </h2>
 
       {/* Summary Section */}
       <div className="flex flex-col md:flex-row items-center gap-6">
@@ -158,7 +160,7 @@ export function PerfectBiodieselPage() {
             alt="Biodiesel"
             fill
             objectFit="cover"
-            className="rounded-xl max-w-xl relative"
+            className="rounded-xl max-w-xl !relative"
           />
         </div>
       </div>
@@ -205,11 +207,11 @@ export function PerfectBiodieselPage() {
       <div className="flex flex-col md:flex-row gap-6 items-center">
         <div className="flex-1 max-w-xl h-[400px] relative">
           <Image
-            src="/images/products/biodiesel.JPG"
+            src="/images/products/biodiesel-2.JPG"
             alt="Key Features"
             fill
             objectFit="cover"
-            className="rounded-xl max-w-xl relative"
+            className="rounded-xl max-w-xl !relative"
           />
         </div>
         <div>
@@ -424,8 +426,10 @@ export function PerfectGlycerinPage() {
   ];
 
   return (
-    <div className="p-6 space-y-12">
-      <h2 className="text-center text-4xl font-bold">{t("title")}</h2>
+    <div className="p-6 space-y-12 font-inter">
+      <h2 className="text-center text-4xl font-bold font-spaceGrotesk">
+        {t("title")}
+      </h2>
 
       {/* Summary Section */}
       <div className="flex flex-col md:flex-row items-center gap-6">
@@ -436,7 +440,7 @@ export function PerfectGlycerinPage() {
             alt="Glycerin"
             fill
             objectFit="cover"
-            className="rounded-xl max-w-xl relative"
+            className="rounded-xl max-w-xl !relative"
           />
         </div>
       </div>
@@ -483,11 +487,11 @@ export function PerfectGlycerinPage() {
       <div className="flex flex-col md:flex-row gap-6 items-center">
         <div className="flex-1 max-w-xl h-[400px] relative">
           <Image
-            src="/images/products/glycerin.JPG"
+            src="/images/products/glycerin-2.JPG"
             alt="Key Features"
             fill
             objectFit="cover"
-            className="rounded-xl max-w-xl relative"
+            className="rounded-xl max-w-xl !relative"
           />
         </div>
         <div>
