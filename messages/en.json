@@ -456,6 +456,12 @@
     "referencePhoneLabel": "Reference Phone",
     "referencePhonePlaceholder": "Enter the reference phone number"
   },
+  "careerEmail": {
+    "subject": "Application for {position}",
+    "body": "Thank you for applying to {position} at JSK Biofuels. Here are the details we received:\n\nName: {name}\nPhone: {phone}\nEmail: {email}\nAddress: {address}\nPosition: {position}\nExperience: {experience}\nExpected CTC: {expectedCTC}\n\nWe will review your application and get back to you soon.\n\nBest regards,\nTeam JSK Biofuel",
+    "successMessage": "Email sent successfully!",
+    "errorMessage": "Failed to send email"
+  },
   "about": {
     "imageTitle": "Company Overview",
     "title": "About",
