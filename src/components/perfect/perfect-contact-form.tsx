@@ -109,6 +109,8 @@ export default function PerfectContactForm() {
         toast.error(error || t("formError"));
       }
     } catch (error) {
+      console.log(error);
+
       toast.error(t("formError"));
     } finally {
       setIsSubmitting(false);

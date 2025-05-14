@@ -159,8 +159,7 @@ export function PerfectBiodieselPage() {
             src="/images/products/biodiesel.JPG"
             alt="Biodiesel"
             fill
-            objectFit="cover"
-            className="rounded-xl max-w-xl !relative"
+            className="rounded-xl max-w-xl !relative object-cover"
           />
         </div>
       </div>
@@ -210,8 +209,7 @@ export function PerfectBiodieselPage() {
             src="/images/products/biodiesel-2.JPG"
             alt="Key Features"
             fill
-            objectFit="cover"
-            className="rounded-xl max-w-xl !relative"
+            className="rounded-xl max-w-xl !relative object-cover"
           />
         </div>
         <div>
@@ -439,8 +437,7 @@ export function PerfectGlycerinPage() {
             src="/images/products/glycerin.JPG"
             alt="Glycerin"
             fill
-            objectFit="cover"
-            className="rounded-xl max-w-xl !relative"
+            className="rounded-xl max-w-xl !relative object-cover"
           />
         </div>
       </div>
@@ -490,8 +487,7 @@ export function PerfectGlycerinPage() {
             src="/images/products/glycerin-2.JPG"
             alt="Key Features"
             fill
-            objectFit="cover"
-            className="rounded-xl max-w-xl !relative"
+            className="rounded-xl max-w-xl !relative object-cover"
           />
         </div>
         <div>
@@ -526,7 +522,7 @@ export function PerfectGlycerinPage() {
 
       {/* Product Applications Section */}
       <div>
-        <h3 className="text-2xl font-bold mb-4">Glycerin Applications</h3>
+        <h3 className="text-2xl font-bold mb-4">{glycerinApplicationsTitle}</h3>
         <ul className="space-y-4 grid md:grid-cols-3 gap-6">
           {glycerinApplications.map((item, index) => (
             <li key={index} className="mb-0 flex flex-col">

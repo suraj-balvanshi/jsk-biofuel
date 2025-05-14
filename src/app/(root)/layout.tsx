@@ -7,6 +7,7 @@ import PerfectBurgerMenu from "@/components/perfect/perfect-burger-menu";
 import Link from "next/link";
 import PerfectFooter from "@/components/perfect/perfect-footer";
 import { inter_18pt, playfair_9pt, spaceGrotesk } from "@/lib/fonts";
+import messages from "@/messages/en.json";
 
 export const metadata: Metadata = {
   title: "JSK Bio-fuel",
@@ -20,7 +21,6 @@ export default function RootLayout({
 }>) {
   const t = useTranslations();
   const locale = "en";
-  const messages = require(`/messages/${locale}.json`).default;
 
   return (
     <html

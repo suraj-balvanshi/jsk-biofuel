@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export default function PerfectFounders() {
   const t = useTranslations("founder");
@@ -8,9 +9,10 @@ export default function PerfectFounders() {
         <div className="rounded overflow-hidden shadow-md bg-white">
           <div className="absolute -mt-20 w-full flex justify-center">
             <div className="h-32 w-32">
-              <img
+              <Image
+                fill
                 src="/images/founders/founder-1.JPG"
-                className="rounded-full object-cover h-full w-full shadow-md"
+                className="rounded-full object-cover h-full w-full shadow-md !relative"
                 alt="Founder Image 1"
               />
             </div>
