@@ -406,14 +406,31 @@
     "queryPlaceholder": "Please describe your query or message",
     "submitting": "Submitting...",
     "submit": "Submit",
-    "formSubmitted": "Form submitted",
-    "formSubmittedDescription": "We've received your message and will get back to you soon.",
     "form": {
       "nameError": "Name must be at least 2 characters.",
       "phoneError": "Please enter a valid phone number.",
       "emailError": "Please enter a valid email address.",
       "queryError": "Query must be at least 10 characters."
-    }
+    },
+    "emailSubject": "Contact Form Submission/Query Submission",
+    "emailBody": {
+      "name": "Name",
+      "phone": "Phone",
+      "email": "Email",
+      "city": "City",
+      "state": "State",
+      "product": "Product",
+      "query": "Query",
+      "intro": "Thanks for sending us your query(ies)",
+      "patience": "We hope you will be patient while we work through your query(ies)",
+      "closing": "We will get back to you as soon as possible",
+      "regards": "Best regards,",
+      "company": "JSK Biofuels"
+    },
+    "formSubmitted": "Form submitted successfully!",
+    "formSubmittedDescription": "We've received your message and will get back to you soon.",
+    "formError": "An error occurred while submitting the form.",
+    "emailError": "Failed to send email."
   },
   "career": {
     "title": "Career",
@@ -462,13 +479,25 @@
     "referenceEmailLabel": "Reference Email",
     "referenceEmailPlaceholder": "Enter the reference email",
     "referencePhoneLabel": "Reference Phone",
-    "referencePhonePlaceholder": "Enter the reference phone number"
-  },
-  "careerEmail": {
+    "referencePhonePlaceholder": "Enter the reference phone number",
     "subject": "Application for {position}",
     "body": "Thank you for applying to {position} at JSK Biofuels. Here are the details we received:\n\nName: {name}\nPhone: {phone}\nEmail: {email}\nAddress: {address}\nPosition: {position}\nExperience: {experience}\nExpected CTC: {expectedCTC}\n\nWe will review your application and get back to you soon.\n\nBest regards,\nTeam JSK Biofuel",
     "successMessage": "Email sent successfully!",
-    "errorMessage": "Failed to send email"
+    "errorMessage": "Failed to send email",
+    "positionRequiredError": "Please select a position",
+    "nameValidationError": "Name must be at least 2 characters",
+    "phoneValidationError": "Please enter a valid phone number",
+    "emailValidationError": "Please enter a valid email address",
+    "addressValidationError": "Please enter your full address",
+    "previousPositionValidationError": "Please enter your previous position",
+    "previousCompanyValidationError": "Please enter your previous company",
+    "expectedCTCValidationError": "Please enter your expected CTC",
+    "yearsOfExperienceValidationError": "Please enter your years of experience",
+    "referenceNameValidationError": "Reference name must be at least 2 characters",
+    "referenceCompanyValidationError": "Reference company must be at least 2 characters",
+    "referencePositionValidationError": "Reference position must be at least 2 characters",
+    "referenceEmailValidationError": "Please enter a valid email address",
+    "referencePhoneValidationError": "Please enter a valid phone number"
   },
   "about": {
     "imageTitle": "Company Overview",

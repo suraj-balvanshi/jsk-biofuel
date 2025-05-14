@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import * as z from "zod";
 import nodemailer from "nodemailer";
-import { useTranslations } from "next-intl";
 
 // Zod schema for validation
 const formSchema = z.object({
@@ -19,10 +18,10 @@ const formSchema = z.object({
   referencePosition: z.string().optional(),
   referenceEmail: z.string().email().optional(),
   referencePhone: z.string().optional(),
+  tStrings: z.string(),
 });
 
 export async function POST(req: Request) {
-  const t = useTranslations("careerEmail");
   const formData = await req.formData();
 
   const fields: Record<string, string> = {};
@@ -40,6 +39,7 @@ export async function POST(req: Request) {
     );
   }
 
+  const tStrings = JSON.parse(fields.tStrings);
   const resume = formData.get("resume") as File | null;
 
   try {
@@ -69,25 +69,14 @@ export async function POST(req: Request) {
       from: process.env.SMTP_USER,
       to: formData.get("email") as string,
       bcc: process.env.SMTP_USER,
-      subject: t("subject", { position: fields.position }),
-      text: t("body", {
-        name: fields.name,
-        phone: fields.phone,
-        email: fields.email,
-        address: fields.address,
-        position: fields.position,
-        experience: fields.yearsOfExperience,
-        expectedCTC: fields.expectedCTC,
-      }),
+      subject: tStrings.subject,
+      text: tStrings.body,
       attachments,
     });
 
-    return NextResponse.json({ message: t("successMessage") });
+    return NextResponse.json({ message: tStrings.successMessage });
   } catch (error) {
     console.error("Error sending email:", error);
-    return NextResponse.json(
-      { error: t("errorMessage") },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: tStrings.errorMessage }, { status: 500 });
   }
 }

@@ -25,30 +25,31 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { useTranslations } from "next-intl";
 
-const formSchema = z.object({
-  name: z.string().min(2, {
-    message: "form.nameError", // Translation key
-  }),
-  phone: z.string().min(10, {
-    message: "form.phoneError", // Translation key
-  }),
-  email: z
-    .string()
-    .email({
-      message: "form.emailError", // Translation key
-    })
-    .optional()
-    .or(z.literal("")),
-  city: z.string().optional(),
-  state: z.string().optional(),
-  product: z.string().optional(),
-  query: z.string().min(10, {
-    message: "form.queryError", // Translation key
-  }),
-});
-
 export default function PerfectContactForm() {
   const t = useTranslations("PerfectContactForm");
+
+  const formSchema = z.object({
+    name: z.string().min(2, {
+      message: t("form.nameError"), // Use translation function
+    }),
+    phone: z.string().min(10, {
+      message: t("form.phoneError"), // Use translation function
+    }),
+    email: z
+      .string()
+      .email({
+        message: t("form.emailError"), // Use translation function
+      })
+      .optional()
+      .or(z.literal("")),
+    city: z.string().optional(),
+    state: z.string().optional(),
+    product: z.string().optional(),
+    query: z.string().min(10, {
+      message: t("form.queryError"), // Use translation function
+    }),
+  });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -64,19 +65,54 @@ export default function PerfectContactForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      console.log(values);
+    const tStrings = {
+      emailSubject: t("emailSubject"),
+      emailBody: {
+        name: t("emailBody.name"),
+        phone: t("emailBody.phone"),
+        email: t("emailBody.email"),
+        city: t("emailBody.city"),
+        state: t("emailBody.state"),
+        product: t("emailBody.product"),
+        query: t("emailBody.query"),
+      },
+      emailAdditionalContent: {
+        intro: t("emailBody.intro"),
+        patience: t("emailBody.patience"),
+        closing: t("emailBody.closing"),
+        regards: t("emailBody.regards"),
+        company: t("emailBody.company"),
+      },
+      formSubmitted: t("formSubmitted"),
+      emailError: t("emailError"),
+    };
 
-      toast(t("formSubmitted"), {
-        description: t("formSubmittedDescription"),
+    try {
+      const response = await fetch("/api/contact-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ...values, ...tStrings }),
       });
-      form.reset();
+
+      if (response.ok) {
+        toast(t("formSubmitted"), {
+          description: t("formSubmittedDescription"),
+        });
+        form.reset();
+      } else {
+        const { error } = await response.json();
+        toast.error(error || t("formError"));
+      }
+    } catch (error) {
+      toast.error(t("formError"));
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   }
 
   return (

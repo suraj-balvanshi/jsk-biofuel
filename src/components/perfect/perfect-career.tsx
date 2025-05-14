@@ -28,51 +28,69 @@ import {
 } from "@/components/ui/select";
 import { Card } from "@/components/ui/card";
 
-const formSchema = z.object({
-  position: z.string({
-    required_error: "Please select a position",
-  }),
-  name: z.string().min(2, { message: "Name must be at least 2 characters" }),
-  phone: z.string().min(10, { message: "Please enter a valid phone number" }),
-  email: z.string().email({ message: "Please enter a valid email address" }),
-  address: z.string().min(5, { message: "Please enter your full address" }),
-  previousPosition: z
-    .string()
-    .min(2, { message: "Please enter your previous position" }),
-  previousCompany: z
-    .string()
-    .min(2, { message: "Please enter your previous company" }),
-  expectedCTC: z.string().min(1, { message: "Please enter your expected CTC" }),
-  yearsOfExperience: z
-    .string()
-    .min(1, { message: "Please enter your years of experience" }),
-  // Add reference fields
-  referenceName: z
-    .string()
-    .min(2, { message: "Reference name must be at least 2 characters" })
-    .optional(),
-  referenceCompany: z
-    .string()
-    .min(2, { message: "Reference company must be at least 2 characters" })
-    .optional(),
-  referencePosition: z
-    .string()
-    .min(2, { message: "Reference position must be at least 2 characters" })
-    .optional(),
-  referenceEmail: z
-    .string()
-    .email({ message: "Please enter a valid email address" })
-    .optional(),
-  referencePhone: z
-    .string()
-    .min(10, { message: "Please enter a valid phone number" })
-    .optional(),
-});
-
-type FormValues = z.infer<typeof formSchema>;
-
 export default function PerfectCareer() {
   const t = useTranslations("career");
+
+  const formSchema = z.object({
+    // Required fields...
+    position: z.string({ required_error: t("positionRequiredError") }),
+    name: z.string().min(2, { message: t("nameValidationError") }),
+    phone: z.string().min(10, { message: t("phoneValidationError") }),
+    email: z.string().email({ message: t("emailValidationError") }),
+    address: z.string().min(5, { message: t("addressValidationError") }),
+    previousPosition: z
+      .string()
+      .min(2, { message: t("previousPositionValidationError") }),
+    previousCompany: z
+      .string()
+      .min(2, { message: t("previousCompanyValidationError") }),
+    expectedCTC: z
+      .string()
+      .min(1, { message: t("expectedCTCValidationError") }),
+    yearsOfExperience: z
+      .string()
+      .min(1, { message: t("yearsOfExperienceValidationError") }),
+
+    // Optional fields with proper handling for empty string
+    referenceName: z
+      .string()
+      .transform((val) => (val === "" ? undefined : val))
+      .optional()
+      .refine((val) => val === undefined || val.length >= 2, {
+        message: t("referenceNameValidationError"),
+      }),
+    referenceCompany: z
+      .string()
+      .transform((val) => (val === "" ? undefined : val))
+      .optional()
+      .refine((val) => val === undefined || val.length >= 2, {
+        message: t("referenceCompanyValidationError"),
+      }),
+    referencePosition: z
+      .string()
+      .transform((val) => (val === "" ? undefined : val))
+      .optional()
+      .refine((val) => val === undefined || val.length >= 2, {
+        message: t("referencePositionValidationError"),
+      }),
+    referenceEmail: z
+      .string()
+      .transform((val) => (val === "" ? undefined : val))
+      .optional()
+      .refine(
+        (val) => val === undefined || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val),
+        { message: t("referenceEmailValidationError") }
+      ),
+    referencePhone: z
+      .string()
+      .transform((val) => (val === "" ? undefined : val))
+      .optional()
+      .refine((val) => val === undefined || val.length >= 10, {
+        message: t("referencePhoneValidationError"),
+      }),
+  });
+
+  type FormValues = z.infer<typeof formSchema>;
   const [resumeFile, setResumeFile] = useState<File | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
@@ -89,7 +107,6 @@ export default function PerfectCareer() {
       previousCompany: "",
       expectedCTC: "",
       yearsOfExperience: "",
-      // Add reference fields default values
       referenceName: "",
       referenceCompany: "",
       referencePosition: "",
@@ -111,20 +128,40 @@ export default function PerfectCareer() {
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
 
+    const tStrings = {
+      subject: t("subject", { position: data.position }),
+      body: t("body", {
+        name: data.name,
+        phone: data.phone,
+        email: data.email,
+        address: data.address,
+        position: data.position,
+        experience: data.yearsOfExperience,
+        expectedCTC: data.expectedCTC,
+        referenceName: data.referenceName || "",
+        referenceCompany: data.referenceCompany || "",
+        referencePosition: data.referencePosition || "",
+        referenceEmail: data.referenceEmail || "",
+        referencePhone: data.referencePhone || "",
+      }),
+      successMessage: t("successMessage"),
+      errorMessage: t("errorMessage"),
+    };
+
     try {
       const formData = new FormData();
 
-      // Append all form values
       Object.entries(data).forEach(([key, value]) => {
         if (value !== undefined) {
           formData.append(key, value);
         }
       });
 
-      // Append the resume file
       if (resumeFile) {
         formData.append("resume", resumeFile);
       }
+
+      formData.append("tStrings", JSON.stringify(tStrings));
 
       const response = await fetch("/api/career-email", {
         method: "POST",
@@ -132,16 +169,16 @@ export default function PerfectCareer() {
       });
 
       if (!response.ok) {
-        alert(t("serverError"));
+        alert(tStrings.errorMessage);
         throw new Error("Failed to send email");
       }
 
-      alert(t("formSubmitted"));
+      alert(tStrings.successMessage);
       form.reset();
       setResumeFile(null);
     } catch (error) {
       console.error("Error:", error);
-      alert(t("formError"));
+      alert(tStrings.errorMessage);
     } finally {
       setIsSubmitting(false);
     }
