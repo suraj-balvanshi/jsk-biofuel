@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { NextIntlClientProvider, useLocale, useTranslations } from "next-intl";
+import { NextIntlClientProvider, useTranslations } from "next-intl";
 import PerfectNavMenu from "@/components/perfect/perfect-nav-menu";
 import PerfectBurgerMenu from "@/components/perfect/perfect-burger-menu";
 

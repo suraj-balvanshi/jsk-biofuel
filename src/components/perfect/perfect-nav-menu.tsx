@@ -27,7 +27,7 @@ export default function PerfectNavMenu() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink>{t("menu-2")}</NavigationMenuLink>
+            <NavigationMenuLink href="/media">{t("menu-2")}</NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink href="/career">

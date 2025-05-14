@@ -66,6 +66,15 @@
   @apply motion-preset-bounce;
 }
 
+@layer utilities {
+  @media (hover: none) and (pointer: coarse) {
+    .touch\:opacity-100 {
+      opacity: 1 !important;
+      background-color: transparent !important;
+    }
+  }
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(0%);
