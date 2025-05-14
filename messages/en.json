@@ -477,5 +477,71 @@
     "title": "Chief Executive Officer",
     "description": "Mr. Arya is a visionary CEO known for her exceptional leadership and strategic acumen. With a wealth of experience in the corporate world, she has a proven track record of driving innovation and achieving remarkable business growth.",
     "quote": "Beyond fuel, we see opportunity in every renewable resource. We're building a greener world, one byproduct at a time."
+  },
+  "mediaPage": {
+    "title": "Media Page",
+    "albumTitle": "Inauguration Album",
+    "siteTitle": "Site",
+    "youtubeTitle": "Youtube Media",
+    "inauguration1": {
+      "alt": "Ceremonial Groundbreaking Image",
+      "caption": "Ceremonial Groundbreaking of JSK Biofuel Plant"
+    },
+    "inauguration2": {
+      "alt": "Office Blessing Ritual Image",
+      "caption": "Office Blessing Ritual"
+    },
+    "inauguration3": {
+      "alt": "Machine Inauguration Ceremony Image",
+      "caption": "Machine Inauguration Ceremony"
+    },
+    "inauguration4": {
+      "alt": "Welcoming the Guest of Honor Image",
+      "caption": "Welcoming the Guest of Honor"
+    },
+    "inauguration5": {
+      "alt": "Ritual Offering by Female Guests Image",
+      "caption": "Ritual Offering by Female Guests"
+    },
+    "inauguration6": {
+      "alt": "MVPs Posing After Ceremony Image",
+      "caption": "MVPs Posing After Ceremony"
+    },
+    "inauguration7": {
+      "alt": "Team and Family at the Ritual Image",
+      "caption": "Team and Family at the Ritual"
+    },
+    "site1": {
+      "alt": "Site Image 1",
+      "caption": "Site Image 1"
+    },
+    "site2": {
+      "alt": "Site Image 2",
+      "caption": "Site Image 2"
+    },
+    "site3": {
+      "alt": "Site Image 3",
+      "caption": "Site Image 3"
+    },
+    "site4": {
+      "alt": "Site Image 4",
+      "caption": "Site Image 4"
+    },
+    "site5": {
+      "alt": "Site Image 5",
+      "caption": "Site Image 5"
+    },
+    "site6": {
+      "alt": "Site Image 6",
+      "caption": "Site Image 6"
+    },
+    "site7": {
+      "alt": "Site Image 7",
+      "caption": "Site Image 7"
+    },
+    "site8": {
+      "alt": "Site Image 8",
+      "caption": "Site Image 8"
+    }
   }
 }
