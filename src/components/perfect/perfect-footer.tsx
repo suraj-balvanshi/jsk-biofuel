@@ -5,15 +5,19 @@ export default function PerfectFooter() {
   const t = useTranslations("footer");
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 font-inter">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div>
-          <h4 className="text-lg font-bold mb-4">{t("title")}</h4>
-          <p>{t("description")}</p>
+          <h4 className="text-lg font-bold mb-4 font-spaceGrotesk">
+            {t("title")}
+          </h4>
+          <p className="font-playfair">{t("description")}</p>
         </div>
         <div>
-          <h4 className="text-lg font-bold mb-4">{t("quickLinks.title")}</h4>
-          <ul className="space-y-2">
+          <h4 className="text-lg font-bold mb-4 font-spaceGrotesk">
+            {t("quickLinks.title")}
+          </h4>
+          <ul className="space-y-2 font-playfair">
             <li>
               <a href="/products/biodiesel" className="hover:text-gray-300">
                 {t("quickLinks.biodiesel")}
@@ -32,8 +36,10 @@ export default function PerfectFooter() {
           </ul>
         </div>
         <div>
-          <h4 className="text-lg font-bold mb-4">{t("contactUs.title")}</h4>
-          <ul className="space-y-2">
+          <h4 className="text-lg font-bold mb-4 font-spaceGrotesk">
+            {t("contactUs.title")}
+          </h4>
+          <ul className="space-y-2 font-playfair">
             <li>
               <a
                 href="mailto:info@jskbiofuel.com"
@@ -54,8 +60,10 @@ export default function PerfectFooter() {
           </ul>
         </div>
         <div>
-          <h4 className="text-lg font-bold mb-4">{t("followUs.title")}</h4>
-          <div className="flex space-x-4">
+          <h4 className="text-lg font-bold mb-4 font-spaceGrotesk">
+            {t("followUs.title")}
+          </h4>
+          <div className="flex space-x-4 font-playfair">
             <div className="hover:text-blue-400">
               <FaLinkedin className="h-6 w-6" />
               <p>{t("followUs.linkedin")}</p>
@@ -67,7 +75,7 @@ export default function PerfectFooter() {
           </div>
         </div>
       </div>
-      <div className="text-center mt-8">
+      <div className="text-center mt-8 font-playfair">
         <p>{t("copyright")}</p>
       </div>
     </div>

@@ -6,11 +6,13 @@ export default function PerfectMediaPage() {
   const t = useTranslations("mediaPage");
 
   return (
-    <div className="flex flex-col justify-center">
-      <h2 className="text-4xl font-bold m-4 text-center">{t("title")}</h2>
+    <div className="flex flex-col justify-center font-inter">
+      <h2 className="text-4xl font-bold m-4 text-center font-spaceGrotesk">
+        {t("title")}
+      </h2>
       <div>
         <div className="container mx-auto px-4 py-8">
-          <h3 className="text-4xl font-bold text-center mb-8">
+          <h3 className="text-4xl font-bold text-center mb-8 font-playfair">
             {t("albumTitle")}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -129,7 +131,7 @@ export default function PerfectMediaPage() {
           </div>
         </div>
         <div className="container mx-auto px-4 py-8">
-          <h3 className="text-4xl font-bold text-center mb-8">
+          <h3 className="text-4xl font-bold text-center mb-8 font-playfair">
             {t("siteTitle")}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -264,7 +266,7 @@ export default function PerfectMediaPage() {
         </div>
       </div>
       <div className="mx-4 mt-0">
-        <h3 className="text-4xl font-bold text-center mb-4">
+        <h3 className="text-4xl font-bold text-center mb-4 font-spaceGrotesk">
           {t("youtubeTitle")}
         </h3>
         <PerfectYoutubeEmbed />

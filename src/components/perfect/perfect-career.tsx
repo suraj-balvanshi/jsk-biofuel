@@ -155,12 +155,16 @@ export default function PerfectCareer() {
   ];
 
   return (
-    <Card className="p-6 my-4 max-w-4xl mx-auto">
-      <h3 className="text-6xl text-center font-bold">{t("title")}</h3>
+    <Card className="p-6 my-4 max-w-4xl mx-auto font-inter">
+      <h3 className="text-6xl text-center font-bold font-spaceGrotesk">
+        {t("title")}
+      </h3>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <div className="space-y-4">
-            <h2 className="text-xl font-semibold">{t("positionInfo")}</h2>
+            <h2 className="text-xl font-semibold font-playfair">
+              {t("positionInfo")}
+            </h2>
             <FormField
               control={form.control}
               name="position"
@@ -191,7 +195,9 @@ export default function PerfectCareer() {
           </div>
 
           <div className="space-y-4">
-            <h2 className="text-xl font-semibold">{t("personalInfo")}</h2>
+            <h2 className="text-xl font-semibold font-playfair">
+              {t("personalInfo")}
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <FormField
                 control={form.control}
@@ -259,7 +265,9 @@ export default function PerfectCareer() {
           </div>
 
           <div className="space-y-4">
-            <h2 className="text-xl font-semibold">{t("professionalInfo")}</h2>
+            <h2 className="text-xl font-semibold font-playfair">
+              {t("professionalInfo")}
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <FormField
                 control={form.control}
@@ -332,7 +340,9 @@ export default function PerfectCareer() {
           </div>
 
           <div className="space-y-4">
-            <h2 className="text-xl font-semibold">{t("references")}</h2>
+            <h2 className="text-xl font-semibold font-playfair">
+              {t("references")}
+            </h2>
             <p className="text-sm text-gray-500 mb-4">{t("referencesNote")}</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <FormField
@@ -516,7 +526,11 @@ export default function PerfectCareer() {
           </div>
 
           <div className="pt-4">
-            <Button type="submit" className="w-full" disabled={isSubmitting}>
+            <Button
+              type="submit"
+              className="w-full font-spaceGrotesk"
+              disabled={isSubmitting}
+            >
               {isSubmitting ? t("submitting") : t("submit")}
             </Button>
           </div>

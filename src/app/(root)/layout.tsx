@@ -33,7 +33,7 @@ export const inter_18pt = localFont({
       style: "italic",
     },
   ],
-  variable: "--font-inter-18pt",
+  variable: "--font-inter",
   display: "swap",
 });
 
@@ -61,7 +61,7 @@ export const playfair_9pt = localFont({
       style: "italic",
     },
   ],
-  variable: "--font-playfair-9pt",
+  variable: "--font-playfair",
   display: "swap",
 });
 
@@ -105,25 +105,25 @@ export default function RootLayout({
   return (
     <html
       lang={locale}
-      className={`${inter_18pt.variable} ${playfair_9pt.variable} ${spaceGrotesk.variable} aliased`}
+      className={`${inter_18pt.variable} ${playfair_9pt.variable} ${spaceGrotesk.variable} font-inter aliased`}
     >
-      <body className="min-h-screen flex flex-col">
+      <body className="min-h-screen flex flex-col font-inter">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <header className="border-b shadow-sm">
             <nav className="flex items-center max-content-width px-4 py-2">
-              <h1 className="mr-auto">
+              <h1 className="mr-auto font-spaceGrotesk font-bold text-xl">
                 <Link href="/">{t("header.title")}</Link>
               </h1>
               <div className="max-sm:hidden">
                 <PerfectNavMenu />
               </div>
-              <div className="sm:hidden h-6 ">
+              <div className="sm:hidden h-6">
                 <PerfectBurgerMenu />
               </div>
             </nav>
           </header>
           <main className="max-content-width w-full">{children}</main>
-          <footer className="bg-gray-800 text-white py-8">
+          <footer className="bg-gray-800 text-white py-8 font-playfair">
             <PerfectFooter />
           </footer>
         </NextIntlClientProvider>
