@@ -22,7 +22,7 @@ export default function ProductAccordionGrid() {
           <Image
             src="/images/products/biodiesel.JPG"
             alt="Biodiesel"
-            className="w-full h-64 object-cover self-center sm:border-2 border-white !relative"
+            className="w-full h-64 max-h-[250px] object-cover self-center sm:border-2 border-white !relative"
             fill
           />
           <div>
@@ -53,7 +53,7 @@ export default function ProductAccordionGrid() {
             fill
             src="/images/products/glycerin.JPG"
             alt="Glycerin"
-            className="w-full h-64 object-cover self-center sm:border-2 border-white !relative"
+            className="w-full h-64 max-h-[250px] object-cover self-center sm:border-2 border-white !relative"
           />
           <div>
             {Array.from({ length: 4 }).map((_, idx) => {
