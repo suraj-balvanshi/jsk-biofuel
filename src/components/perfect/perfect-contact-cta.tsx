@@ -20,7 +20,7 @@ export default function PerfectContactCta() {
               <div className="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6">
                 <div className="mt-3 rounded-lg">
                   <Link
-                    href="/contact-us"
+                    href="/contact"
                     className="flex items-center gap-2 px-5 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-[var(--color-deep-forest)] lg:px-10 rounded-xl hover:bg-[var(--color-nature-green)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                   >
                     <span>{t("button")}</span>
