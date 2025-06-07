@@ -1,6 +1,6 @@
 {
   "header": {
-    "title": "JSK Biofuel",
+    "title": "JSK Green India Bio Fuel",
     "menu-1": "Products",
     "menu-2": "Media",
     "menu-3": "Careers",
@@ -10,7 +10,7 @@
     "submenu-1-2": "Glycerin"
   },
   "footer": {
-    "title": "JSK Biofuel",
+    "title": "JSK Green India Bio Fuel",
     "description": "Fueling the Future, Sustainably. Explore how biofuel is transforming the world of renewable energy and reducing carbon emissions.",
     "quickLinks": {
       "title": "Quick Links",
@@ -29,7 +29,7 @@
       "linkedin": "@jskbiofuel",
       "whatsapp": "9839571751"
     },
-    "copyright": "© 2025 JSK Biofuel All rights reserved."
+    "copyright": "© 2025 JSK Green India Bio Fuel All rights reserved."
   },
   "hero": {
     "slide-1": {
@@ -45,7 +45,7 @@
       "description": "See how everyday resources can be converted into powerful fuel alternatives."
     },
     "slide-4": {
-      "heading": "Fuel the Change. Go JSK Biofuel",
+      "heading": "Fuel the Change. Go JSK Green India Bio Fuel",
       "description": "Be part of the global shift toward clean and efficient biofuel."
     }
   },
@@ -425,7 +425,7 @@
       "patience": "We hope you will be patient while we work through your query(ies)",
       "closing": "We will get back to you as soon as possible",
       "regards": "Best regards,",
-      "company": "JSK Biofuels"
+      "company": "JSK Green India Bio Fuel"
     },
     "formSubmitted": "Form submitted successfully!",
     "formSubmittedDescription": "We've received your message and will get back to you soon.",
@@ -481,7 +481,7 @@
     "referencePhoneLabel": "Reference Phone",
     "referencePhonePlaceholder": "Enter the reference phone number",
     "subject": "Application for {position}",
-    "body": "Thank you for applying to {position} at JSK Biofuels. Here are the details we received:\n\nName: {name}\nPhone: {phone}\nEmail: {email}\nAddress: {address}\nPosition: {position}\nExperience: {experience}\nExpected CTC: {expectedCTC}\n\nWe will review your application and get back to you soon.\n\nBest regards,\nTeam JSK Biofuel",
+    "body": "Thank you for applying to {position} at JSK Green India Bio Fuel. Here are the details we received:\n\nName: {name}\nPhone: {phone}\nEmail: {email}\nAddress: {address}\nPosition: {position}\nExperience: {experience}\nExpected CTC: {expectedCTC}\n\nWe will review your application and get back to you soon.\n\nBest regards,\nTeam JSK Green India Bio Fuel",
     "successMessage": "Email sent successfully!",
     "errorMessage": "Failed to send email",
     "positionRequiredError": "Please select a position",
@@ -502,18 +502,24 @@
   "about": {
     "imageTitle": "Company Overview",
     "title": "About",
-    "description": "This biofuel company stands at the intersection of renewable energy and sustainable chemistry, specializing in the co-production of biodiesel and glycerin. By converting renewable feedstocks, they offer a cleaner alternative to traditional fossil fuels while simultaneously generating a versatile bio-based chemical. This dual output model not only enhances the economic viability of their operations but also aligns with principles of waste reduction and resource efficiency.",
+    "description": "JSK Biofuel is a forward-thinking renewable energy company committed to revolutionizing the way the world uses fuel. Established in 2025 and based in Lucknow, we specialize in the production of eco-friendly biodiesel and glycerin, offering sustainable alternatives to conventional fossil fuels. Our operations are driven by cutting-edge technology, innovation, and a deep responsibility toward environmental conservation. Since our inception, JSK Biofuel has worked relentlessly to promote cleaner energy and reduce the carbon footprint through efficient, scalable, and high-quality biofuel solutions.",
     "mvpsTitle": "MVPs",
     "missionTitle": "#1. Mission",
-    "missionDescription": "Driven by a deep commitment to environmental stewardship, the company's mission is to actively contribute to a more sustainable future. They strive to achieve this by producing and supplying high-quality, environmentally responsible biofuels and bio-based chemicals that reduce reliance on finite resources and minimize ecological impact. Their core values center around innovation, quality, and a dedication to promoting environmentally sound practices throughout their production lifecycle.",
+    "missionDescription": "Our mission is to responsibly produce and deliver sustainable biofuel solutions that support the world's growing energy demands. Guided by our commitment to innovation, environmental stewardship, and energy efficiency, we aim to contribute to global progress while paving the way for a cleaner, greener future.",
     "visionTitle": "#2. Vision",
-    "visionDescription": "Looking ahead, the company's vision is to establish itself as a prominent leader in the burgeoning renewable energy and bio-products industry. They aim to be at the forefront of innovation, continuously exploring and implementing advanced technologies to maximize the value derived from renewable resources. Ultimately, they aspire to play a key role in fostering a circular economy where byproducts are seen as valuable resources, contributing to a more resilient and environmentally balanced world."
+    "visionDescription": "To be a trusted and innovative force in the renewable energy sector, driving progress through responsible practices and sustainable biofuel technologies. We envision a future where our efforts contribute meaningfully to a cleaner, more efficient energy landscape and support long-term environmental and economic well-being. "
   },
   "founder": {
-    "name": "Mr. Arya",
-    "title": "Chief Executive Officer",
-    "description": "Mr. Arya is a visionary CEO known for her exceptional leadership and strategic acumen. With a wealth of experience in the corporate world, she has a proven track record of driving innovation and achieving remarkable business growth.",
+    "name": "Mr Vivek Kumar Gupta",
+    "title": "Director",
+    "description": "Mr. Vivek Kumar Gupta is a visionary Director known for his exceptional leadership and strategic acumen. With a wealth of experience in the corporate world, he has a proven track record of driving innovation and achieving remarkable business growth.",
     "quote": "Beyond fuel, we see opportunity in every renewable resource. We're building a greener world, one byproduct at a time."
+  },
+  "founder2": {
+    "name": "Mr Krishna Gopal Gupta",
+    "title": "Director",
+    "description": "Mr. Krishna Gopal Gupta is a dedicated Director recognized for his practical leadership and focus on operational excellence. With years of experience in business development, he has played a key role in building strong partnerships and advancing JSK Green India Bio Fuel’ mission of sustainable growth.",
+    "quote": "Every partnership and improvement brings us closer to a cleaner, more sustainable future."
   },
   "mediaPage": {
     "title": "Media Page",
@@ -522,7 +528,7 @@
     "youtubeTitle": "Youtube Media",
     "inauguration1": {
       "alt": "Ceremonial Groundbreaking Image",
-      "caption": "Ceremonial Groundbreaking of JSK Biofuel Plant"
+      "caption": "Ceremonial Groundbreaking of JSK Green India Bio Fuel Plant"
     },
     "inauguration2": {
       "alt": "Office Blessing Ritual Image",
