@@ -10,7 +10,7 @@ import { inter_18pt, playfair_9pt, spaceGrotesk } from "@/lib/fonts";
 import messages from "@/messages/en.json";
 
 export const metadata: Metadata = {
-  title: "JSK Bio-fuel",
+  title: "JSK Green India Bio Fuel",
   description: "Aiming for a greener future with bio-fuel solutions.",
 };
 
