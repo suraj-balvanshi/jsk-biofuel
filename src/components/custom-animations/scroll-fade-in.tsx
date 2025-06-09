@@ -2,6 +2,7 @@
 
 import { SCROLL_FADE_IN, SCROLL_FADE_IN_ANIMATE } from "@/lib/className";
 import React, { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 
 export default function ScrollFadeIn({
   children,
@@ -9,6 +10,7 @@ export default function ScrollFadeIn({
   children: React.ReactNode;
 }) {
   const ref = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     const node = ref.current;
@@ -23,14 +25,13 @@ export default function ScrollFadeIn({
       },
       { threshold: 0.1 }
     );
-
     const elements = node.querySelectorAll(`.${SCROLL_FADE_IN}`);
     elements.forEach((el) => {
       observer.observe(el);
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [pathname]);
 
   return <div ref={ref}>{children}</div>;
 }

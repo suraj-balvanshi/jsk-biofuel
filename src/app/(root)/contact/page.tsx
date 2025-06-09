@@ -2,6 +2,7 @@ import PerfectContactForm from "@/components/perfect/perfect-contact-form";
 import PerfectContactInfoGrid from "@/components/perfect/prefect-contact-info-grid";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { SCROLL_FADE_IN } from "@/lib/className";
 
 export default function ContactHero() {
   const t = useTranslations("contact");
@@ -38,7 +39,7 @@ export default function ContactHero() {
           <PerfectContactForm />
         </div>
       </div>
-      <div>
+      <div className={`${SCROLL_FADE_IN}`}>
         <PerfectContactInfoGrid />
       </div>
     </section>

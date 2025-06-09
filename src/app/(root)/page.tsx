@@ -5,27 +5,30 @@ import PerfectInfinitePartners from "@/components/perfect/perfect-infinite-partn
 import PerfectStrengthCard from "@/components/perfect/perfect-strength-card";
 import PerfectYoutubeEmbed from "@/components/perfect/perfect-youtube-embed";
 import PerfectProductAccordion from "@/components/perfect/prefect-product-accordion";
+import { SCROLL_FADE_IN } from "@/lib/className";
 
 export default function Home() {
   return (
     <div className="w-full">
       <PerfectHeroSection />
-      <div className="mx-4 mb-4">
+      <div className={`mx-4 mb-4 ${SCROLL_FADE_IN}`}>
         <PerfectStrengthCard />
       </div>
-      <div className="mb-4">
+      <div className={`mb-4 ${SCROLL_FADE_IN}`}>
         <PerfectProductAccordion />
       </div>
-      <div className="mx-4 mb-4">
+      <div className={`mx-4 mb-4 ${SCROLL_FADE_IN}`}>
         <PerfectCompanyStrength />
       </div>
-      <div className="m-4">
+      <div className={`m-4 ${SCROLL_FADE_IN}`}>
         <PerfectInfinitePartners />
       </div>
-      <div>
+      <div className={`${SCROLL_FADE_IN}`}>
         <PerfectContactCta />
       </div>
-      <div className="m-auto px-4 mb-4 flex place-items-center max-h-[450px] max-w-[800px]">
+      <div
+        className={`m-auto px-4 mb-4 flex place-items-center max-h-[450px] max-w-[800px] ${SCROLL_FADE_IN}`}
+      >
         <PerfectYoutubeEmbed />
       </div>
     </div>

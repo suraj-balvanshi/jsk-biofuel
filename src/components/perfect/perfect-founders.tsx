@@ -1,3 +1,4 @@
+import { SCROLL_FADE_IN } from "@/lib/className";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -6,7 +7,9 @@ export default function PerfectFounders() {
   const t2 = useTranslations("founder2");
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-      <div className="bg-gray-100 grid grid-cols-1 gap-4 justify-items-center rounded-xl font-inter h-max">
+      <div
+        className={`bg-gray-100 grid grid-cols-1 gap-4 justify-items-center rounded-xl font-inter h-max ${SCROLL_FADE_IN}`}
+      >
         <div className="relative mt-24 mb-0 mx-auto">
           <div className="rounded overflow-hidden shadow-md bg-white">
             <div className="absolute -mt-20 w-full flex justify-center">
@@ -36,7 +39,9 @@ export default function PerfectFounders() {
           </blockquote>
         </div>
       </div>
-      <div className="bg-gray-100 grid grid-cols-1 gap-4 items-center justify-items-center rounded-xl font-inter h-max">
+      <div
+        className={`bg-gray-100 grid grid-cols-1 gap-4 items-center justify-items-center rounded-xl font-inter h-max ${SCROLL_FADE_IN}`}
+      >
         <div className="relative mt-24 mb-0 mx-auto">
           <div className="rounded overflow-hidden shadow-md bg-white">
             <div className="absolute -mt-20 w-full flex justify-center">

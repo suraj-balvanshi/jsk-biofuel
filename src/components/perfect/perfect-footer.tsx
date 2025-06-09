@@ -63,10 +63,9 @@ export default function PerfectFooter() {
           <h4 className="text-lg font-bold mb-4 font-spaceGrotesk">
             {t("followUs.title")}
           </h4>
-          <div className="flex space-x-4">
+          <div className="flex flex-wrap gap-4">
             <div className="hover:text-blue-400">
               <FaLinkedin className="h-6 w-6" />
-              <br />
               <p>{t("followUs.linkedin")}</p>
             </div>
             <div className="hover:text-pink-500">
@@ -76,7 +75,6 @@ export default function PerfectFooter() {
                 rel="noopener noreferrer"
               >
                 <FaWhatsapp className="h-6 w-6" />
-                <br />
                 <p>{t("followUs.whatsapp")}</p>
               </a>
             </div>

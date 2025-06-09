@@ -91,7 +91,7 @@
 .scroll-fade-in {
   opacity: 0;
   transform: translateY(50px);
-  transition: all 1s linear;
+  transition: all 0.5s linear;
 }
 
 .scroll-fade-in-animate {
