@@ -297,41 +297,37 @@
     }
   },
   "companyStrength": {
-    "title": "Why Trust Us",
+    "title": "What We Stand For",
+    "description": "At JSK Biofuel, our mission is to empower businesses through innovative and sustainable energy solutions that fuel growth and success. We are committed to delivering high-quality products and services while building lasting partnerships with our clients. Integrity guides every action we take.",
     "feature-1": {
       "emoji": "🏭",
-      "title": "Reliable Manufacturer",
-      "description": "In-house production of biodiesel and glycerin with quality you can trust."
+      "title": "RELIABILITY",
+      "description": "We ensure smooth operations, efficient processes that maximize productivity, dedicated support to foster growth, and innovative approaches to meet evolving needs."
     },
     "feature-2": {
       "emoji": "🌱",
-      "title": "Sustainable & Eco-Friendly",
-      "description": "Products made from renewable resources like tallow and used cooking oil."
+      "title": "SUSTAINABILITY",
+      "description": "We are dedicated to environmentally responsible practices that benefit communities and the planet."
     },
     "feature-3": {
-      "emoji": "🧪",
-      "title": "Tested & Certified Quality",
+      "emoji": "🛡️",
+      "title": "SAFETY & QUALITY",
       "description": "Every batch is lab-tested to meet national and industry standards."
     },
     "feature-4": {
-      "emoji": "🛢️",
-      "title": "Bulk Supply Capability",
-      "description": "Equipped to handle large-scale orders with consistent on-time delivery."
+      "emoji": "⚙️",
+      "title": "INNOVATION",
+      "description": "We embrace change and constantly pursue new technologies to lead the biofuel industry forward."
     },
     "feature-5": {
-      "emoji": "⚙️",
-      "title": "Dual Product Portfolio",
-      "description": "Offering Biodiesel & Glycerin for industrial use."
+      "emoji": "🚚",
+      "title": "COLLABORATION",
+      "description": "We believe in the power of teamwork and strong partnerships to achieve shared goals."
     },
     "feature-6": {
-      "emoji": "🚚",
-      "title": "Efficient Distribution Network",
-      "description": "Smooth logistics across India ensure reliable client service."
-    },
-    "feature-7": {
       "emoji": "🤝",
-      "title": "Customer-Centric Approach",
-      "description": "Custom blends, flexible packaging, and responsive support."
+      "title": "INTEGRITY",
+      "description": "We uphold the highest standards of honesty and transparency in all our dealings."
     }
   },
   "contact": {
@@ -347,14 +343,11 @@
     "contactUsDescription": "Fill out the form below and we'll get back to you as soon as possible."
   },
   "PerfectInfinitePartners": {
-    "company1": "Company 1",
-    "company2": "Company 2",
-    "company3": "Company 3",
-    "company4": "Company 4",
-    "company5": "Company 5",
-    "company6": "Company 6",
-    "company7": "Company 7",
-    "company8": "Company 8"
+    "title": "Our Partners",
+    "description": "We serve leading businesses in the biofuel industry by delivering reliable solutions that ensure smooth operations, efficient processes that maximize productivity, dedicated support to foster their growth, and innovative approaches to help achieve their sustainability goals.",
+    "company1": "Indian Oil Corporation Limited",
+    "company2": "Bharat Petroleum Corporation Limited",
+    "company3": "Hindustan Petroleum Corporation Limited"
   },
   "PerfectContactInfoGrid": {
     "title": "Get in touch with us",

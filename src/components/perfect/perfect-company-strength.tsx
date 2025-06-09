@@ -31,10 +31,10 @@ export default function PerfectCompanyStrength() {
           className="absolute inset-0 w-full h-full object-cover sm:rounded-xl overflow-hidden"
         />
         <div className="relative max-w-sm w-full min-h-[200px] h-auto ">
-          {Array.from({ length: 7 }).map((_, idx) => {
+          {Array.from({ length: 6 }).map((_, idx) => {
             const featureKey = `feature-${idx + 1}`;
             const isCurrent = idx === current;
-            const isNext = idx === (current + 1) % 7;
+            const isNext = idx === (current + 1) % 6;
 
             return (
               <Card
