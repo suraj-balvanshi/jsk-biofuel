@@ -211,3 +211,41 @@
 .font-spaceGrotesk {
   font-family: var(--font-space-grotesk);
 }
+
+@layer utilities {
+  /* Windmill-out: spin down and fade */
+  @keyframes windmillOut {
+    0% {
+      opacity: 1;
+      transform: rotate(0deg) translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(90deg) translateY(30px);
+    }
+  }
+
+  /* Windmill-in: spin up and appear */
+  @keyframes windmillIn {
+    0% {
+      opacity: 0;
+      transform: rotate(-90deg) translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: rotate(0deg) translateY(0);
+    }
+  }
+
+  .origin-left-center {
+    transform-origin: left center;
+  }
+
+  .animate-windmill-out {
+    animation: windmillOut 0.5s ease-in;
+  }
+
+  .animate-windmill-in {
+    animation: windmillIn 0.5s ease-out;
+  }
+}

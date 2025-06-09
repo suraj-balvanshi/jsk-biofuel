@@ -11,6 +11,7 @@ import messages from "@/messages/en.json";
 import ScrollFadeIn from "@/components/custom-animations/scroll-fade-in";
 import { SCROLL_FADE_IN } from "@/lib/className";
 import Image from "next/image";
+import PerfectTravelGuide from "@/components/perfect/perfect-travel-guide";
 
 export const metadata: Metadata = {
   title: "JSK Green India Bio Fuel",
@@ -59,6 +60,7 @@ export default function RootLayout({
             >
               <PerfectFooter />
             </footer>
+            <PerfectTravelGuide />
           </ScrollFadeIn>
         </NextIntlClientProvider>
       </body>
