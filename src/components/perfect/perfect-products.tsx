@@ -31,6 +31,7 @@ import {
   Ruler,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { SCROLL_FADE_IN } from "@/lib/className";
 
 export function PerfectBiodieselPage() {
   const t = useTranslations("products.biodiesel");
@@ -165,7 +166,7 @@ export function PerfectBiodieselPage() {
       </div>
 
       {/* Key Highlights Section */}
-      <div className="text-center">
+      <div className={`text-center ${SCROLL_FADE_IN}`}>
         <h2 className="text-2xl font-bold">
           <span className="text-blue-600">{biodieselHighlightTitle}</span>
         </h2>
@@ -184,7 +185,7 @@ export function PerfectBiodieselPage() {
       </div>
 
       {/* Benefits Section */}
-      <div className="bg-gray-100 p-6 rounded-xl">
+      <div className={`bg-gray-100 p-6 rounded-xl ${SCROLL_FADE_IN}`}>
         <h3 className="text-center text-2xl font-bold">
           {biodieselBenefitsTitle}
         </h3>
@@ -203,7 +204,9 @@ export function PerfectBiodieselPage() {
       </div>
 
       {/* Key Features Section */}
-      <div className="flex flex-col md:flex-row gap-6 items-center">
+      <div
+        className={`flex flex-col md:flex-row gap-6 items-center ${SCROLL_FADE_IN}`}
+      >
         <div className="flex-1 max-w-xl h-[400px] relative">
           <Image
             src="/images/products/biodiesel-2.JPG"
@@ -229,7 +232,7 @@ export function PerfectBiodieselPage() {
       </div>
 
       {/* Environmental Advantages Section */}
-      <div className="text-center">
+      <div className={`text-center ${SCROLL_FADE_IN}`}>
         <h3 className="text-2xl font-bold mb-4">
           {biodieselEnvironmentalAdvantagesTitle}
         </h3>
@@ -243,7 +246,7 @@ export function PerfectBiodieselPage() {
       </div>
 
       {/* Product Applications Section */}
-      <div>
+      <div className={`${SCROLL_FADE_IN}`}>
         <h3 className="text-2xl font-bold mb-4">
           {biodieselApplicationsTitle}
         </h3>
@@ -262,7 +265,7 @@ export function PerfectBiodieselPage() {
       </div>
 
       {/* Product Advantages Section */}
-      <div className="text-center">
+      <div className={`text-center ${SCROLL_FADE_IN}`}>
         <h3 className="text-2xl font-bold mb-4">{biodieselAdvantagesTitle}</h3>
         <ul className="list-disc list-inside space-y-2 text-gray-800">
           {biodieselAdvantages.map((advantage, index) => (
@@ -274,7 +277,7 @@ export function PerfectBiodieselPage() {
       </div>
 
       {/* FAQ Section */}
-      <div>
+      <div className={`${SCROLL_FADE_IN}`}>
         <h3 className="text-2xl font-bold mb-4 text-center">
           {BiodieselFAQTitle}
         </h3>
@@ -443,7 +446,7 @@ export function PerfectGlycerinPage() {
       </div>
 
       {/* Key Highlights Section */}
-      <div className="text-center">
+      <div className={`text-center ${SCROLL_FADE_IN}`}>
         <h2 className="text-2xl font-bold">
           <span className="text-blue-600">{glycerinHighlightsTitle}</span>
         </h2>
@@ -462,7 +465,7 @@ export function PerfectGlycerinPage() {
       </div>
 
       {/* Benefits Section */}
-      <div className="bg-gray-100 p-6 rounded-xl">
+      <div className={`bg-gray-100 p-6 rounded-xl ${SCROLL_FADE_IN}`}>
         <h3 className="text-center text-2xl font-bold">
           {glycerinBenefitsTitle}
         </h3>
@@ -481,7 +484,9 @@ export function PerfectGlycerinPage() {
       </div>
 
       {/* Key Features Section */}
-      <div className="flex flex-col md:flex-row gap-6 items-center">
+      <div
+        className={`flex flex-col md:flex-row gap-6 items-center ${SCROLL_FADE_IN}`}
+      >
         <div className="flex-1 max-w-xl h-[400px] relative">
           <Image
             src="/images/products/glycerin-2.JPG"
@@ -507,7 +512,7 @@ export function PerfectGlycerinPage() {
       </div>
 
       {/* Environmental Advantages Section */}
-      <div className="text-center">
+      <div className={`text-center ${SCROLL_FADE_IN}`}>
         <h3 className="text-2xl font-bold mb-4">
           {glycerinEnvironmentalAdvantagesTitle}
         </h3>
@@ -521,7 +526,7 @@ export function PerfectGlycerinPage() {
       </div>
 
       {/* Product Applications Section */}
-      <div>
+      <div className={` ${SCROLL_FADE_IN}`}>
         <h3 className="text-2xl font-bold mb-4">{glycerinApplicationsTitle}</h3>
         <ul className="space-y-4 grid md:grid-cols-3 gap-6">
           {glycerinApplications.map((item, index) => (
@@ -538,7 +543,7 @@ export function PerfectGlycerinPage() {
       </div>
 
       {/* Product Advantages Section */}
-      <div className="text-center">
+      <div className={`text-center ${SCROLL_FADE_IN}`}>
         <h3 className="text-2xl font-bold mb-4">{glycerinAdvantagesTitle}</h3>
         <ul className="list-disc list-inside space-y-2 text-gray-800">
           {glycerinAdvantages.map((advantage, index) => (
@@ -550,7 +555,7 @@ export function PerfectGlycerinPage() {
       </div>
 
       {/* FAQ Section */}
-      <div>
+      <div className={`${SCROLL_FADE_IN}`}>
         <h3 className="text-2xl font-bold mb-4 text-center">
           {glycerinFaqsTitle}
         </h3>

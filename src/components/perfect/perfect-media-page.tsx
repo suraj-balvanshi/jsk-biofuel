@@ -1,6 +1,7 @@
 import Image from "next/image";
 import PerfectYoutubeEmbed from "./perfect-youtube-embed";
 import { useTranslations } from "next-intl";
+import { SCROLL_FADE_IN } from "@/lib/className";
 
 export default function PerfectMediaPage() {
   const t = useTranslations("mediaPage");
@@ -11,7 +12,7 @@ export default function PerfectMediaPage() {
         {t("title")}
       </h2>
       <div>
-        <div className="container mx-auto px-4 py-8">
+        <div className={`container mx-auto px-4 py-8 ${SCROLL_FADE_IN}`}>
           <h3 className="text-4xl font-bold text-center mb-8 font-playfair">
             {t("albumTitle")}
           </h3>
@@ -130,7 +131,7 @@ export default function PerfectMediaPage() {
             </div>
           </div>
         </div>
-        <div className="container mx-auto px-4 py-8">
+        <div className={`container mx-auto px-4 py-8 ${SCROLL_FADE_IN}`}>
           <h3 className="text-4xl font-bold text-center mb-8 font-playfair">
             {t("siteTitle")}
           </h3>
@@ -265,7 +266,7 @@ export default function PerfectMediaPage() {
           </div>
         </div>
       </div>
-      <div className="mx-4 mt-0">
+      <div className={`mx-4 mt-0 ${SCROLL_FADE_IN}`}>
         <h3 className="text-4xl font-bold text-center mb-4 font-spaceGrotesk">
           {t("youtubeTitle")}
         </h3>

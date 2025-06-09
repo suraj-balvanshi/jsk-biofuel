@@ -88,6 +88,17 @@
   animation: scroll linear infinite;
 }
 
+.scroll-fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s linear;
+}
+
+.scroll-fade-in-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
