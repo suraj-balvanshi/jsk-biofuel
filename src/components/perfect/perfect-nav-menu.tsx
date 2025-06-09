@@ -13,13 +13,13 @@ export default function PerfectNavMenu() {
 
   return (
     <>
-      <NavigationMenu className="font-inter">
+      <NavigationMenu className="font-inter bg-[var(--color-header-footer)] text-white">
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="font-semibold">
+            <NavigationMenuTrigger className="font-semibold bg-[var(--color-header-footer)] text-white hover:bg-[var(--color-header-footer)] hover:text-white">
               {t("menu-1")}
             </NavigationMenuTrigger>
-            <NavigationMenuContent>
+            <NavigationMenuContent className="bg-[var(--color-header-footer)] text-white hover:bg-[var(--color-header-footer)] hover:text-white">
               <NavigationMenuLink
                 href="/products/biodiesel"
                 className="font-normal"

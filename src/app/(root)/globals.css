@@ -56,6 +56,9 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-header-footer: var(--color-header-footer);
+  --color-body-bg: var(--color-body-bg);
+  --color-burger-menu-bg: var(--color-burger-menu-bg);
 }
 
 @utility max-content-width {
@@ -147,6 +150,10 @@
   --font-inter: "Inter", sans-serif;
   --font-playfair: "Playfair Display", serif;
   --font-space-grotesk: "Space Grotesk", sans-serif;
+
+  --color-header-footer: #449f3d;
+  --color-body-bg: #d7ffab;
+  --color-burger-menu-bg: #0a7b42;
 }
 
 .dark {
@@ -210,4 +217,42 @@
 
 .font-spaceGrotesk {
   font-family: var(--font-space-grotesk);
+}
+
+@layer utilities {
+  /* Windmill-out: spin down and fade */
+  @keyframes windmillOut {
+    0% {
+      opacity: 1;
+      transform: rotate(0deg) translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(90deg) translateY(30px);
+    }
+  }
+
+  /* Windmill-in: spin up and appear */
+  @keyframes windmillIn {
+    0% {
+      opacity: 0;
+      transform: rotate(-90deg) translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: rotate(0deg) translateY(0);
+    }
+  }
+
+  .origin-left-center {
+    transform-origin: left center;
+  }
+
+  .animate-windmill-out {
+    animation: windmillOut 0.5s ease-in;
+  }
+
+  .animate-windmill-in {
+    animation: windmillIn 0.5s ease-out;
+  }
 }
