@@ -48,7 +48,7 @@ export default function PerfectInfinitePartners() {
             {companies.map((company, index) => (
               <div
                 key={`company-${index}`}
-                className="mx-8 flex w-[200px] h-[100px] flex-shrink-0 items-center justify-center"
+                className="mx-8 flex w-[300px] h-[100px] flex-shrink-0 items-center justify-center"
               >
                 <Image
                   src={company.logo}
@@ -64,7 +64,7 @@ export default function PerfectInfinitePartners() {
             {companies.map((company, index) => (
               <div
                 key={`company-duplicate-${index}`}
-                className="mx-8 flex w-[200px] h-[100px] flex-shrink-0 flex-grow-1 items-center justify-center"
+                className="mx-8 flex w-[300px] h-[100px] flex-shrink-0 items-center justify-center"
               >
                 <Image
                   src={company.logo}

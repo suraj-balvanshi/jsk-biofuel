@@ -16,7 +16,7 @@ const messages: Message[] = [
   { text: "Glycerin", href: "/product/glycerin" },
   { text: "Contact", href: "/contact" },
   { text: "Join us", href: "/career" },
-  { text: "Troll Div. Thanks Ψ(｀∀´)ﾉ", href: "/" },
+  { text: "Please Troll Div. Thanks Ψ(｀∀´)ﾉ", href: "/" },
 ];
 
 export default function PerfectTravelGuide() {
@@ -61,8 +61,8 @@ export default function PerfectTravelGuide() {
   if (!show) return null;
 
   return (
-    <div className="fixed bottom-0 left-[50%] translate-x-[-50%] z-50 flex justify-end items-center w-7xl p-4">
-      <div className="p-4 rounded-xl drop-shadow-xl mr-auto">
+    <div className="fixed bottom-0 left-[50%] translate-x-[-50%] z-50 flex justify-end items-center max-w-7xl w-full min-w-[300px] p-4">
+      <div className="drop-shadow-xl mr-auto">
         <div className="relative flex items-center w-fit translate-y-3/4">
           {/* Stationary Character */}
           <Image

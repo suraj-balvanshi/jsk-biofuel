@@ -31,12 +31,12 @@ export default function RootLayout({
       lang={locale}
       className={`${inter_18pt.variable} ${playfair_9pt.variable} ${spaceGrotesk.variable} font-inter aliased`}
     >
-      <body className="min-h-screen flex flex-col font-inter">
+      <body className="min-h-screen flex flex-col font-inter bg-[var(--color-body-bg)]/2">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ScrollFadeIn>
-            <header className="border-b shadow-sm">
+            <header className="border-b shadow-sm bg-[var(--color-header-footer)] text-white">
               <nav className="flex items-center max-content-width px-4 py-2">
-                <h1 className="mr-auto font-spaceGrotesk font-bold text-xl capitalize">
+                <h1 className="mr-auto font-spaceGrotesk font-bold text-lg">
                   <Image
                     src="/logos/logo_v5.svg"
                     alt={t("header.title")}
@@ -44,7 +44,9 @@ export default function RootLayout({
                     height={30}
                     width={30}
                   />
-                  <Link href="/">{t("header.title")}</Link>
+                  <Link href="/" className="uppercase">
+                    {t("header.title")}
+                  </Link>
                 </h1>
                 <div className="max-sm:hidden">
                   <PerfectNavMenu />
@@ -56,7 +58,7 @@ export default function RootLayout({
             </header>
             <main className="max-content-width w-full">{children}</main>
             <footer
-              className={`bg-gray-800 text-white py-8 font-playfair ${SCROLL_FADE_IN}`}
+              className={`text-white py-8 font-playfair bg-[var(--color-header-footer)] ${SCROLL_FADE_IN}`}
             >
               <PerfectFooter />
             </footer>
