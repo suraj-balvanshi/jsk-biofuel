@@ -1,7 +1,7 @@
 // src/app/(root)/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
-import { NextIntlClientProvider, useTranslations } from "next-intl";
+import { NextIntlClientProvider } from "next-intl";
 import PerfectFooter from "@/components/perfect/perfect-footer";
 import { inter_18pt, playfair_9pt, spaceGrotesk } from "@/lib/fonts";
 import messages from "@/messages/en.json";
@@ -20,7 +20,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const t = useTranslations();
   const locale = "en";
 
   return (
