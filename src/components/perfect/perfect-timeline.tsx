@@ -49,7 +49,7 @@ export default function PerfectTimeline() {
           className="sticky top-[calc(4rem*_var(--i))] flex justify-center h-auto mb-[10rem] w-full  transition-all duration-300 ease-in-out"
           style={{
             // Push down each card using its index to create a step effect
-            ["--i" as any]: index,
+            ["--i" as string]: index,
             zIndex: index + 10, // ensure correct stacking
           }}
         >
