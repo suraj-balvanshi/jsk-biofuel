@@ -61,7 +61,7 @@ export default function PerfectTravelGuide() {
   if (!show) return null;
 
   return (
-    <div className="fixed bottom-0 left-[50%] translate-x-[-50%] z-50 flex justify-end items-center max-w-7xl w-full min-w-[300px] p-4">
+    <div className="fixed bottom-0 left-[50%] translate-x-[-50%] z-50 flex justify-end items-center max-w-7xl w-full min-w-[300px] p-4 pointer-events-none">
       <div className="drop-shadow-xl mr-auto">
         <div className="relative flex items-center w-fit translate-y-3/4">
           {/* Stationary Character */}
@@ -77,7 +77,7 @@ export default function PerfectTravelGuide() {
           <div
             key={index}
             className={clsx(
-              "origin-left-center px-5 py-2 rounded-2xl bg-red-300 text-white text-sm shadow-md top-[-42px] relative",
+              "origin-left-center px-5 py-2 rounded-2xl bg-[var(--color-nature-green)] text-white text-sm shadow-md top-[-42px] relative pointer-events-auto",
               animating ? "animate-windmill-out" : "animate-windmill-in",
               "top-2"
             )}
@@ -96,7 +96,7 @@ export default function PerfectTravelGuide() {
         href="https://wa.me/919999999999" // Replace with your WhatsApp number
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg transition-colors w-16 h-16 flex items-center justify-center"
+        className="bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg transition-colors w-16 h-16 flex items-center justify-center pointer-events-auto fixed bottom-4 right-4 z-50"
         aria-label="Chat on WhatsApp"
       >
         <FaWhatsapp size={48} />

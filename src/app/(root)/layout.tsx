@@ -2,16 +2,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { NextIntlClientProvider, useTranslations } from "next-intl";
-import PerfectNavMenu from "@/components/perfect/perfect-nav-menu";
-import PerfectBurgerMenu from "@/components/perfect/perfect-burger-menu";
-import Link from "next/link";
 import PerfectFooter from "@/components/perfect/perfect-footer";
 import { inter_18pt, playfair_9pt, spaceGrotesk } from "@/lib/fonts";
 import messages from "@/messages/en.json";
 import ScrollFadeIn from "@/components/custom-animations/scroll-fade-in";
 import { SCROLL_FADE_IN } from "@/lib/className";
-import Image from "next/image";
 import PerfectTravelGuide from "@/components/perfect/perfect-travel-guide";
+import PerfectHeader from "@/components/perfect/perfect-header";
 
 export const metadata: Metadata = {
   title: "JSK Green India Bio Fuel",
@@ -35,26 +32,7 @@ export default function RootLayout({
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ScrollFadeIn>
             <header className="border-b shadow-sm bg-[var(--color-header-footer)] text-white">
-              <nav className="flex items-center max-content-width px-4 py-2">
-                <h1 className="mr-auto font-spaceGrotesk font-bold text-lg">
-                  <Image
-                    src="/logos/logo_v5.svg"
-                    alt={t("header.title")}
-                    className="inline-block mr-2"
-                    height={30}
-                    width={30}
-                  />
-                  <Link href="/" className="uppercase">
-                    {t("header.title")}
-                  </Link>
-                </h1>
-                <div className="max-sm:hidden">
-                  <PerfectNavMenu />
-                </div>
-                <div className="sm:hidden h-6">
-                  <PerfectBurgerMenu />
-                </div>
-              </nav>
+              <PerfectHeader />
             </header>
             <main className="max-content-width w-full">{children}</main>
             <footer

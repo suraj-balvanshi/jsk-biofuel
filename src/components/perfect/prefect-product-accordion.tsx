@@ -18,14 +18,15 @@ export default function ProductAccordionGrid() {
       {/* Biodiesel Section */}
       <section className="bg-white text-black py-4 sm:mx-4 font-inter">
         <h3 className="text-2xl font-semibold">{t("biodiesel.title")}</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:p-4 sm:rounded-xl bg-gradient-custom">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:rounded-xl overflow-hidden bg-[var(--color-nature-green)]">
           <Image
             src="/images/products/biodiesel.JPG"
             alt="Biodiesel"
-            className="w-full h-64 max-h-[250px] object-cover self-center sm:border-2 border-white !relative"
-            fill
+            className="w-full h-full max-h-[600px] object-cover self-center  !relative"
+            height={1600}
+            width={900}
           />
-          <div>
+          <div className="px-2">
             {Array.from({ length: 6 }).map((_, idx) => {
               const featureKey = `feature-${idx + 1}`;
               return (
@@ -48,14 +49,15 @@ export default function ProductAccordionGrid() {
       {/* Glycerin Section */}
       <section className="bg-white text-black pb-4 sm:mx-4 font-inter">
         <h3 className="text-2xl font-semibold">{t("glycerin.title")}</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:p-4 sm:rounded-xl bg-gradient-custom">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:rounded-xl overflow-hidden bg-[var(--color-nature-green)]">
           <Image
-            fill
+            height={1600}
+            width={900}
             src="/images/products/glycerin.JPG"
             alt="Glycerin"
-            className="w-full h-64 max-h-[250px] object-cover self-center sm:border-2 border-white !relative"
+            className="w-full h-full max-h-[600px] object-cover self-center  !relative"
           />
-          <div>
+          <div className="px-2">
             {Array.from({ length: 4 }).map((_, idx) => {
               const featureKey = `feature-${idx + 1}`;
               return (

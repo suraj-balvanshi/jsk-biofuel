@@ -21,6 +21,8 @@
 }
 
 @theme inline {
+  --breakpoint-xsm: 25rem;
+  --breakpoint-xxsm: 15rem;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -142,6 +144,7 @@
   --color-mint-green: #88d4a3;
   --color-nature-green: #2e7d32;
   --color-deep-forest: #1b3a2b;
+  --color-jet: #39393a;
 
   --color-soft-white: #f5f5f5;
   --color-light-gray: #e0e0e0;
@@ -151,7 +154,7 @@
   --font-playfair: "Playfair Display", serif;
   --font-space-grotesk: "Space Grotesk", sans-serif;
 
-  --color-header-footer: #449f3d;
+  --color-header-footer: var(--color-deep-forest);
   --color-body-bg: #d7ffab;
   --color-burger-menu-bg: #0a7b42;
 }
@@ -202,8 +205,8 @@
 .bg-gradient-custom {
   background: linear-gradient(
     to right,
-    var(--color-nature-green),
-    var(--color-mint-green)
+    var(--color-deep-forest),
+    var(--color-nature-green)
   );
 }
 

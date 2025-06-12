@@ -3,6 +3,7 @@ import PerfectContactCta from "@/components/perfect/perfect-contact-cta";
 import PerfectHeroSection from "@/components/perfect/perfect-hero-section";
 import PerfectInfinitePartners from "@/components/perfect/perfect-infinite-partners";
 import PerfectStrengthCard from "@/components/perfect/perfect-strength-card";
+import PerfectTimeline from "@/components/perfect/perfect-timeline";
 import PerfectYoutubeEmbed from "@/components/perfect/perfect-youtube-embed";
 import PerfectProductAccordion from "@/components/perfect/prefect-product-accordion";
 import { SCROLL_FADE_IN } from "@/lib/className";
@@ -16,6 +17,9 @@ export default function Home() {
       </div>
       <div className={`mb-4 ${SCROLL_FADE_IN}`}>
         <PerfectProductAccordion />
+      </div>
+      <div className={`mx-4 mb-4 ${SCROLL_FADE_IN}`}>
+        <PerfectTimeline />
       </div>
       <div className={`mx-4 mb-4 ${SCROLL_FADE_IN}`}>
         <PerfectCompanyStrength />
