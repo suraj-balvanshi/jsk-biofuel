@@ -151,7 +151,7 @@
   --font-playfair: "Playfair Display", serif;
   --font-space-grotesk: "Space Grotesk", sans-serif;
 
-  --color-header-footer: #449f3d;
+  --color-header-footer: var(--color-deep-forest);
   --color-body-bg: #d7ffab;
   --color-burger-menu-bg: #0a7b42;
 }
