@@ -153,8 +153,16 @@ export function PerfectBiodieselPage() {
       </h2>
 
       {/* Summary Section */}
-      <div className="flex flex-col md:flex-row items-center gap-6">
-        <div className="flex-1 text-lg">{biodieselSummary}</div>
+      <div className="flex flex-col md:flex-row items-center gap-6 relative p-4">
+        <Image
+          src="/images/products/biodiesel.JPG"
+          alt="Biodiesel"
+          fill
+          className="rounded-xl object-cover absolute top-0 left-0 z-[-1] filter greyscale opacity-50 w-full h-full"
+        />
+        <div className="flex-1 text-lg bg-white/50 rounded-xl p-4">
+          {biodieselSummary}
+        </div>
         <div className="flex-1 max-w-xl h-[400px] relative">
           <Image
             src="/images/products/biodiesel.JPG"
@@ -168,12 +176,14 @@ export function PerfectBiodieselPage() {
       {/* Key Highlights Section */}
       <div className={`text-center ${SCROLL_FADE_IN}`}>
         <h2 className="text-2xl font-bold">
-          <span className="text-blue-600">{biodieselHighlightTitle}</span>
+          <span className="text-[var(--color-deep-forest)]">
+            {biodieselHighlightTitle}
+          </span>
         </h2>
         <div className="grid md:grid-cols-2 gap-8 mt-6">
           {biodieselHighlights.map((highlight, index) => (
             <div key={index}>
-              <h3 className="text-lg font-bold text-blue-950">
+              <h3 className="text-lg font-bold text-[var(--color-deep-forest)]">
                 {highlight.title}
               </h3>
               <p className="text-sm text-gray-700 mt-2">
@@ -186,13 +196,13 @@ export function PerfectBiodieselPage() {
 
       {/* Benefits Section */}
       <div className={`bg-gray-100 p-6 rounded-xl ${SCROLL_FADE_IN}`}>
-        <h3 className="text-center text-2xl font-bold">
+        <h3 className="text-center text-2xl font-bold text-[var(--color-deep-forest)]">
           {biodieselBenefitsTitle}
         </h3>
         <div className="grid md:grid-cols-3 gap-6 mt-6">
           {biodieselBenefits.map((benefit, index) => (
             <div key={index} className="bg-white p-4 rounded shadow">
-              <h4 className="text-purple-600 text-2xl font-bold">
+              <h4 className="text-[var(--color-nature-green)] text-2xl font-bold">
                 {benefit.title}
               </h4>
               <p className="text-sm text-gray-700 mt-1">
@@ -216,7 +226,7 @@ export function PerfectBiodieselPage() {
           />
         </div>
         <div>
-          <h3 className="text-purple-600 text-2xl font-bold">
+          <h3 className="text-[var(--color-nature-green)] text-2xl font-bold">
             {biodieselKeyFeaturesTitle}
           </h3>
           <ul className="flex-1 space-y-2 text-lg list-disc list-inside">
@@ -253,8 +263,8 @@ export function PerfectBiodieselPage() {
         <ul className="space-y-4 grid md:grid-cols-3 gap-6">
           {biodieselApplications.map((item, index) => (
             <li key={index} className="mb-0 flex flex-col">
-              <div className="flex items-center bg-blue-50 p-4 rounded-lg shadow-sm max-w-2xl mx-auto h-full w-full">
-                <div className="bg-blue-600 text-white rounded-full p-2 mr-4">
+              <div className="flex items-center bg-[var(--color-deep-forest)]/30 p-4 rounded-lg shadow-sm max-w-2xl mx-auto h-full w-full">
+                <div className="bg-[var(--color-deep-forest)] text-white rounded-full p-2 mr-4">
                   {item.icon}
                 </div>
                 <p className="text-gray-800 text-sm">{item.text}</p>
@@ -293,16 +303,16 @@ export function PerfectBiodieselPage() {
               className="mt-2 border-0"
             >
               <AccordionTrigger className="flex items-center gap-3 px-4 py-3 bg-gray-100 rounded-md">
-                <span className="bg-violet-600 text-white p-2 rounded-full">
+                <span className="bg-[var(--color-nature-green)] text-white p-2 rounded-full">
                   <CircleHelp size={20} />
                 </span>
                 <span className="font-semibold text-sm">
                   <p>{faq.question}</p>
                 </span>
               </AccordionTrigger>
-              <AccordionContent className="bg-indigo-100 text-sm text-gray-800 rounded-md px-4 py-3 mt-2 flex justify-between items-start gap-4">
+              <AccordionContent className="bg-[var(--color-mint-green)] text-sm text-gray-800 rounded-md px-4 py-3 mt-2 flex justify-between items-start gap-4">
                 <p className="flex-1">{faq.answer}</p>
-                <div className="bg-violet-600 text-white p-2 rounded-full">
+                <div className="bg-[var(--color-nature-green)]/30 text-white p-2 rounded-full">
                   <BotMessageSquare size={20} />
                 </div>
               </AccordionContent>
@@ -433,8 +443,16 @@ export function PerfectGlycerinPage() {
       </h2>
 
       {/* Summary Section */}
-      <div className="flex flex-col md:flex-row items-center gap-6">
-        <div className="flex-1 text-lg">{glycerinSummary}</div>
+      <div className="flex flex-col md:flex-row items-center gap-6 relative p-4">
+        <Image
+          src="/images/products/glycerin.JPG"
+          alt="Glycerin"
+          fill
+          className="rounded-xl object-cover absolute top-0 left-0 z-[-1] filter greyscale opacity-50 w-full h-full"
+        />
+        <div className="flex-1 text-lg bg-white/50 rounded-xl p-4">
+          {glycerinSummary}
+        </div>
         <div className="flex-1 max-w-xl h-[400px] relative">
           <Image
             src="/images/products/glycerin.JPG"
@@ -448,12 +466,14 @@ export function PerfectGlycerinPage() {
       {/* Key Highlights Section */}
       <div className={`text-center ${SCROLL_FADE_IN}`}>
         <h2 className="text-2xl font-bold">
-          <span className="text-blue-600">{glycerinHighlightsTitle}</span>
+          <span className="text-[var(--color-deep-forest)]">
+            {glycerinHighlightsTitle}
+          </span>
         </h2>
         <div className="grid md:grid-cols-2 gap-8 mt-6">
           {glycerinHighlights.map((highlight, index) => (
             <div key={index}>
-              <h3 className="text-lg font-bold text-blue-950">
+              <h3 className="text-lg font-bold text-[var(--color-deep-forest)]">
                 {highlight.title}
               </h3>
               <p className="text-sm text-gray-700 mt-2">
@@ -466,13 +486,13 @@ export function PerfectGlycerinPage() {
 
       {/* Benefits Section */}
       <div className={`bg-gray-100 p-6 rounded-xl ${SCROLL_FADE_IN}`}>
-        <h3 className="text-center text-2xl font-bold">
+        <h3 className="text-center text-2xl font-bold text-[var(--color-deep-forest)]">
           {glycerinBenefitsTitle}
         </h3>
         <div className="grid md:grid-cols-3 gap-6 mt-6">
           {glycerinBenefits.map((benefit, index) => (
             <div key={index} className="bg-white p-4 rounded shadow">
-              <h4 className="text-purple-600 text-2xl font-bold">
+              <h4 className="text-[var(--color-nature-green)] text-2xl font-bold">
                 {benefit.title}
               </h4>
               <p className="text-sm text-gray-700 mt-1">
@@ -496,7 +516,7 @@ export function PerfectGlycerinPage() {
           />
         </div>
         <div>
-          <h3 className="text-purple-600 text-2xl font-bold">
+          <h3 className="text-[var(--color-nature-green)] text-2xl font-bold">
             {glycerinKeyFeaturesTitle}
           </h3>
           <ul className="flex-1 space-y-2 text-lg list-disc list-inside">
@@ -531,8 +551,8 @@ export function PerfectGlycerinPage() {
         <ul className="space-y-4 grid md:grid-cols-3 gap-6">
           {glycerinApplications.map((item, index) => (
             <li key={index} className="mb-0 flex flex-col">
-              <div className="flex items-center bg-blue-50 p-4 rounded-lg shadow-sm max-w-2xl mx-auto h-full w-full">
-                <div className="bg-blue-600 text-white rounded-full p-2 mr-4 flex items-center justify-center w-10 h-10">
+              <div className="flex items-center bg-[var(--color-deep-forest)]/30 p-4 rounded-lg shadow-sm max-w-2xl mx-auto h-full w-full">
+                <div className="bg-[var(--color-deep-forest)] text-white rounded-full p-2 mr-4 flex items-center justify-center w-10 h-10">
                   {item.icon}
                 </div>
                 <p className="text-gray-800 text-sm">{item.text}</p>
@@ -571,16 +591,16 @@ export function PerfectGlycerinPage() {
               className="mt-2 border-0"
             >
               <AccordionTrigger className="flex items-center gap-3 px-4 py-3 bg-gray-100 rounded-md">
-                <span className="bg-violet-600 text-white p-2 rounded-full">
+                <span className="bg-[var(--color-nature-green)] text-white p-2 rounded-full">
                   <CircleHelp size={20} />
                 </span>
                 <span className="font-semibold text-sm">
                   <p>{faq.question}</p>
                 </span>
               </AccordionTrigger>
-              <AccordionContent className="bg-indigo-100 text-sm text-gray-800 rounded-md px-4 py-3 mt-2 flex justify-between items-start gap-4">
+              <AccordionContent className="bg-[var(--color-mint-green)] text-sm text-gray-800 rounded-md px-4 py-3 mt-2 flex justify-between items-start gap-4">
                 <p className="flex-1">{faq.answer}</p>
-                <div className="bg-violet-600 text-white p-2 rounded-full">
+                <div className="bg-[var(--color-nature-green)]/30 text-white p-2 rounded-full">
                   <BotMessageSquare size={20} />
                 </div>
               </AccordionContent>
