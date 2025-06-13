@@ -1,39 +1,36 @@
 import Image from "next/image";
-
-const cards = [
-  {
-    title: "Pioneering Technology and Solutions",
-    content:
-      "Development of high‑efficiency transesterification reactors for faster, cleaner biodiesel production.",
-  },
-  {
-    title: "Sustainable Practices and Environmental Stewardship",
-    content:
-      "Closed‑loop water reclamation tominimize wastewater discharge. Lifecycle assessments to reduce carbon footprint from feedstock sourcing through distribution.",
-  },
-  {
-    title: "Safety and Operational Excellence",
-    content:
-      "Rigorous HSE (Health, Safety & Environment) protocols at every production stage. Regular training, audits, and emergency‑response drills to ensure zero‑incident operations. ",
-  },
-  {
-    title: "Strategic Partnerships and Collaborations",
-    content:
-      "Rigorous HSE (Health, Safety & Environment) protocols at every production stage. Regular training, audits, and emergency‑response drills to ensure zero‑incident operations.",
-  },
-  {
-    title: "Biodiesel",
-    content:
-      "High-quality, eco-friendly fuel for transportation and industrial use.",
-  },
-  {
-    title: "Refined Glycerin",
-    content:
-      "A versatile by-product used in pharmaceuticals, cosmetics, and agriculture.",
-  },
-];
+import { useTranslations } from "next-intl";
 
 export default function PerfectTimeline() {
+  const t = useTranslations("timeline");
+
+  const cards = [
+    {
+      title: t("card-1-title"),
+      content: t("card-1-content"),
+    },
+    {
+      title: t("card-2-title"),
+      content: t("card-2-content"),
+    },
+    {
+      title: t("card-3-title"),
+      content: t("card-3-content"),
+    },
+    {
+      title: t("card-4-title"),
+      content: t("card-4-content"),
+    },
+    {
+      title: t("card-5-title"),
+      content: t("card-5-content"),
+    },
+    {
+      title: t("card-6-title"),
+      content: t("card-6-content"),
+    },
+  ];
+
   return (
     <div className="h-[calc(40rem*_6)] xxsm:h-[calc(35rem*_6)] xsm:h-[calc(25rem*_6)] sm:h-[calc(20rem*_6)] relative px-4">
       <Image
@@ -41,16 +38,15 @@ export default function PerfectTimeline() {
         height={1200}
         width={1920}
         className="h-full w-full absolute top-0 left-0 object-cover rounded-2xl filter sepia hue-rotate-[330deg] saturate-200"
-        alt="Perfect Timeline Background"
+        alt={t("backgroundAlt")}
       />
       {cards.map((card, index) => (
         <div
           key={index}
           className="sticky top-[calc(4rem*_var(--i))] flex justify-center h-auto mb-[10rem] w-full  transition-all duration-300 ease-in-out"
           style={{
-            // Push down each card using its index to create a step effect
             ["--i" as string]: index,
-            zIndex: index + 10, // ensure correct stacking
+            zIndex: index + 10,
           }}
         >
           <div className="max-w-xl w-full border rounded-2xl p-6 shadow-md mt-4 bg-white shadow-2xl">

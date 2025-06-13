@@ -583,5 +583,20 @@
       "alt": "Site Image 8",
       "caption": "Site Image 8"
     }
+  },
+  "timeline": {
+    "card-1-title": "Pioneering Technology and Solutions",
+    "card-1-content": "Development of high‑efficiency transesterification reactors for faster, cleaner biodiesel production.",
+    "card-2-title": "Sustainable Practices and Environmental Stewardship",
+    "card-2-content": "Closed‑loop water reclamation to minimize wastewater discharge. Lifecycle assessments to reduce carbon footprint from feedstock sourcing through distribution.",
+    "card-3-title": "Safety and Operational Excellence",
+    "card-3-content": "Rigorous HSE (Health, Safety & Environment) protocols at every production stage. Regular training, audits, and emergency‑response drills to ensure zero‑incident operations.",
+    "card-4-title": "Strategic Partnerships and Collaborations",
+    "card-4-content": "Rigorous HSE (Health, Safety & Environment) protocols at every production stage. Regular training, audits, and emergency‑response drills to ensure zero‑incident operations.",
+    "card-5-title": "Biodiesel",
+    "card-5-content": "High-quality, eco-friendly fuel for transportation and industrial use.",
+    "card-6-title": "Refined Glycerin",
+    "card-6-content": "A versatile by-product used in pharmaceuticals, cosmetics, and agriculture.",
+    "backgroundAlt": "Perfect Timeline Background"
   }
 }
