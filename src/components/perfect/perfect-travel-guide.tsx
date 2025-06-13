@@ -5,26 +5,29 @@ import Link from "next/link";
 import clsx from "clsx";
 import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
-
-type Message = {
-  text: string;
-  href: string;
-};
-
-const messages: Message[] = [
-  { text: "Biodiesel", href: "/product/biodiesel" },
-  { text: "Glycerin", href: "/product/glycerin" },
-  { text: "Contact", href: "/contact" },
-  { text: "Join us", href: "/career" },
-  { text: "Please Troll Div. Thanks Ψ(｀∀´)ﾉ", href: "/" },
-];
+import { useTranslations } from "next-intl";
 
 export default function PerfectTravelGuide() {
+  const t = useTranslations("travelGuide");
+  const tFooter = useTranslations("footer"); // For WhatsApp number
   const [index, setIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [show, setShow] = useState(true);
 
-  // Hide when user is within 100px of bottom, show otherwise
+  const messages = [
+    { text: t("biodiesel"), href: "/product/biodiesel" },
+    { text: t("glycerin"), href: "/product/glycerin" },
+    { text: t("contact"), href: "/contact" },
+    { text: t("career"), href: "/career" },
+    { text: t("troll"), href: "/" },
+  ];
+
+  // Get WhatsApp number and aria label from translations
+  const whatsappNumber = tFooter("followUs.whatsapp");
+  const whatsappHref = `https://wa.me/91${whatsappNumber.replace(/\D/g, "")}`;
+  const whatsappAria = tFooter("followUs.title") || "Chat on WhatsApp";
+
+  // Hide when user is within 500px of bottom, show otherwise
   useEffect(() => {
     function handleScroll() {
       const buffer = 500;
@@ -40,7 +43,6 @@ export default function PerfectTravelGuide() {
     }
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    // Run once on mount
     handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
@@ -52,11 +54,11 @@ export default function PerfectTravelGuide() {
       setTimeout(() => {
         setIndex((prev) => (prev + 1) % messages.length);
         setAnimating(false);
-      }, 500); // duration matches CSS
+      }, 500);
     }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [messages.length]);
 
   if (!show) return null;
 
@@ -93,11 +95,11 @@ export default function PerfectTravelGuide() {
 
       {/* WhatsApp Bubble */}
       <a
-        href="https://wa.me/919999999999" // Replace with your WhatsApp number
+        href={whatsappHref}
         target="_blank"
         rel="noopener noreferrer"
         className="bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg transition-colors w-16 h-16 flex items-center justify-center pointer-events-auto fixed bottom-4 right-4 z-50"
-        aria-label="Chat on WhatsApp"
+        aria-label={whatsappAria}
       >
         <FaWhatsapp size={48} />
       </a>

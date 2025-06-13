@@ -598,5 +598,12 @@
     "card-6-title": "Refined Glycerin",
     "card-6-content": "A versatile by-product used in pharmaceuticals, cosmetics, and agriculture.",
     "backgroundAlt": "Perfect Timeline Background"
+  },
+  "travelGuide": {
+    "biodiesel": "Biodiesel",
+    "glycerin": "Glycerin",
+    "contact": "Contact",
+    "career": "Join us",
+    "troll": "Please Troll Div. Thanks Ψ(｀∀´)ﾉ"
   }
 }
