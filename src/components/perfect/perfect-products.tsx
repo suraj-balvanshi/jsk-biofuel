@@ -156,7 +156,7 @@ export function PerfectBiodieselPage() {
       <div className="flex flex-col md:flex-row items-center gap-6 relative p-4">
         <Image
           src="/images/products/biodiesel.JPG"
-          alt="Biodiesel"
+          alt={t("imageAlt")}
           fill
           className="rounded-xl object-cover absolute top-0 left-0 z-[-1] filter greyscale opacity-50 w-full h-full"
         />
@@ -166,7 +166,7 @@ export function PerfectBiodieselPage() {
         <div className="flex-1 max-w-xl h-[400px] relative">
           <Image
             src="/images/products/biodiesel.JPG"
-            alt="Biodiesel"
+            alt={t("imageAlt")}
             fill
             className="rounded-xl max-w-xl !relative object-cover"
           />
@@ -220,7 +220,7 @@ export function PerfectBiodieselPage() {
         <div className="flex-1 max-w-xl h-[400px] relative">
           <Image
             src="/images/products/biodiesel-2.JPG"
-            alt="Key Features"
+            alt={t("keyFeaturesImageAlt")}
             fill
             className="rounded-xl max-w-xl !relative object-cover"
           />
@@ -446,7 +446,7 @@ export function PerfectGlycerinPage() {
       <div className="flex flex-col md:flex-row items-center gap-6 relative p-4">
         <Image
           src="/images/products/glycerin.JPG"
-          alt="Glycerin"
+          alt={t("imageAlt")}
           fill
           className="rounded-xl object-cover absolute top-0 left-0 z-[-1] filter greyscale opacity-50 w-full h-full"
         />
@@ -456,7 +456,7 @@ export function PerfectGlycerinPage() {
         <div className="flex-1 max-w-xl h-[400px] relative">
           <Image
             src="/images/products/glycerin.JPG"
-            alt="Glycerin"
+            alt={t("imageAlt")}
             fill
             className="rounded-xl max-w-xl !relative object-cover"
           />
@@ -510,7 +510,7 @@ export function PerfectGlycerinPage() {
         <div className="flex-1 max-w-xl h-[400px] relative">
           <Image
             src="/images/products/glycerin-2.JPG"
-            alt="Key Features"
+            alt={t("keyFeaturesImageAlt")}
             fill
             className="rounded-xl max-w-xl !relative object-cover"
           />

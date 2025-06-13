@@ -199,7 +199,9 @@
         "urbanServices": "Urban Services: Powering municipal garbage trucks and other service vehicles in cities.",
         "telecom": "Telecom: Fueling DG sets in mobile communication towers.",
         "institutionalBackup": "Institutional Backup: Providing reliable power for schools, hospitals, and government offices."
-      }
+      },
+      "imageAlt": "Biodiesel product image",
+      "keyFeaturesImageAlt": "Key Features of Biodiesel"
     },
     "glycerin": {
       "title": "Glycerin",
@@ -293,7 +295,9 @@
         "agrochemicals": "Agrochemicals: As a carrier agent for fertilizers and pesticides in agriculture.",
         "leatherIndustry": "Leather Industry: In the tanning and finishing processes.",
         "textileIndustry": "Textile Industry: In dyeing and fabric sizing."
-      }
+      },
+      "imageAlt": "Glycerin product image",
+      "keyFeaturesImageAlt": "Key Features of Glycerin"
     }
   },
   "companyStrength": {
