@@ -585,7 +585,9 @@
     },
     "youtubeDriveLink": "https://drive.google.com/file/d/1l73OA9QfrUoXZWkwrrAz9zKdlKX1Q2w4/preview"
   },
-  "timeline": {
+  "innovation": {
+    "title": "Innovation",
+    "description": "We invest heavily in research and development to advance cutting‐edge technologies that enhance efficiency and safety across all our operations.",
     "card-1-title": "Pioneering Technology and Solutions",
     "card-1-content": "Development of high‑efficiency transesterification reactors for faster, cleaner biodiesel production.",
     "card-2-title": "Sustainable Practices and Environmental Stewardship",
@@ -614,5 +616,43 @@
       "2": "Our operations are guided by strong values that emphasize protecting our employees, supporting our communities, and preserving the environment.",
       "3": "We achieve this through strict policies and proactive actions that foster a safe and sustainable workplace."
     }
+  },
+  "stance": {
+    "title": "What We Do",
+    "description": "At JSK Biofuel, we are dedicated to providing sustainable energy alternatives that help reduce dependence on fossil fuels and help protect the environment. We focus on producing high-quality biodiesel and glycerin from renewable resources.",
+    "services": [
+      {
+        "title": "BIODIESEL PRODUCTION",
+        "desc": "Manufacturing eco-friendly biodiesel from renewable feedstocks."
+      },
+      {
+        "title": "GLYCERIN SUPPLY",
+        "desc": "Providing high-quality glycerin, a by-product of biodiesel production."
+      },
+      {
+        "title": "CUSTOM FUEL BLENDING",
+        "desc": "Creating tailored biodiesel blends to meet specific client needs."
+      },
+      {
+        "title": "BULK SUPPLY",
+        "desc": "Reliable delivery of biofuels to industrial and commercial customers."
+      },
+      {
+        "title": "SUSTAINABILITY CONSULTING",
+        "desc": "Advising businesses on adopting green energy and reducing carbon footprints."
+      },
+      {
+        "title": "QUALITY TESTING & ASSURANCE",
+        "desc": "Ensuring every product meets strict quality standards for safety and performance."
+      },
+      {
+        "title": "RESEARCH & DEVELOPMENT",
+        "desc": "Innovating new biofuel technologies for improved efficiency and sustainability."
+      },
+      {
+        "title": "TECHNICAL SUPPORT",
+        "desc": "Offering expert guidance and training to clients on biofuel use and safety."
+      }
+    ]
   }
 }
