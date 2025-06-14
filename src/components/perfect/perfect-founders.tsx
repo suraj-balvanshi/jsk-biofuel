@@ -48,9 +48,9 @@ export default function PerfectFounders() {
               <div className="h-32 w-32">
                 <Image
                   fill
-                  src="/images/founders/founder-1.JPG"
-                  className="rounded-full object-cover h-full w-full shadow-md !relative blur"
-                  alt="Founder Image 1"
+                  src="/images/founders/founder-2.JPG"
+                  className="rounded-full object-cover h-full w-full shadow-md !relative"
+                  alt="Founder Image 2"
                 />
               </div>
             </div>

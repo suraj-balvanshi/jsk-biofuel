@@ -582,7 +582,8 @@
     "site8": {
       "alt": "Site Image 8",
       "caption": "Site Image 8"
-    }
+    },
+    "youtubeDriveLink": "https://drive.google.com/file/d/1l73OA9QfrUoXZWkwrrAz9zKdlKX1Q2w4/preview"
   },
   "timeline": {
     "card-1-title": "Pioneering Technology and Solutions",
@@ -605,5 +606,13 @@
     "contact": "Contact",
     "career": "Join us",
     "troll": "Please Troll Div. Thanks Ψ(｀∀´)ﾉ"
+  },
+  "healthAndSafety": {
+    "title": "Health, Safety, and Environmental Commitment",
+    "healthAndSafetyAdvantages": {
+      "1": "We ensure health, safety, and environmental responsibility is at the heart of everything we do.",
+      "2": "Our operations are guided by strong values that emphasize protecting our employees, supporting our communities, and preserving the environment.",
+      "3": "We achieve this through strict policies and proactive actions that foster a safe and sustainable workplace."
+    }
   }
 }
