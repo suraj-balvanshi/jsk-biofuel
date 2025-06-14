@@ -1,8 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-export default function PerfectTimeline() {
-  const t = useTranslations("timeline");
+export default function PerfectInnovation() {
+  const t = useTranslations("innovation");
 
   const cards = [
     {
@@ -32,7 +34,7 @@ export default function PerfectTimeline() {
   ];
 
   return (
-    <div className="h-[calc(40rem*_6)] xxsm:h-[calc(35rem*_6)] xsm:h-[calc(25rem*_6)] sm:h-[calc(20rem*_6)] relative px-4">
+    <div className="h-max relative px-4 pb-4">
       <Image
         src="/images/timeline/timeline_1.JPG"
         height={1200}
@@ -40,6 +42,13 @@ export default function PerfectTimeline() {
         className="h-full w-full absolute top-0 left-0 object-cover rounded-2xl filter sepia hue-rotate-[330deg] saturate-200"
         alt={t("backgroundAlt")}
       />
+      <h2 className="p-4 text-3xl font-bold text-[var(--color-deep-forest)] z-1 relative font-spaceGrotesk">
+        {t("title")}
+      </h2>
+
+      <p className="px-4 text-[var(--color-deep-forest)] z-1 relative font-inter">
+        {t("description")}
+      </p>
       {cards.map((card, index) => (
         <div
           key={index}

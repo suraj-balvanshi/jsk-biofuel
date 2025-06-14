@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Carousel,
   CarouselContent,
@@ -5,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
@@ -36,7 +39,15 @@ export default function PerfectHeroSection() {
 
   return (
     <section className="perfect-hero-section font-inter">
-      <Carousel className="max-w-full mx-auto sm:m-4 mb-4">
+      <Carousel
+        opts={{ loop: true }}
+        plugins={[
+          Autoplay({
+            delay: 5000,
+          }),
+        ]}
+        className="max-w-full mx-auto sm:m-4 mb-4"
+      >
         <CarouselContent>
           {carouselSlides.map((slide, index) => (
             <CarouselItem key={index} className="h-[35vh]">

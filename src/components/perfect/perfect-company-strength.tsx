@@ -23,14 +23,15 @@ export default function PerfectCompanyStrength() {
           {t("title")}
         </h2>
       </div>
-      <div className="relative h-[350px] w-full overflow-hidden flex justify-end items-center px-4 font-inter">
+      <div className="relative h-[500px] w-full overflow-hidden flex justify-end items-center px-4 font-inter">
         <Image
           src="/images/company-strength/company-strength-1.JPG"
           alt="Inaugration of JSK Biofuel"
-          fill
+          height={500}
+          width={1200}
           className="absolute inset-0 w-full h-full object-cover sm:rounded-xl overflow-hidden"
         />
-        <div className="relative max-w-sm w-full min-h-[200px] h-auto ">
+        <div className="relative max-w-sm w-full sm:min-h-[250px] min-h-[350px]">
           {Array.from({ length: 6 }).map((_, idx) => {
             const featureKey = `feature-${idx + 1}`;
             const isCurrent = idx === current;
@@ -48,7 +49,7 @@ export default function PerfectCompanyStrength() {
       `}
               >
                 <CardHeader className="p-4">
-                  <CardTitle className="flex items-center gap-3 text-xl">
+                  <CardTitle className="flex flex-wrap items-center gap-3 text-xl">
                     <span className="text-2xl">{t(`${featureKey}.emoji`)}</span>
                     {t(`${featureKey}.title`)}
                   </CardTitle>

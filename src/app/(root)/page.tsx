@@ -1,17 +1,22 @@
 import PerfectCompanyStrength from "@/components/perfect/perfect-company-strength";
 import PerfectContactCta from "@/components/perfect/perfect-contact-cta";
+import PerfectHealthSafety from "@/components/perfect/perfect-health-safety";
 import PerfectHeroSection from "@/components/perfect/perfect-hero-section";
 import PerfectInfinitePartners from "@/components/perfect/perfect-infinite-partners";
 import PerfectStrengthCard from "@/components/perfect/perfect-strength-card";
-import PerfectTimeline from "@/components/perfect/perfect-timeline";
+import PerfectInnovation from "@/components/perfect/perfect-innovation";
 import PerfectYoutubeEmbed from "@/components/perfect/perfect-youtube-embed";
 import PerfectProductAccordion from "@/components/perfect/prefect-product-accordion";
+import PerfectStance from "@/components/perfect/prefect-stance";
 import { SCROLL_FADE_IN } from "@/lib/className";
 
 export default function Home() {
   return (
     <div className="w-full">
       <PerfectHeroSection />
+      <div className={`mb-4 ${SCROLL_FADE_IN}`}>
+        <PerfectStance />
+      </div>
       <div className={`mx-4 mb-4 ${SCROLL_FADE_IN}`}>
         <PerfectStrengthCard />
       </div>
@@ -19,7 +24,7 @@ export default function Home() {
         <PerfectProductAccordion />
       </div>
       <div className={`mx-4 mb-4 ${SCROLL_FADE_IN}`}>
-        <PerfectTimeline />
+        <PerfectInnovation />
       </div>
       <div className={`mx-4 mb-4 ${SCROLL_FADE_IN}`}>
         <PerfectCompanyStrength />
@@ -34,6 +39,7 @@ export default function Home() {
         className={`m-auto px-4 mb-4 flex place-items-center max-h-[450px] max-w-[800px] ${SCROLL_FADE_IN}`}
       >
         <PerfectYoutubeEmbed />
+        <PerfectHealthSafety />
       </div>
     </div>
   );
