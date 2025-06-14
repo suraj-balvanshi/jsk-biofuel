@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
@@ -32,7 +34,7 @@ export default function PerfectInnovation() {
   ];
 
   return (
-    <div className="h-[calc(41rem*_6)] xxsm:h-[calc(36rem*_6)] xsm:h-[calc(26rem*_6)] sm:h-[calc(21rem*_6)] relative px-4">
+    <div className="h-max relative px-4 pb-4">
       <Image
         src="/images/timeline/timeline_1.JPG"
         height={1200}
