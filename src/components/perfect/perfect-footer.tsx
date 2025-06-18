@@ -6,7 +6,7 @@ export default function PerfectFooter() {
 
   return (
     <div className="container mx-auto px-4 font-inter">
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
         <div>
           <h4 className="text-lg font-bold mb-4 font-spaceGrotesk">
             {t("title")}
@@ -17,7 +17,7 @@ export default function PerfectFooter() {
           <h4 className="text-lg font-bold mb-4 font-spaceGrotesk">
             {t("quickLinks.title")}
           </h4>
-          <ul className="space-y-2">
+          <ul className="space-y-2 flex flex-col max-sm:flex-row max-sm:space-x-4 max-sm:flex-wrap">
             <li>
               <a href="/products/biodiesel" className="hover:text-gray-300">
                 {t("quickLinks.biodiesel")}

@@ -30,7 +30,7 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col font-inter bg-[var(--color-body-bg)]/2">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ScrollFadeIn>
-            <header className="border-b shadow-sm bg-[var(--color-header-footer)] text-white">
+            <header className="border-b shadow-sm bg-[var(--color-header-footer)] text-white sticky top-0 z-50">
               <PerfectHeader />
             </header>
             <main className="max-content-width w-full">{children}</main>
