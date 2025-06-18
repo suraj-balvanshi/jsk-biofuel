@@ -27,7 +27,8 @@
     "followUs": {
       "title": "Follow Us",
       "linkedin": "@jskbiofuel",
-      "whatsapp": "9839571751"
+      "whatsapp": "9839571751",
+      "address": "E-3196/7, Rajarjipuram, Lucknow, Uttar Pradesh, 226017"
     },
     "copyright": "© 2025 JSK Green India Bio Fuel All rights reserved."
   },
@@ -367,8 +368,8 @@
     },
     "address": {
       "label": "Address",
-      "value": "Newaj Kheda, Parg Mohan, The Hasanganj, Unnao, Uttar Pradesh, 209841",
-      "link": "https://www.google.com/maps/search/?api=1&query=Newaj+Kheda,+Parg+Mohan,+The+Hasanganj,+Unnao,+Uttar+Pradesh,+209841"
+      "value": "E-3196/7, Rajarjipuram, Lucknow, Uttar Pradesh, 226017",
+      "link": "https://www.google.com/maps/search/?api=1&query=E-3196/7,+Rajarjipuram,+Lucknow,+Uttar+Pradesh,+226017"
     },
     "business": {
       "label": "Business hours",

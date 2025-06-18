@@ -11,6 +11,12 @@ export default function PerfectMediaPage() {
       <h2 className="text-4xl font-bold m-4 text-center font-spaceGrotesk">
         {t("title")}
       </h2>
+      <div className={`mx-4 mt-0 ${SCROLL_FADE_IN}`}>
+        <h3 className="text-4xl font-bold text-center mb-4 font-playfair">
+          {t("youtubeTitle")}
+        </h3>
+        <PerfectYoutubeEmbed />
+      </div>
       <div>
         <div className={`container mx-auto px-4 py-8 ${SCROLL_FADE_IN}`}>
           <h3 className="text-4xl font-bold text-center mb-8 font-playfair">
@@ -265,12 +271,6 @@ export default function PerfectMediaPage() {
             </div>
           </div>
         </div>
-      </div>
-      <div className={`mx-4 mt-0 ${SCROLL_FADE_IN}`}>
-        <h3 className="text-4xl font-bold text-center mb-4 font-spaceGrotesk">
-          {t("youtubeTitle")}
-        </h3>
-        <PerfectYoutubeEmbed />
       </div>
     </div>
   );
