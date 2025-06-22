@@ -36,7 +36,7 @@ export default function Home() {
         <PerfectContactCta />
       </div>
       <div
-        className={`m-auto px-4 mb-4 flex flex-wrap place-items-center ${SCROLL_FADE_IN}`}
+        className={`m-auto px-4 mb-4 flex max-sm:flex-wrap place-items-center ${SCROLL_FADE_IN}`}
       >
         <PerfectYoutubeEmbed />
         <PerfectHealthSafety />
