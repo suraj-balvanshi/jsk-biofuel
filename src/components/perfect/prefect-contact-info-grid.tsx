@@ -4,7 +4,7 @@ import {
   FaMapLocationDot,
   FaBusinessTime,
   FaWhatsapp,
-  FaLinkedin,
+  FaBuilding,
 } from "react-icons/fa6";
 import { useTranslations } from "next-intl";
 
@@ -100,15 +100,22 @@ export default function PerfectContactInfoGrid() {
             </a>
           </div>
 
-          {/* LinkedIn */}
+          {/* Office Address */}
           <div className="w-full md:w-1/2 lg:w-1/3 p-8">
             <div className="flex items-center mb-6">
-              <FaLinkedin className="h-6 w-6" />
+              <FaBuilding className="h-6 w-6" />
               <div className="ml-4 text-xl font-semibold">
-                {t("linkedin.label")}
+                {t("office.label")}
               </div>
             </div>
-            <p className="leading-loose text-gray-500">{t("linkedin.value")}</p>
+            <a
+              href={t("office.link")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="leading-loose text-gray-500 underline"
+            >
+              {t("office.value")}
+            </a>
           </div>
         </div>
       </div>

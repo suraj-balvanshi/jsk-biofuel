@@ -23,9 +23,9 @@ export default function PerfectTravelGuide() {
   ];
 
   // Get WhatsApp number and aria label from translations
-  const whatsappNumber = tFooter("followUs.whatsapp");
+  const whatsappNumber = tFooter("contactUs.whatsapp");
   const whatsappHref = `https://wa.me/91${whatsappNumber.replace(/\D/g, "")}`;
-  const whatsappAria = tFooter("followUs.title") || "Chat on WhatsApp";
+  const whatsappAria = tFooter("contactUs.title") || "Chat on WhatsApp";
 
   // Hide when user is within 500px of bottom, show otherwise
   useEffect(() => {
