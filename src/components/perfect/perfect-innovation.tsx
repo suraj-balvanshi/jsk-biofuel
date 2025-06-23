@@ -52,7 +52,7 @@ export default function PerfectInnovation() {
       {cards.map((card, index) => (
         <div
           key={index}
-          className="sticky top-[calc(4rem*_var(--i))] flex justify-center h-auto mb-[10rem] w-full  transition-all duration-300 ease-in-out"
+          className="sticky top-[calc((4rem*_var(--i))+4rem)] flex justify-center h-auto mb-[10rem] w-full  transition-all duration-300 ease-in-out"
           style={{
             ["--i" as string]: index,
             zIndex: index + 10,
