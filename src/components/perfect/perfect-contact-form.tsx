@@ -35,13 +35,12 @@ export default function PerfectContactForm() {
     phone: z.string().min(10, {
       message: t("form.phoneError"), // Use translation function
     }),
-    email: z
-      .string()
-      .email({
-        message: t("form.emailError"), // Use translation function
-      })
-      .optional()
-      .or(z.literal("")),
+    email: z.union([
+      z.email({
+        message: t("form.emailError"),
+      }),
+      z.literal(""),
+    ]),
     city: z.string().optional(),
     state: z.string().optional(),
     product: z.string().optional(),
