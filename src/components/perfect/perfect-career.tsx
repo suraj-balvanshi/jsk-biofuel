@@ -33,10 +33,10 @@ export default function PerfectCareer() {
 
   const formSchema = z.object({
     // Required fields...
-    position: z.string({ required_error: t("positionRequiredError") }),
+    position: z.string().min(1, t("positionRequiredError")),
     name: z.string().min(2, { message: t("nameValidationError") }),
     phone: z.string().min(10, { message: t("phoneValidationError") }),
-    email: z.string().email({ message: t("emailValidationError") }),
+    email: z.email({ message: t("emailValidationError") }),
     address: z.string().min(5, { message: t("addressValidationError") }),
     previousPosition: z
       .string()
@@ -79,7 +79,7 @@ export default function PerfectCareer() {
       .optional()
       .refine(
         (val) => val === undefined || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val),
-        { message: t("referenceEmailValidationError") }
+        { message: t("referenceEmailValidationError") },
       ),
     referencePhone: z
       .string()
@@ -483,7 +483,7 @@ export default function PerfectCareer() {
                 e.stopPropagation();
                 e.currentTarget.classList.remove(
                   "border-blue-500",
-                  "bg-blue-50"
+                  "bg-blue-50",
                 );
               }}
               onDrop={(e) => {
@@ -491,7 +491,7 @@ export default function PerfectCareer() {
                 e.stopPropagation();
                 e.currentTarget.classList.remove(
                   "border-blue-500",
-                  "bg-blue-50"
+                  "bg-blue-50",
                 );
                 if (e.dataTransfer.files && e.dataTransfer.files[0]) {
                   setResumeFile(e.dataTransfer.files[0]);
