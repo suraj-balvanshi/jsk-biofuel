@@ -10,15 +10,15 @@ export default function PerfectHeader() {
   return (
     <nav className="flex items-center max-content-width px-4 py-2">
       <h1 className="mr-auto font-spaceGrotesk font-bold text-lg flex items-center">
-        <div className="rounded-[50%] bg-white inline-block flex justify-center items-center p-1 mr-2">
-          <Image
-            src="/logos/logo_v5.svg"
-            alt={t("header.title")}
-            height={30}
-            width={30}
-          />
-        </div>
-        <Link href="/" className="uppercase">
+        <Link href="/" className="uppercase flex justify-center items-center">
+          <div className="rounded-[50%] bg-white  p-1 mr-2">
+            <Image
+              src="/logos/logo_v5.svg"
+              alt={t("header.title")}
+              height={30}
+              width={30}
+            />
+          </div>
           {t("header.title")}
         </Link>
       </h1>
