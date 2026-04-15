@@ -6,6 +6,7 @@ import { SCROLL_FADE_IN } from "@/lib/className";
 
 export default function ContactHero() {
   const t = useTranslations("contact");
+  const m = useTranslations("miscellaneous");
 
   return (
     <section className="w-full p-4 bg-white font-inter">
@@ -35,8 +36,9 @@ export default function ContactHero() {
               {t("contactUsTitle")}
             </h1>
             <p className="text-gray-500">{t("contactUsDescription")}</p>
+            <p className="text-gray-500">{m("willBeBack")}</p>
           </div>
-          <PerfectContactForm />
+          {/* <PerfectContactForm /> */}
         </div>
       </div>
       <div className={`${SCROLL_FADE_IN}`}>

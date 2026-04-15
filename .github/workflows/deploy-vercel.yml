@@ -1,27 +1,29 @@
-name: Deploy to Vercel
+# deprecated as vercel deploys if changes to master branch is detected
 
-on:
-  push:
-    branches:
-      - master
+# name: Deploy to Vercel
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    environment: production
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+# on:
+#   push:
+#     branches:
+#       - master
 
-      - name: Install Vercel CLI
-        run: npm install -g vercel
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     environment: production
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v4
 
-      - name: Deploy to Vercel
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-        run: |
-          vercel pull --yes --environment=production --token=$VERCEL_TOKEN
-          vercel build --prod --token=$VERCEL_TOKEN
-          vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN
+#       - name: Install Vercel CLI
+#         run: npm install -g vercel
+
+#       - name: Deploy to Vercel
+#         env:
+#           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+#           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+#           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+#         run: |
+#           vercel pull --yes --environment=production --token=$VERCEL_TOKEN
+#           vercel build --prod --token=$VERCEL_TOKEN
+#           vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN
