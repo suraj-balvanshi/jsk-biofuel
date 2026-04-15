@@ -20,7 +20,7 @@
     },
     "contactUs": {
       "title": "Contact Us",
-      "email": "info@jskbiofuel.com",
+      "email": "jskgreenindia@gmail.com",
       "phone1": "+91 9839571751",
       "phone2": "+91 9415564333",
       "whatsapp": "9839571751",
@@ -356,8 +356,8 @@
     "title": "Get in touch with us",
     "email": {
       "label": "Email",
-      "value": "info@jskbiofuel.com",
-      "link": "mailto:info@jskbiofuel.com"
+      "value": "jskgreenindia@gmail.com",
+      "link": "mailto:jskgreenindia@gmail.com"
     },
     "phone": {
       "label": "Phone/Fax",
@@ -654,5 +654,8 @@
         "desc": "Offering expert guidance and training to clients on biofuel use and safety."
       }
     ]
+  },
+  "miscellaneous": {
+    "willBeBack": "We are working on update. We will be back soon. Thanks."
   }
 }
